@@ -29,6 +29,10 @@ typedef NS_ENUM(NSInteger,Pillow_ScoreDeductibleTypes) {
     Pillow_ScoreDeductibleType_Invalid,
 };
 
+@interface SLPPillowHistoryData : SLPHistoryData
+
+@end
+
 @interface Pillow_HistoryDataDetail : HistoryDataDetail
 @property (nonatomic,strong) NSArray *sleepStatusArray;//睡眠状态数组
 @property (nonatomic,strong) NSArray *sleepStatusValueArray;//睡眠状态附加数组
