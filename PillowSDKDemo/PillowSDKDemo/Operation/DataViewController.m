@@ -218,7 +218,7 @@
         {
             [self showReportwith: [SimulateData dealwithData:[Tool backLatestHistoryData:historyArr]]];
         }
-    }];
+    }];    
 }
 
 - (IBAction)simulateShortData:(id)sender {

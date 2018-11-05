@@ -40,6 +40,13 @@ typedef NS_ENUM(NSInteger,Pillow_ScoreDeductibleTypes) {
 @property (nonatomic,strong) NSArray *breathRateValueArray;//呼吸速率数组
 @end
 
+@interface P300_HistoryDataDetail : Pillow_HistoryDataDetail
+@property (nonatomic,strong) NSArray *temperatureAry;//温度
+@property (nonatomic,strong) NSArray *humidityAry;//湿度
+@end
+
+
+
 @interface Pillow_HistoryDataAnalysis : HistoryDataAnalysis
 /*呼吸暂停
  0：代表没有出现呼吸暂停

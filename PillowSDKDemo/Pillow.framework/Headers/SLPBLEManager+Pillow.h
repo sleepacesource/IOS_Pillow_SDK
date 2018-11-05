@@ -15,7 +15,7 @@
 #import "PillowOriginalData.h"
 #import "PillowUpgradeInfo.h"
 #import "Pillow_HistoryData.h"
-
+#import "PEnvironmentalData.h"
 @interface SLPBLEManager (Pillow)
 
 /*deviceName 设备名称 和设备ID区分一下
@@ -45,6 +45,11 @@
  */
 - (void)pillow:(CBPeripheral *)peripheral getDeviceVersionWithTimeout:(CGFloat)timeout
       callback:(SLPTransforCallback)handle;
+
+/*获取设备的环境数据
+ 回调返回PillowEnvironmentalData
+ */
+- (void)pillow:(CBPeripheral *)peripheral getEnvironmentalDataTimeout:(CGFloat)timeout completion:(SLPTransforCallback)handle;
 
 /*设置自动开始采集
  valid: 是开启自动采集

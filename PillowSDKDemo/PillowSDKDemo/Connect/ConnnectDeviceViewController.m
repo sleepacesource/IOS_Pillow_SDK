@@ -41,7 +41,7 @@
 - (NSArray *)numArray
 {
     if (!_numArray) {
-        self.numArray=@[@"3-0",@"3-1",@"3-2",@"3-3",@"3-4",@"3-5",@"3-6"];
+        self.numArray=@[@"3-0",@"3-1",@"3-2",@"3-3",@"3-4",@"3-5",@"3-6",@"34-3"];
     }
     return _numArray;
 }
@@ -149,7 +149,7 @@
 }
 - (IBAction)selectDeviceNumber:(id)sender {
     
-    UIActionSheet *sheet=[[UIActionSheet alloc]initWithTitle:nil delegate:self cancelButtonTitle:NSLocalizedString(@"cancel", nil) destructiveButtonTitle:nil otherButtonTitles:self.numArray[0],self.numArray[1],self.numArray[2],self.numArray[3],self.numArray[4],self.numArray[5],self.numArray[6], nil];
+    UIActionSheet *sheet=[[UIActionSheet alloc]initWithTitle:nil delegate:self cancelButtonTitle:NSLocalizedString(@"cancel", nil) destructiveButtonTitle:nil otherButtonTitles:self.numArray[0],self.numArray[1],self.numArray[2],self.numArray[3],self.numArray[4],self.numArray[5],self.numArray[6],self.numArray[7], nil];
     [sheet showInView:self.view];
 }
 

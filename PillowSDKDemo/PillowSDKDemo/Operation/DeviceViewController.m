@@ -47,6 +47,8 @@
     
     [self setUI];
     [self addLeftItem];
+    
+//    [self getEnviroment];
 }
 
 - (void)setUI
@@ -199,6 +201,7 @@
 
 
 - (IBAction)getDevicePower:(id)sender {
+    
     if (![Tool bleIsOpenShowToTextview:self.textView]) {
         return ;
     }
@@ -308,6 +311,17 @@
     }
     
     [self disconnectedDevice];
+}
+
+
+- (void)getEnviroment
+{
+    [SLPBLESharedManager pillow:self.selectPeripheral.peripheral getEnvironmentalDataTimeout:8.0 completion:^(SLPDataTransferStatus status, id data) {
+        if (status == SLPDataTransferStatus_Succeed){
+            PEnvironmentalData *evnData = data;
+            NSLog(@"%@",evnData);
+        }
+    }];
 }
 
 - (void)disconnectedDevice

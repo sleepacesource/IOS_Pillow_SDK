@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <BluetoothManager/SLPDataTransferDef.h>
 
 @interface PillowRealTimeData : NSObject
 @property (nonatomic,assign) BOOL awakFlag;//清醒标志

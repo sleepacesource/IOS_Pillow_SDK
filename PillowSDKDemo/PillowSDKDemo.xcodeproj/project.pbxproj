@@ -94,6 +94,7 @@
 		261EA1621F6910B10044BF3C /* DeviceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 261EA15C1F6910B10044BF3C /* DeviceViewController.m */; };
 		261EA1631F6910B10044BF3C /* DeviceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 261EA15D1F6910B10044BF3C /* DeviceViewController.xib */; };
 		261EA1641F69114F0044BF3C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 261EA1661F69114F0044BF3C /* Localizable.strings */; };
+		2663112821905D4F00777CC0 /* SLPCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2663112721905D4F00777CC0 /* SLPCommon.framework */; };
 		26B41BAD1F7DE01C0003994A /* sdk_index_icon_pillow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 26B41BAB1F7DE01C0003994A /* sdk_index_icon_pillow@2x.png */; };
 		26B41BAE1F7DE01C0003994A /* sdk_index_icon_pillow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 26B41BAC1F7DE01C0003994A /* sdk_index_icon_pillow@3x.png */; };
 		26B4CEFD1F69160D00E7EDD1 /* Pillow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26B4CEFC1F69160D00E7EDD1 /* Pillow.framework */; };
@@ -251,6 +252,7 @@
 		261EA15D1F6910B10044BF3C /* DeviceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeviceViewController.xib; sourceTree = "<group>"; };
 		261EA1651F69114F0044BF3C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		261EA1671F6911540044BF3C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		2663112721905D4F00777CC0 /* SLPCommon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SLPCommon.framework; sourceTree = "<group>"; };
 		269449301F7C9BCB006A215F /* sdk_pillow_80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sdk_pillow_80.png; sourceTree = "<group>"; };
 		26B41BAB1F7DE01C0003994A /* sdk_index_icon_pillow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sdk_index_icon_pillow@2x.png"; sourceTree = "<group>"; };
 		26B41BAC1F7DE01C0003994A /* sdk_index_icon_pillow@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sdk_index_icon_pillow@3x.png"; sourceTree = "<group>"; };
@@ -266,6 +268,7 @@
 				26B4CF031F6929D500E7EDD1 /* libc++.tbd in Frameworks */,
 				26B4CEFD1F69160D00E7EDD1 /* Pillow.framework in Frameworks */,
 				261EA1521F69100E0044BF3C /* BluetoothManager.framework in Frameworks */,
+				2663112821905D4F00777CC0 /* SLPCommon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +343,7 @@
 		261E9F791F690D7D0044BF3C = {
 			isa = PBXGroup;
 			children = (
+				2663112721905D4F00777CC0 /* SLPCommon.framework */,
 				26B4CEFC1F69160D00E7EDD1 /* Pillow.framework */,
 				261EA1511F69100E0044BF3C /* BluetoothManager.framework */,
 				261EA1491F6910080044BF3C /* MBProgressHUD */,

@@ -29,12 +29,23 @@ typedef NS_ENUM(NSInteger,Pillow_ScoreDeductibleTypes) {
     Pillow_ScoreDeductibleType_Invalid,
 };
 
+@interface SLPPillowHistoryData : SLPHistoryData
+
+@end
+
 @interface Pillow_HistoryDataDetail : HistoryDataDetail
 @property (nonatomic,strong) NSArray *sleepStatusArray;//睡眠状态数组
 @property (nonatomic,strong) NSArray *sleepStatusValueArray;//睡眠状态附加数组
 @property (nonatomic,strong) NSArray *heartBeatRateValueArray;//心跳数组
 @property (nonatomic,strong) NSArray *breathRateValueArray;//呼吸速率数组
 @end
+
+@interface P300_HistoryDataDetail : Pillow_HistoryDataDetail
+@property (nonatomic,strong) NSArray *temperatureAry;//温度
+@property (nonatomic,strong) NSArray *humidityAry;//湿度
+@end
+
+
 
 @interface Pillow_HistoryDataAnalysis : HistoryDataAnalysis
 /*呼吸暂停
