@@ -258,6 +258,7 @@
 		26B41BAC1F7DE01C0003994A /* sdk_index_icon_pillow@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sdk_index_icon_pillow@3x.png"; sourceTree = "<group>"; };
 		26B4CEFC1F69160D00E7EDD1 /* Pillow.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Pillow.framework; sourceTree = "<group>"; };
 		26B4CEFF1F69280500E7EDD1 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		26D9AE3721CB8F5200B8BFA9 /* 34-3_1.15.des */ = {isa = PBXFileReference; lastKnownFileType = file; path = "34-3_1.15.des"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -432,6 +433,7 @@
 				261E9FC81F690F0E0044BF3C /* 3-4_1.04.des */,
 				261E9FC91F690F0E0044BF3C /* 3-5_1.04.des */,
 				261E9FCA1F690F0E0044BF3C /* 3-6_1.04.des */,
+				26D9AE3721CB8F5200B8BFA9 /* 34-3_1.15.des */,
 			);
 			path = package;
 			sourceTree = "<group>";

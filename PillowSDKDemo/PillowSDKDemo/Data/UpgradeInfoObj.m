@@ -61,9 +61,16 @@
         upgradeInfo.crcDes=542788408;
         upgradeInfo.crcBin=709647589;
     }
+    else if ([numberString isEqualToString:@"34-3"])
+    {
+        NSString *filepath=[[NSBundle mainBundle] pathForResource:@"34-3_1.15" ofType:@"des"];
+        upgradeInfo.package=[NSData dataWithContentsOfFile:filepath];
+        upgradeInfo.crcDes=4206117993;
+        upgradeInfo.crcBin=1630395148;
+    }
     else
     {
-        
+
     }
     
     return upgradeInfo;
