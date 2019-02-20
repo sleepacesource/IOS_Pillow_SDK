@@ -266,7 +266,7 @@
     if (![Tool bleIsOpenShowToTextview:self.textView]) {
         return ;
     }
-    
+                                                                                                             
     if (![Tool deviceIsConnected:self.selectPeripheral.peripheral ShowToTextview:self.textView]) {
         return ;
     }
