@@ -46,4 +46,7 @@
          withDeviceName:(NSString *)deviceName
              deviceType:(int)deviceType protocolType:(int)protocolType
                 withWriteWithResponse:(BOOL)writeWithResponse;
+
+- (void)timeDelay;
+
 @end
