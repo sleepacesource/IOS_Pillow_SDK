@@ -63,7 +63,7 @@
     deviceVC.title=NSLocalizedString(@"device", nil);
     deviceVC.tabBarItem.image = [UIImage imageNamed:@"home.png"];
     ControlViewController *controlVC=[[ControlViewController alloc]initWithNibName:@"ControlViewController" bundle:nil];
-    controlVC.title=NSLocalizedString(@"control", nil);
+    controlVC.title=NSLocalizedString(@"im_data", nil);
     controlVC.tabBarItem.image = [UIImage imageNamed:@"control.png"];
     
     DataViewController *dataVC=[[DataViewController alloc]initWithNibName:@"DataViewController" bundle:nil];

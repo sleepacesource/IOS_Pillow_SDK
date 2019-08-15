@@ -76,8 +76,6 @@
 //     self.numberSelectLabel.text=numberStr;
 }
 
-
-
 - (void)viewWillAppear:(BOOL)animated
 {
     self.navigationController.navigationBar.hidden=NO;
@@ -125,7 +123,7 @@
     deviceVC.deviceNumberString=numberStr;
     
     ControlViewController *controlVC=[[ControlViewController alloc]initWithNibName:@"ControlViewController" bundle:nil];
-    controlVC.title=NSLocalizedString(@"control", nil);
+    controlVC.title=NSLocalizedString(@"im_data", nil);
     controlVC.tabBarItem.image = [UIImage imageNamed:@"control.png"];
     //    controlVC.tabBarItem.selectedImage = [UIImage imageNamed:@"tabbar_message_center_selected"];
     controlVC.selectPeripheral=self.selectPeripheral;

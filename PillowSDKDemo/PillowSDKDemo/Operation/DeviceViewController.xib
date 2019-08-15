@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -38,7 +37,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="执行过程:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CMK-kn-KTQ">
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="执行过程:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CMK-kn-KTQ">
                     <rect key="frame" x="15" y="80" width="223" height="21"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="21" id="lFA-BP-bZb"/>
@@ -48,7 +47,7 @@
                     <color key="textColor" red="0.50980392159999999" green="0.57254901960000004" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="srX-4n-rX1">
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="srX-4n-rX1">
                     <rect key="frame" x="15" y="106" width="290" height="200"/>
                     <subviews>
                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tyF-1K-u0x">
@@ -67,10 +66,10 @@
                     </constraints>
                 </view>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="utg-19-Cn3">
-                    <rect key="frame" x="0.0" y="306" width="320" height="212"/>
+                    <rect key="frame" x="0.0" y="80" width="320" height="438"/>
                 </scrollView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="407-IP-qt3">
-                    <rect key="frame" x="0.0" y="306" width="320" height="406"/>
+                    <rect key="frame" x="0.0" y="80" width="320" height="406"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="连接设备" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dun-pw-vkU">
                             <rect key="frame" x="15" y="15" width="223" height="21"/>
@@ -284,12 +283,12 @@
                 <constraint firstItem="utg-19-Cn3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="5RE-d8-6Xr"/>
                 <constraint firstAttribute="trailing" secondItem="utg-19-Cn3" secondAttribute="trailing" id="9Lm-Ib-WnU"/>
                 <constraint firstItem="CMK-kn-KTQ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="9e6-us-o2N"/>
+                <constraint firstItem="utg-19-Cn3" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="80" id="BUz-Gp-ulT"/>
                 <constraint firstAttribute="bottom" secondItem="utg-19-Cn3" secondAttribute="bottom" constant="50" id="H0n-mw-3aq"/>
                 <constraint firstItem="srX-4n-rX1" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="RIG-Nq-JeN"/>
                 <constraint firstAttribute="trailing" secondItem="srX-4n-rX1" secondAttribute="trailing" constant="15" id="ng7-JF-pkk"/>
                 <constraint firstAttribute="trailing" secondItem="407-IP-qt3" secondAttribute="trailing" id="ptZ-bo-eOX"/>
                 <constraint firstItem="CMK-kn-KTQ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="80" id="thH-aN-X0I"/>
-                <constraint firstItem="utg-19-Cn3" firstAttribute="top" secondItem="srX-4n-rX1" secondAttribute="bottom" id="yd8-em-Ybt"/>
                 <constraint firstItem="utg-19-Cn3" firstAttribute="top" secondItem="407-IP-qt3" secondAttribute="top" id="zf8-pN-geF"/>
             </constraints>
         </view>

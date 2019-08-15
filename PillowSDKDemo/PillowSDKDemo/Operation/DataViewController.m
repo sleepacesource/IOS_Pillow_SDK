@@ -190,6 +190,8 @@
         return ;
     }
     if (![Tool deviceIsConnected:self.selectPeripheral.peripheral ShowToTextview:self.textView]) {
+        UIAlertView *alertview=[[UIAlertView alloc]initWithTitle:NSLocalizedString(@"连接失败", nil) message:NSLocalizedString(@"请确保设备已开机，且与App的距离不超过5米", nil) delegate:self cancelButtonTitle:NSLocalizedString(@"confirm", nil) otherButtonTitles:nil];
+        [alertview show];
         return ;
     }
     [self downloadSleepData];
@@ -199,7 +201,7 @@
 {
     [Tool outputResultWithStr:NSLocalizedString(@"data_analyzed", nil) textView:self.textView];
     [historyArr removeAllObjects];
-    long startTime = 0  ;
+    long startTime = 0;
     long endTime = [[NSDate date] timeIntervalSince1970];
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     [SLPBLESharedManager pillow:self.selectPeripheral.peripheral personType:SLPSleepPersonType_Male historyDownloadWithStartTime:startTime endTime:endTime eachDataCallback:^(SLPDataTransferStatus status, id data) {
