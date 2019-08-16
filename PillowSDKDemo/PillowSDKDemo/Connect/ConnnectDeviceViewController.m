@@ -130,7 +130,7 @@
     controlVC.userID=self.myTextfield.text;
     
     DataViewController *dataVC=[[DataViewController alloc]initWithNibName:@"DataViewController" bundle:nil];
-    dataVC.title=NSLocalizedString(@"report", nil);
+    dataVC.title=NSLocalizedString(@"tab_data", nil);
     dataVC.tabBarItem.image = [UIImage imageNamed:@"data.png"];
     //    dataVC.tabBarItem.selectedImage = [UIImage imageNamed:@"tabbar_discover_selected"];
     dataVC.selectPeripheral=self.selectPeripheral;

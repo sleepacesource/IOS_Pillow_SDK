@@ -56,7 +56,6 @@
     [self addLeftItem];
 }
 
-
 - (void)setUI
 {
     //    self.myscorollview.contentSize=self.cView.frame.size;
@@ -111,10 +110,8 @@
     [self.tabBarController.navigationController popToRootViewControllerAnimated:YES];
 }
 
-
 - (void)viewWillAppear:(BOOL)animated
 {
-    //
     BOOL isConnected=self.selectPeripheral.peripheral&&[SLPBLESharedManager peripheralIsConnected:self.selectPeripheral.peripheral];
     self.analysisBT.enabled=isConnected;
     [Tool outputResultWithStr:nil textView:self.textView];
@@ -122,7 +119,6 @@
 
 - (void)setGraphviewUI
 {
-    
     fixView = [[FixView alloc] initWithFrame:CGRectMake(30, 10,([[UIScreen mainScreen] bounds].size.width)-50, 140+13)];
     fixView.backgroundColor = [UIColor clearColor];
     [myView addSubview:fixView];
@@ -167,7 +163,6 @@
     }
 }
 
-
 ///data
 - (void)initData:(UserObj *)obj
 {
@@ -182,15 +177,13 @@
     [sleepview setNeedsDisplay];
 }
 
-
 ///数据分析
 - (IBAction)analysisSleep:(id)sender {
-    
     if (![Tool bleIsOpenShowToTextview:self.textView]) {
         return ;
     }
     if (![Tool deviceIsConnected:self.selectPeripheral.peripheral ShowToTextview:self.textView]) {
-        UIAlertView *alertview=[[UIAlertView alloc]initWithTitle:NSLocalizedString(@"连接失败", nil) message:NSLocalizedString(@"请确保设备已开机，且与App的距离不超过5米", nil) delegate:self cancelButtonTitle:NSLocalizedString(@"confirm", nil) otherButtonTitles:nil];
+        UIAlertView *alertview=[[UIAlertView alloc]initWithTitle:NSLocalizedString(@"title_connect_fail", nil) message:NSLocalizedString(@"hint_connect", nil) delegate:self cancelButtonTitle:NSLocalizedString(@"confirm", nil) otherButtonTitles:nil];
         [alertview show];
         return ;
     }
@@ -214,6 +207,8 @@
         NSLog(@"download history data finished");
         if (!historyArr.count) {
             [Tool outputResultWithStr:NSLocalizedString(@"no_data", nil) textView:self.textView];
+            UIAlertView *alertview=[[UIAlertView alloc]initWithTitle:nil message:NSLocalizedString(@"hint_analyze_fail", nil) delegate:self cancelButtonTitle:NSLocalizedString(@"confirm", nil) otherButtonTitles:nil];
+            [alertview show];
             return;
         }
         else///deal with data
@@ -224,14 +219,12 @@
 }
 
 - (IBAction)simulateShortData:(id)sender {
-    
     [Tool outputResultWithStr:NSLocalizedString(@"simulation_short_report", nil) textView:self.textView];
     [self showReportwith:[SimulateData simulateShortData]];
 }
 
 
 - (IBAction)simulateLongData:(id)sender {
-    
     [Tool outputResultWithStr:NSLocalizedString(@"simulation_long_report", nil) textView:self.textView];
     [self showReportwith:[SimulateData simulateLongData]];
 }
@@ -309,7 +302,7 @@
                 height=180.0f;
             }
         }
-            break ;
+            break;
         default:
             break;
     }
@@ -332,7 +325,7 @@
                 headView=myView;
             }
         }
-            break ;
+            break;
         default:
             break;
     }
@@ -377,14 +370,13 @@
                 cell.detailInfoLabel.text=[NSString stringWithFormat:@"%@",valueArray[indexPath.row+1]];
             }
         }
-            break ;
+            break;
         default:
             break;
     }
     
     return cell;
 }
-
 
 - (void)showReportwith:(UserObj*)obj
 {

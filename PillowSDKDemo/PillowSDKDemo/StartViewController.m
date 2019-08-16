@@ -65,9 +65,8 @@
     ControlViewController *controlVC=[[ControlViewController alloc]initWithNibName:@"ControlViewController" bundle:nil];
     controlVC.title=NSLocalizedString(@"im_data", nil);
     controlVC.tabBarItem.image = [UIImage imageNamed:@"control.png"];
-    
     DataViewController *dataVC=[[DataViewController alloc]initWithNibName:@"DataViewController" bundle:nil];
-    dataVC.title=NSLocalizedString(@"report", nil);
+    dataVC.title=NSLocalizedString(@"tab_data", nil);
     dataVC.tabBarItem.image = [UIImage imageNamed:@"data.png"];
     
     UINavigationController *un1=[[UINavigationController alloc]initWithRootViewController:deviceVC];
