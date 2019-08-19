@@ -1,5 +1,5 @@
 //
-//  ConnnectDeviceViewController.h
+//  ConnectDeviceViewController.h
 //  RestonSDKDemo
 //
 //  Created by San on 2017/7/25.
@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <BluetoothManager/SLPBLEManager.h>
 
-@interface ConnnectDeviceViewController : UIViewController
+@interface ConnectDeviceViewController : UIViewController
 
 @property(nonatomic,strong) SLPPeripheralInfo *selectPeripheral;
 

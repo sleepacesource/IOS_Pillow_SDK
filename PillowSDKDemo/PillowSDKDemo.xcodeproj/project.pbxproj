@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		260493D71F6B81EE0035E2E8 /* ConnnectDeviceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 260493D21F6B81EE0035E2E8 /* ConnnectDeviceViewController.m */; };
-		260493D81F6B81EE0035E2E8 /* ConnnectDeviceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 260493D31F6B81EE0035E2E8 /* ConnnectDeviceViewController.xib */; };
+		260493D71F6B81EE0035E2E8 /* ConnectDeviceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 260493D21F6B81EE0035E2E8 /* ConnectDeviceViewController.m */; };
+		260493D81F6B81EE0035E2E8 /* ConnectDeviceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 260493D31F6B81EE0035E2E8 /* ConnectDeviceViewController.xib */; };
 		260493D91F6B81EE0035E2E8 /* ScanDeviceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 260493D51F6B81EE0035E2E8 /* ScanDeviceViewController.m */; };
 		260493DA1F6B81EE0035E2E8 /* ScanDeviceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 260493D61F6B81EE0035E2E8 /* ScanDeviceViewController.xib */; };
 		260493E11F6B81FD0035E2E8 /* AutoMonitorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 260493DC1F6B81FD0035E2E8 /* AutoMonitorViewController.m */; };
@@ -120,9 +120,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		260493D11F6B81EE0035E2E8 /* ConnnectDeviceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnnectDeviceViewController.h; sourceTree = "<group>"; };
-		260493D21F6B81EE0035E2E8 /* ConnnectDeviceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnnectDeviceViewController.m; sourceTree = "<group>"; };
-		260493D31F6B81EE0035E2E8 /* ConnnectDeviceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConnnectDeviceViewController.xib; sourceTree = "<group>"; };
+		260493D11F6B81EE0035E2E8 /* ConnectDeviceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectDeviceViewController.h; sourceTree = "<group>"; };
+		260493D21F6B81EE0035E2E8 /* ConnectDeviceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectDeviceViewController.m; sourceTree = "<group>"; };
+		260493D31F6B81EE0035E2E8 /* ConnectDeviceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConnectDeviceViewController.xib; sourceTree = "<group>"; };
 		260493D41F6B81EE0035E2E8 /* ScanDeviceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanDeviceViewController.h; sourceTree = "<group>"; };
 		260493D51F6B81EE0035E2E8 /* ScanDeviceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanDeviceViewController.m; sourceTree = "<group>"; };
 		260493D61F6B81EE0035E2E8 /* ScanDeviceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScanDeviceViewController.xib; sourceTree = "<group>"; };
@@ -294,9 +294,9 @@
 		260493701F6B7C250035E2E8 /* Connect */ = {
 			isa = PBXGroup;
 			children = (
-				260493D11F6B81EE0035E2E8 /* ConnnectDeviceViewController.h */,
-				260493D21F6B81EE0035E2E8 /* ConnnectDeviceViewController.m */,
-				260493D31F6B81EE0035E2E8 /* ConnnectDeviceViewController.xib */,
+				260493D11F6B81EE0035E2E8 /* ConnectDeviceViewController.h */,
+				260493D21F6B81EE0035E2E8 /* ConnectDeviceViewController.m */,
+				260493D31F6B81EE0035E2E8 /* ConnectDeviceViewController.xib */,
 				260493D41F6B81EE0035E2E8 /* ScanDeviceViewController.h */,
 				260493D51F6B81EE0035E2E8 /* ScanDeviceViewController.m */,
 				260493D61F6B81EE0035E2E8 /* ScanDeviceViewController.xib */,
@@ -702,7 +702,7 @@
 				261EA1641F69114F0044BF3C /* Localizable.strings in Resources */,
 				261EA14E1F6910080044BF3C /* LICENSE in Resources */,
 				261EA0011F690F0E0044BF3C /* tab_btn_scenes_home@3x.png in Resources */,
-				260493D81F6B81EE0035E2E8 /* ConnnectDeviceViewController.xib in Resources */,
+				260493D81F6B81EE0035E2E8 /* ConnectDeviceViewController.xib in Resources */,
 				261E9FBD1F690F050044BF3C /* Default-667h@2x.png in Resources */,
 				261E9FFE1F690F0E0044BF3C /* sun@2x.png in Resources */,
 				261E9FFA1F690F0E0044BF3C /* leavebed_sm@2x.png in Resources */,
@@ -769,7 +769,7 @@
 				261EA10A1F690FB90044BF3C /* SBJsonParser.m in Sources */,
 				261EA10F1F690FB90044BF3C /* SBJsonStreamWriter.m in Sources */,
 				261EA1621F6910B10044BF3C /* DeviceViewController.m in Sources */,
-				260493D71F6B81EE0035E2E8 /* ConnnectDeviceViewController.m in Sources */,
+				260493D71F6B81EE0035E2E8 /* ConnectDeviceViewController.m in Sources */,
 				261EA10B1F690FB90044BF3C /* SBJsonStreamParser.m in Sources */,
 				261EA1111F690FB90044BF3C /* SBJsonStreamWriterState.m in Sources */,
 				261EA1381F690FF40044BF3C /* SLPTitleValueArrowTableViewCell.m in Sources */,

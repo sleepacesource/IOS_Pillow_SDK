@@ -102,7 +102,6 @@
     self.textView.layer.cornerRadius=2.0f;
     self.textView.textColor=[FontColor C3];
     self.textView.font=[FontColor T4];
-    
 }
 
 - (void)addLeftItem
@@ -132,7 +131,6 @@
     [Tool outputResultWithStr:nil textView:self.textView];
 }
 
-
 - (void)deviceDisconenct
 {
     BOOL isConnected=self.selectPeripheral.peripheral&&[SLPBLESharedManager peripheralIsConnected:self.selectPeripheral.peripheral];
@@ -146,7 +144,6 @@
 
 ////device////
 - (IBAction)getDeviceName:(id)sender {
-    
     if (![Tool bleIsOpenShowToTextview:self.textView]) {
         return ;
     }
@@ -167,11 +164,9 @@
         self.deviceNameLabel.text=NSLocalizedString(@"failure", nil);
         [Tool outputResultWithStr:NSLocalizedString(@"failure", nil) textView:self.textView];
     }
-    
 }
 
 - (IBAction)getdeviceID:(id)sender{
-    
     if (![Tool bleIsOpenShowToTextview:self.textView]) {
         return ;
     }
@@ -199,9 +194,7 @@
     }];
 }
 
-
 - (IBAction)getDevicePower:(id)sender {
-    
     if (![Tool bleIsOpenShowToTextview:self.textView]) {
         return ;
     }
@@ -229,10 +222,8 @@
             self.powerLabel.text= NSLocalizedString(@"failure", nil);
             [Tool outputResultWithStr:NSLocalizedString(@"failure", nil) textView:self.textView];
         }
-        
     }];
 }
-
 
 - (IBAction)getDeviceVersion:(id)sender {
     if (![Tool bleIsOpenShowToTextview:self.textView]) {
@@ -257,10 +248,8 @@
             self.versionLabel.text= NSLocalizedString(@"failure", nil);
             [Tool outputResultWithStr:NSLocalizedString(@"failure", nil) textView:self.textView];
         }
-        
     }];
 }
-
 
 - (IBAction)deviceUpgrade:(id)sender {
     if (![Tool bleIsOpenShowToTextview:self.textView]) {
@@ -295,7 +284,6 @@
             [Tool outputResultWithStr:NSLocalizedString(@"failure", nil) textView:self.textView];
             [self isShowUpgradeView:NO];
         }
-        
     }];
 }
 
@@ -312,7 +300,6 @@
     
     [self disconnectedDevice];
 }
-
 
 - (void)getEnviroment
 {
@@ -351,7 +338,6 @@
             [Tool outputResultWithStr:NSLocalizedString(@"failure", nil) textView:self.textView];
             [self deviceDisconenct];
         }
-        
     }];
 }
 
@@ -370,7 +356,6 @@
     }
     else
         [ugView removeFromSuperview];
-    
 }
 
 - (void)didReceiveMemoryWarning {

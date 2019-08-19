@@ -1,12 +1,12 @@
 //
-//  ConnnectDeviceViewController.m
+//  ConnectDeviceViewController.m
 //  RestonSDKDemo
 //
 //  Created by San on 2017/7/25.
 //  Copyright © 2017年 medica. All rights reserved.
 //
 
-#import "ConnnectDeviceViewController.h"
+#import "ConnectDeviceViewController.h"
 #import "Tool.h"
 #import "DeviceViewController.h"
 #import "ControlViewController.h"
@@ -14,7 +14,7 @@
 #import "MBProgressHUD.h"
 #import <Pillow/Pillow.h>
 
-@interface ConnnectDeviceViewController ()<UITextFieldDelegate,UIActionSheetDelegate>
+@interface ConnectDeviceViewController ()<UITextFieldDelegate,UIActionSheetDelegate>
 {
     NSString *numberStr;
 }
@@ -30,7 +30,7 @@
 
 @end
 
-@implementation ConnnectDeviceViewController
+@implementation ConnectDeviceViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -83,7 +83,6 @@
 }
 
 - (IBAction)presssConnect:(id)sender {
-    
     if (![Tool bleIsOpenShowToTextview:self.textView]) {
         return ;
     }
@@ -145,8 +144,8 @@
     self.navigationController.navigationBar.hidden=YES;
     [self.navigationController pushViewController:tabbarVC animated:YES];
 }
+
 - (IBAction)selectDeviceNumber:(id)sender {
-    
     UIActionSheet *sheet=[[UIActionSheet alloc]initWithTitle:nil delegate:self cancelButtonTitle:NSLocalizedString(@"cancel", nil) destructiveButtonTitle:nil otherButtonTitles:self.numArray[0],self.numArray[1],self.numArray[2],self.numArray[3],self.numArray[4],self.numArray[5],self.numArray[6],self.numArray[7], nil];
     [sheet showInView:self.view];
 }
@@ -157,7 +156,6 @@
         numberStr=self.numArray[buttonIndex];
         self.numberSelectLabel.text=[NSString stringWithFormat:@"%@",numberStr];
     }
-    
 }
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField

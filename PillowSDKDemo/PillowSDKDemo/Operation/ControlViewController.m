@@ -48,6 +48,7 @@
     
     [self initData];
 }
+
 - (void)setUI
 {
     [Tool configSomeKindOfButtonLikeNomal:self.getDeviceStatusBT];
@@ -115,7 +116,6 @@
     [self.tabBarController.navigationController popToRootViewControllerAnimated:YES];
 }
 
-
 - (void)initData
 {
     [self addRealTimeDataNotification];
@@ -138,9 +138,7 @@
     [self getdeviceWrokStatus:nil];//refresh the button status
 }
 
-
 - (IBAction)getdeviceWrokStatus:(id)sender{
-    
     if (![Tool bleIsOpenShowToTextview:self.textView]) {
         return ;
     }
@@ -173,10 +171,8 @@
             self.stautLabel.text=NSLocalizedString(@"failure", nil);
             [Tool outputResultWithStr:NSLocalizedString(@"failure", nil) textView:self.textView];
         }
-        
     }];
 }
-
 
 - (IBAction)setAutoMonitor:(id)sender {
     if (![Tool bleIsOpenShowToTextview:self.textView]) {
@@ -217,7 +213,6 @@
         [self isShowRealDataBT:status==SLPDataTransferStatus_Succeed?YES:NO];
     }];
 }
-
 
 - (IBAction)stopCollect:(id)sender {
     if (![Tool bleIsOpenShowToTextview:self.textView]) {
@@ -299,9 +294,7 @@
         self.startCollectBT.enabled=NO;
         self.stopCollectBT.enabled=YES;
         [self isShowRealDataBT:YES];
-        
     }];
-    
 }
 
 - (IBAction)startRealtimeData:(id)sender {
@@ -327,8 +320,6 @@
         }
     }];
 }
-
-
 
 - (IBAction)stopRealtimeData:(id)sender {
     if (![Tool bleIsOpenShowToTextview:self.textView]) {

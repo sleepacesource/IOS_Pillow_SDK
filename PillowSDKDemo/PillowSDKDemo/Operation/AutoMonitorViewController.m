@@ -58,7 +58,6 @@
 }
 
 - (IBAction)saveData:(id)sender {
-    
     if (![Tool bleIsOpenShowToTextview:nil]) {
         return ;
     }
@@ -121,7 +120,6 @@
             return 0;
             break;
     }
-    
 }
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
@@ -149,12 +147,10 @@
     return  80;
 }
 
-
 - (CGFloat)pickerView:(UIPickerView *)pickerView rowHeightForComponent:(NSInteger)component;
 {
     return 60.0f;
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -7,7 +7,7 @@
 //
 
 #import "ScanDeviceViewController.h"
-#import "ConnnectDeviceViewController.h"
+#import "ConnectDeviceViewController.h"
 #import <BluetoothManager/BluetoothManager.h>
 #import "Tool.h"
 
@@ -55,13 +55,11 @@
     [self performSelector:@selector(pressRefresh:) withObject:nil afterDelay:1.0f];
 }
 
-
 - (void)viewWillAppear:(BOOL)animated
 {
     self.navigationController.navigationBar.hidden=NO;
     [Tool outputResultWithStr:nil textView:self.textView];
 }
-
 
 - (IBAction)pressRefresh:(id)sender
 {
@@ -90,13 +88,12 @@
             [Tool outputResultWithStr:NSLocalizedString(@"load_list_complete", nil) textView:self.textView];
         }
     }];
-    
 }
 
 - (void)selectDevice:(int)index
 {
     if (index<deviceArray.count&&deviceArray) {
-        ConnnectDeviceViewController *connectVC=[[ConnnectDeviceViewController alloc]init];
+        ConnectDeviceViewController *connectVC=[[ConnectDeviceViewController alloc]init];
         connectVC.selectPeripheral=deviceArray[index];
         [self.navigationController pushViewController:connectVC animated:YES];
         [Tool outputResultWithStr:[NSString stringWithFormat:NSLocalizedString(@"select_", nil),connectVC.selectPeripheral.name] textView:self.textView];

@@ -56,7 +56,6 @@
     [self.navigationController pushViewController:scanVC animated:YES];
 }
 
-
 - (IBAction)pressSkip:(id)sender
 {
     DeviceViewController *deviceVC=[[DeviceViewController alloc]initWithNibName:@"DeviceViewController" bundle:nil];
@@ -77,14 +76,11 @@
     tabbarVC.viewControllers=[NSArray arrayWithObjects:un1,un2,un3,nil];
     self.navigationController.navigationBar.hidden=YES;
     [self.navigationController pushViewController:tabbarVC animated:YES];
-    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
 
 @end

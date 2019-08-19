@@ -46,7 +46,6 @@
     [self startSigal];
 }
 
-
 - (void)setUI
 {
     self.title=NSLocalizedString(@"signal_strength", nil);
@@ -77,7 +76,6 @@
     [self addConstraint];
     [self initDataSource];
 }
-
 
 - (void)addConstraint
 {
@@ -119,7 +117,6 @@
     }];
 }
 
-
 -(void)initDataSource
 {
     //初始心跳数据！
@@ -141,7 +138,6 @@
         [[NSRunLoop currentRunLoop]addTimer:_heartTimer forMode:NSRunLoopCommonModes];
     }
 }
-
 
 -(void)createBreathTimerInterval:(NSTimeInterval)timerInterval
 {
