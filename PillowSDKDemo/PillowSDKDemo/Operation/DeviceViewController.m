@@ -37,6 +37,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *devcieInfoTitleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *upgradeTitleLabel;
 
+@property (strong, nonatomic) UILabel *ugLabel;
+
 @end
 
 @implementation DeviceViewController
@@ -58,8 +60,7 @@
     [Tool configSomeKindOfButtonLikeNomal:self.getPowerBT];
     [Tool configSomeKindOfButtonLikeNomal:self.getVersionBT];
     [Tool configSomeKindOfButtonLikeNomal:self.upgradeBT];
-    //    [Tool configSomeKindOfButtonLikeNomal:self.disconnectDeviceBT];
-    [self.disconnectDeviceBT setColor:[FontColor C4]];
+    [Tool configSomeKindOfButtonLikeNomal:self.disconnectDeviceBT];
     [self.disconnectDeviceBT setLineWidth:1.0];
     
     self.myscorollview.contentSize=self.cView.frame.size;
@@ -268,6 +269,7 @@
         if (status==SLPDataTransferStatus_Succeed) {
             PillowUpgradeInfo *upgradeInfo=(PillowUpgradeInfo *)data;
             self.upgradeLabel.text=[NSString stringWithFormat:@"%.1f%%",upgradeInfo.progress*100];
+            self.ugLabel.text=[NSString stringWithFormat:@"%.1f%%",upgradeInfo.progress*100];
             [Tool outputResultWithStr:[NSString stringWithFormat:NSLocalizedString(@"upgrading_device", nil),self.upgradeLabel.text] textView:self.textView];
             if (upgradeInfo.progress==1) {
                 self.upgradeLabel.text=NSLocalizedString(@"update_completed", nil);
@@ -347,11 +349,11 @@
         ugView=[[UIView alloc]initWithFrame:self.view.frame];
         ugView.backgroundColor=[UIColor grayColor];
         ugView.alpha=0.7f;
-        UILabel *label=[[UILabel alloc]initWithFrame:CGRectMake(0, self.view.frame.size.height/2, self.view.frame.size.width, 40)];
-        label.text=[NSString stringWithFormat:NSLocalizedString(@"fireware_updateing", nil),@"Pillow"];
-        label.textColor=[UIColor whiteColor];
-        label.textAlignment=NSTextAlignmentCenter;
-        [ugView addSubview:label];
+        self.ugLabel=[[UILabel alloc]initWithFrame:CGRectMake(0, self.view.frame.size.height/2, self.view.frame.size.width, 40)];
+        self.ugLabel.text=[NSString stringWithFormat:NSLocalizedString(@"fireware_updateing", nil),@"Pillow"];
+        self.ugLabel.textColor=[UIColor whiteColor];
+        self.ugLabel.textAlignment=NSTextAlignmentCenter;
+        [ugView addSubview:self.ugLabel];
         [[UIApplication sharedApplication].keyWindow addSubview:ugView];
     }
     else

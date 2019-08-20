@@ -223,7 +223,6 @@
     [self showReportwith:[SimulateData simulateShortData]];
 }
 
-
 - (IBAction)simulateLongData:(id)sender {
     [Tool outputResultWithStr:NSLocalizedString(@"simulation_long_report", nil) textView:self.textView];
     [self showReportwith:[SimulateData simulateLongData]];

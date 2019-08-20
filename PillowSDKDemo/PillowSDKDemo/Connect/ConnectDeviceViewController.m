@@ -84,12 +84,14 @@
 
 - (IBAction)presssConnect:(id)sender {
     if (![Tool bleIsOpenShowToTextview:self.textView]) {
-        return ;
+        return;
     }
     
     if (!(self.myTextfield.text&&self.myTextfield.text.length)) {
-        [Tool outputResultWithStr:NSLocalizedString(@"userid_judgment", nil) textView:self.textView];
-        return ;
+        [Tool outputResultWithStr:NSLocalizedString(@"toast_user_id", nil) textView:self.textView];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"toast_user_id", nil) message:nil delegate:self cancelButtonTitle:NSLocalizedString(@"confirm", nil) otherButtonTitles:nil, nil];
+        [alert show];
+        return;
     }
     [Tool outputResultWithStr:NSLocalizedString(@"connecting_device", nil) textView:self.textView];
     
@@ -114,7 +116,7 @@
 - (void)showMainView
 {
     DeviceViewController *deviceVC=[[DeviceViewController alloc]initWithNibName:@"DeviceViewController" bundle:nil];
-    deviceVC.title=NSLocalizedString(@"device", nil);
+    deviceVC.title=NSLocalizedString(@"device_", nil);
     deviceVC.tabBarItem.image = [UIImage imageNamed:@"home.png"];
     //        deviceVC.tabBarItem.selectedImage = [UIImage imageNamed:@"tabbar_home_selected"];
     deviceVC.selectPeripheral=self.selectPeripheral;

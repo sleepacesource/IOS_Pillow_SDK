@@ -59,7 +59,7 @@
 - (IBAction)pressSkip:(id)sender
 {
     DeviceViewController *deviceVC=[[DeviceViewController alloc]initWithNibName:@"DeviceViewController" bundle:nil];
-    deviceVC.title=NSLocalizedString(@"device", nil);
+    deviceVC.title=NSLocalizedString(@"device_", nil);
     deviceVC.tabBarItem.image = [UIImage imageNamed:@"home.png"];
     ControlViewController *controlVC=[[ControlViewController alloc]initWithNibName:@"ControlViewController" bundle:nil];
     controlVC.title=NSLocalizedString(@"im_data", nil);

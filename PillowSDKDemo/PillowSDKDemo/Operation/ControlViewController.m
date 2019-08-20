@@ -249,8 +249,8 @@
         
         PillowRealTimeData *realData= [note.userInfo objectForKey:kNotificationPostData];
         NSLog(@"sleep status->%ld,heartBeat-->%d,breath-->%d,temperture->%d,humidity->%d",(long)realData.status,realData.heartRate,realData.breathRate,realData.temperture,realData.humidity);
-        NSString *b_value=[NSString stringWithFormat:@"%d %@",realData.heartRate,NSLocalizedString(@"unit_respiration", nil)];
-        NSString *h_value=[NSString stringWithFormat:@"%d %@",realData.breathRate,NSLocalizedString(@"unit_heart", nil)];
+        NSString *b_value=[NSString stringWithFormat:@"%d %@",realData.breathRate,NSLocalizedString(@"unit_respiration", nil)];
+        NSString *h_value=[NSString stringWithFormat:@"%d %@",realData.heartRate,NSLocalizedString(@"unit_heart", nil)];
         
         NSString *temperture_value=[NSString stringWithFormat:@"%d",realData.temperture];
         NSString *humidity_value=[NSString stringWithFormat:@"%d",realData.humidity];
