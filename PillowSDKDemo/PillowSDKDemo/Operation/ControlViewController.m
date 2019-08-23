@@ -145,9 +145,11 @@
 
 - (IBAction)getdeviceWrokStatus:(id)sender{
     if (![Tool bleIsOpenShowToTextview:self.textView]) {
+        [self isShowRealDataBT:NO];
         return ;
     }
     if (![Tool deviceIsConnected:self.selectPeripheral.peripheral ShowToTextview:self.textView]) {
+        [self isShowRealDataBT:NO];
         return ;
     }
     [Tool outputResultWithStr:NSLocalizedString(@"getting_device_status", nil) textView:self.textView];
