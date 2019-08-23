@@ -272,8 +272,8 @@
             self.ugLabel.text=[NSString stringWithFormat:@"%.1f%%",upgradeInfo.progress*100];
             [Tool outputResultWithStr:[NSString stringWithFormat:NSLocalizedString(@"upgrading_device", nil),self.upgradeLabel.text] textView:self.textView];
             if (upgradeInfo.progress==1) {
-                self.upgradeLabel.text=NSLocalizedString(@"update_completed", nil);
-                [Tool outputResultWithStr:NSLocalizedString(@"update_completed", nil) textView:self.textView];
+                self.upgradeLabel.text=NSLocalizedString(@"update_success", nil);
+                [Tool outputResultWithStr:NSLocalizedString(@"update_success", nil) textView:self.textView];
                 [self deviceDisconenct];
                 [Tool outputResultWithStr:[NSString stringWithFormat:NSLocalizedString(@"reboot_device", nil),self.selectPeripheral.name] textView:self.textView];
                 [self performSelector:@selector(tryConnectDevice) withObject:nil afterDelay:6.0f];
@@ -282,8 +282,8 @@
         }
         else
         {
-            self.upgradeLabel.text= NSLocalizedString(@"failure", nil);
-            [Tool outputResultWithStr:NSLocalizedString(@"failure", nil) textView:self.textView];
+            self.upgradeLabel.text= NSLocalizedString(@"update_failed", nil);
+            [Tool outputResultWithStr:NSLocalizedString(@"update_failed", nil) textView:self.textView];
             [self isShowUpgradeView:NO];
         }
     }];

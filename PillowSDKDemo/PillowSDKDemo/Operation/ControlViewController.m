@@ -135,6 +135,11 @@
         self.stopCollectBT.enabled=isConnected;
     [Tool outputResultWithStr:nil textView:self.textView];
     self.navigationController.tabBarController.tabBar.hidden=NO;
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
     [self getdeviceWrokStatus:nil];//refresh the button status
 }
 
@@ -169,74 +174,6 @@
         else
         {
             self.stautLabel.text=NSLocalizedString(@"failure", nil);
-            [Tool outputResultWithStr:NSLocalizedString(@"failure", nil) textView:self.textView];
-        }
-    }];
-}
-
-- (IBAction)setAutoMonitor:(id)sender {
-    if (![Tool bleIsOpenShowToTextview:self.textView]) {
-        return ;
-    }
-    if (![Tool deviceIsConnected:self.selectPeripheral.peripheral ShowToTextview:self.textView]) {
-        return ;
-    }
-    
-    [Tool outputResultWithStr:NSLocalizedString(@"set_auto_monitor", nil) textView:self.textView];
-    AutoMonitorViewController *autoMonitorVC=[[AutoMonitorViewController alloc]initWithNibName:@"AutoMonitorViewController" bundle:nil];
-    autoMonitorVC.selectPeripheral=self.selectPeripheral;
-    self.navigationController.tabBarController.tabBar.hidden=YES;
-    [self.navigationController pushViewController:autoMonitorVC animated:YES];
-}
-
-- (IBAction)startCollection:(id)sender {
-    if (![Tool bleIsOpenShowToTextview:self.textView]) {
-        return ;
-    }
-    if (![Tool deviceIsConnected:self.selectPeripheral.peripheral ShowToTextview:self.textView]) {
-        return ;
-    }
-    
-    [Tool outputResultWithStr:NSLocalizedString(@"informing_device_collecting", nil) textView:self.textView];
-    [SLPBLESharedManager pillow:self.selectPeripheral.peripheral startCollectionWithTimeout:10.0 callback:^(SLPDataTransferStatus status, id data) {
-        if (status==SLPDataTransferStatus_Succeed) {
-            NSLog(@"%@",NSLocalizedString(@"began_collect_success", nil));
-            [Tool outputResultWithStr:NSLocalizedString(@"began_collect_success", nil) textView:self.textView];
-            self.startCollectBT.enabled=NO;
-            self.stopCollectBT.enabled=YES;
-        }
-        else
-        {
-            NSLog(@"%@",NSLocalizedString(@"start collect failed", nil));
-            [Tool outputResultWithStr:NSLocalizedString(@"failure", nil) textView:self.textView];
-        }
-        [self isShowRealDataBT:status==SLPDataTransferStatus_Succeed?YES:NO];
-    }];
-}
-
-- (IBAction)stopCollect:(id)sender {
-    if (![Tool bleIsOpenShowToTextview:self.textView]) {
-        return ;
-    }
-    if (![Tool deviceIsConnected:self.selectPeripheral.peripheral ShowToTextview:self.textView]) {
-        return ;
-    }
-    
-    [Tool outputResultWithStr:NSLocalizedString(@"notified_acquisition_off", nil) textView:self.textView];
-    [SLPBLESharedManager pillow:self.selectPeripheral.peripheral stopCollectionWithTimeout:10.0 callback:^(SLPDataTransferStatus status, id data) {
-        if (status==SLPDataTransferStatus_Succeed) {
-            NSLog(@"%@",NSLocalizedString(@"close_acquisition_success", nil));
-            [Tool outputResultWithStr:NSLocalizedString(@"close_acquisition_success", nil) textView:self.textView];
-            [self isShowRealDataBT:NO];
-            self.sleepStatusValueLabel.text=@"--";
-            self.breathValueLabel.text=@"--";
-            self.heartRateValueLabel.text=@"--";
-            self.startCollectBT.enabled=YES;
-            self.stopCollectBT.enabled=NO;
-        }
-        else
-        {
-            NSLog(@"%@",NSLocalizedString(@"stop collect failed", nil));
             [Tool outputResultWithStr:NSLocalizedString(@"failure", nil) textView:self.textView];
         }
     }];

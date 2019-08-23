@@ -33,6 +33,7 @@
 
 - (void)setUI
 {
+    SLPBLESharedManager;
     [self.searchButton setTitle:NSLocalizedString(@"search_device", nil) forState:UIControlStateNormal];
     [self.skipButton setTitle:NSLocalizedString(@"ignore", nil) forState:UIControlStateNormal];
     [Tool configSomeKindOfButtonLikeNomal:self.searchButton];

@@ -1,5 +1,6 @@
 "en-us"="zh-cn";
 
+"update_failed"="升级失败";
 "hint_analyze_fail"="无法分析小于10分钟的睡眠数据";
 "hint_connect"="请确保设备已开机，且与App的距离不超过5米";
 "title_connect_fail"="连接失败";
@@ -130,3 +131,5 @@
 "index_guide2"="400-9300-186";
 "index_guide1"="若没有设备，请联系我们";
 "process"="执行过程";
+"app_name"="Auto Pillow SDK";
+"update_success"="升级成功";

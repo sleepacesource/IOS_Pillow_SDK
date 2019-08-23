@@ -1,5 +1,6 @@
 "en-us"="en-us";
 
+"update_failed"="Firmware Update Failed";
 "hint_analyze_fail"="Unable To Analyze Sleep Lasting Less Than 10 Minutes";
 "hint_connect"="Make sure device is ON, the distance between your phone and device is less than 16ft(5m);";
 "title_connect_fail"="Connection Failed";
@@ -130,3 +131,5 @@
 "index_guide2"="400-9300-186";
 "index_guide1"="If you don't have device, please contact us";
 "process"="Execute Process";
+"app_name"="Auto Pillow SDK";
+"update_success"="Firmware Update Complete";

@@ -84,9 +84,6 @@
                             <state key="normal" title="获取设备工作状态">
                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
-                            <connections>
-                                <action selector="getdeviceWrokStatus:" destination="-1" eventType="touchUpInside" id="pBc-Ug-PO1"/>
-                            </connections>
                         </button>
                         <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1U8-Ek-l6W">
                             <rect key="frame" x="167.5" y="15" width="137.5" height="40"/>
@@ -120,9 +117,6 @@
                             <state key="normal" title="开始采集">
                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
-                            <connections>
-                                <action selector="startCollection:" destination="-1" eventType="touchUpInside" id="Puo-EG-m90"/>
-                            </connections>
                         </button>
                         <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wa3-Qa-nrr">
                             <rect key="frame" x="167.5" y="115" width="137.5" height="40"/>
@@ -133,9 +127,6 @@
                             <state key="normal" title="关闭采集">
                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
-                            <connections>
-                                <action selector="stopCollect:" destination="-1" eventType="touchUpInside" id="NQH-Do-UhM"/>
-                            </connections>
                         </button>
                         <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cBx-cT-q0G">
                             <rect key="frame" x="15" y="65" width="290" height="40"/>
@@ -146,9 +137,6 @@
                             <state key="normal" title="设置自动监测">
                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
-                            <connections>
-                                <action selector="setAutoMonitor:" destination="-1" eventType="touchUpInside" id="1rc-CB-gva"/>
-                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iyb-VZ-CgE">
                             <rect key="frame" x="15" y="215" width="290" height="40"/>

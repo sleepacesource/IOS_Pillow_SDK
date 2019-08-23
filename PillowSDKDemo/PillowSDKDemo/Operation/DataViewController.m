@@ -197,7 +197,7 @@
     long startTime = 0;
     long endTime = [[NSDate date] timeIntervalSince1970];
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    [SLPBLESharedManager pillow:self.selectPeripheral.peripheral personType:SLPSleepPersonType_Male historyDownloadWithStartTime:startTime endTime:endTime eachDataCallback:^(SLPDataTransferStatus status, id data) {
+    [SLPBLESharedManager autoPillow:self.selectPeripheral.peripheral personType:SLPSleepPersonType_Male historyDownloadWithStartTime:startTime endTime:endTime eachDataCallback:^(SLPDataTransferStatus status, id data) {
         SLPHistoryData *historyData=(SLPHistoryData *)data;
         [historyArr addObject:historyData];
         NSLog(@"download history data:>%@",historyData);
