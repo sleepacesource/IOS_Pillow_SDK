@@ -265,6 +265,7 @@
     self.upgradeLabel.text= NSLocalizedString(@"fireware_update", nil);
     [self isShowUpgradeView:YES];
     [Tool outputResultWithStr:NSLocalizedString(@"fireware_update", nil) textView:self.textView];
+    [self stopRealtimeData];
     [SLPBLESharedManager pillow:self.selectPeripheral.peripheral upgradeDeviceWithCrcDes:upgradeInfo.crcDes crcBin:upgradeInfo.crcBin upgradePackage:upgradeInfo.package callback:^(SLPDataTransferStatus status, id data) {
         if (status==SLPDataTransferStatus_Succeed) {
             PillowUpgradeInfo *upgradeInfo=(PillowUpgradeInfo *)data;
@@ -285,6 +286,37 @@
             self.upgradeLabel.text= NSLocalizedString(@"update_failed", nil);
             [Tool outputResultWithStr:NSLocalizedString(@"update_failed", nil) textView:self.textView];
             [self isShowUpgradeView:NO];
+            [self startRealtimeData];
+        }
+    }];
+}
+
+- (void)startRealtimeData {
+    [Tool outputResultWithStr:NSLocalizedString(@"getting_real_time_data", nil) textView:self.textView];
+    [SLPBLESharedManager pillow:self.selectPeripheral.peripheral startRealTimeDataWithTimeout:10.0 callback:^(SLPDataTransferStatus status, id data) {
+        if (status==SLPDataTransferStatus_Succeed) {
+            NSLog(@"%@",NSLocalizedString(@"start realtime data succeed", nil));
+//            [Tool outputResultWithStr:NSLocalizedString(@"notice_successful", nil) textView:self.textView];
+        }
+        else
+        {
+            NSLog(@"%@",NSLocalizedString(@"start realtime data failed", nil));
+//            [Tool outputResultWithStr:NSLocalizedString(@"failure", nil) textView:self.textView];
+        }
+    }];
+}
+
+- (void)stopRealtimeData{
+    [Tool outputResultWithStr:NSLocalizedString(@"stopping_data", nil) textView:self.textView];
+    [SLPBLESharedManager pillow:self.selectPeripheral.peripheral stopRealTimeDataWithTimeout:10.0 callback:^(SLPDataTransferStatus status, id data) {
+        if (status==SLPDataTransferStatus_Succeed) {
+            NSLog(@"%@",NSLocalizedString(@"stop_data_successfully", nil));
+//            [Tool outputResultWithStr:NSLocalizedString(@"stop_data_successfully", nil) textView:self.textView];
+        }
+        else
+        {
+            NSLog(@"%@",NSLocalizedString(@"stop realtime data failed", nil));
+//            [Tool outputResultWithStr:NSLocalizedString(@"failure", nil) textView:self.textView];
         }
     }];
 }

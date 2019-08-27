@@ -14,10 +14,10 @@
 {
     UpgradeInfoObj *upgradeInfo=[[UpgradeInfoObj alloc]init];
     
-    NSString *filepath=[[NSBundle mainBundle] pathForResource:@"P200A_HP00X_20190820_V1.08(0.0.1)_Debug" ofType:@"des"];
+    NSString *filepath=[[NSBundle mainBundle] pathForResource:@"P200A_HP00X_20190827_V1.11(0.0.2)_Release_Update" ofType:@"des"];
     upgradeInfo.package=[NSData dataWithContentsOfFile:filepath];
-    upgradeInfo.crcDes=2138129606;
-    upgradeInfo.crcBin=1766804836;
+    upgradeInfo.crcDes=1119821362;
+    upgradeInfo.crcBin=256003259;
     
     return upgradeInfo;
 }

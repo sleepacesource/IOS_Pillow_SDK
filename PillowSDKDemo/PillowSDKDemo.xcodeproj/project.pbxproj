@@ -90,7 +90,7 @@
 		26B41BAE1F7DE01C0003994A /* sdk_index_icon_pillow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 26B41BAC1F7DE01C0003994A /* sdk_index_icon_pillow@3x.png */; };
 		26B4CEFD1F69160D00E7EDD1 /* Pillow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26B4CEFC1F69160D00E7EDD1 /* Pillow.framework */; };
 		26B4CF031F6929D500E7EDD1 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 26B4CEFF1F69280500E7EDD1 /* libc++.tbd */; };
-		A497C94C230E664E00C96D43 /* P200A_HP00X_20190820_V1.08(0.0.1)_Debug.des in Resources */ = {isa = PBXBuildFile; fileRef = A497C94B230E664E00C96D43 /* P200A_HP00X_20190820_V1.08(0.0.1)_Debug.des */; };
+		A4424B85231537CD0002D35B /* P200A_HP00X_20190827_V1.11(0.0.2)_Release_Update.des in Resources */ = {isa = PBXBuildFile; fileRef = A4424B84231537CC0002D35B /* P200A_HP00X_20190827_V1.11(0.0.2)_Release_Update.des */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -240,7 +240,7 @@
 		26B41BAC1F7DE01C0003994A /* sdk_index_icon_pillow@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sdk_index_icon_pillow@3x.png"; sourceTree = "<group>"; };
 		26B4CEFC1F69160D00E7EDD1 /* Pillow.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Pillow.framework; sourceTree = "<group>"; };
 		26B4CEFF1F69280500E7EDD1 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
-		A497C94B230E664E00C96D43 /* P200A_HP00X_20190820_V1.08(0.0.1)_Debug.des */ = {isa = PBXFileReference; lastKnownFileType = file; path = "P200A_HP00X_20190820_V1.08(0.0.1)_Debug.des"; sourceTree = "<group>"; };
+		A4424B84231537CC0002D35B /* P200A_HP00X_20190827_V1.11(0.0.2)_Release_Update.des */ = {isa = PBXFileReference; lastKnownFileType = file; path = "P200A_HP00X_20190827_V1.11(0.0.2)_Release_Update.des"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -408,7 +408,7 @@
 		261E9FC11F690F0E0044BF3C /* package */ = {
 			isa = PBXGroup;
 			children = (
-				A497C94B230E664E00C96D43 /* P200A_HP00X_20190820_V1.08(0.0.1)_Debug.des */,
+				A4424B84231537CC0002D35B /* P200A_HP00X_20190827_V1.11(0.0.2)_Release_Update.des */,
 			);
 			path = package;
 			sourceTree = "<group>";
@@ -662,7 +662,6 @@
 				261E9FFD1F690F0E0044BF3C /* moon@3x.png in Resources */,
 				261E9FF21F690F0E0044BF3C /* device_btn_refresh_nor@2x.png in Resources */,
 				261E9FFC1F690F0E0044BF3C /* moon@2x.png in Resources */,
-				A497C94C230E664E00C96D43 /* P200A_HP00X_20190820_V1.08(0.0.1)_Debug.des in Resources */,
 				261EA1631F6910B10044BF3C /* DeviceViewController.xib in Resources */,
 				261EA1641F69114F0044BF3C /* Localizable.strings in Resources */,
 				261EA14E1F6910080044BF3C /* LICENSE in Resources */,
@@ -676,6 +675,7 @@
 				261EA1441F6910010044BF3C /* StartViewController.xib in Resources */,
 				26B41BAE1F7DE01C0003994A /* sdk_index_icon_pillow@3x.png in Resources */,
 				261E9FBF1F690F050044BF3C /* Default@2x.png in Resources */,
+				A4424B85231537CD0002D35B /* P200A_HP00X_20190827_V1.11(0.0.2)_Release_Update.des in Resources */,
 				261EA1391F690FF40044BF3C /* SLPTitleValueArrowTableViewCell.xib in Resources */,
 				260493DA1F6B81EE0035E2E8 /* ScanDeviceViewController.xib in Resources */,
 				261E9FF81F690F0E0044BF3C /* huxi_3-177@2x.png in Resources */,

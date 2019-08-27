@@ -138,7 +138,7 @@
     obj.statusValueString=[NSString stringWithFormat:@"[%@]",[detail.sleepStatusValueArray componentsJoinedByString:@","]];
     obj.SleepCurveStr=[NSString stringWithFormat:@"[%@]",[analysis.sleepCurveArray componentsJoinedByString:@","]];
     obj.sleepCurveStatusStr=[NSString stringWithFormat:@"[%@]",[analysis.sleepCurveStatusArray componentsJoinedByString:@","]];
-    obj.duration=[NSNumber numberWithInteger:analysis.duration];
+    obj.duration=[NSNumber numberWithInteger:analysis.duration?analysis.duration:detail.breathRateValueArray.count];
     obj.startTime=[NSNumber numberWithInteger:historyData.summary.startTime];
     obj.score=[NSNumber numberWithInteger:analysis.sleepScore];
     obj.light=[NSNumber numberWithInteger:analysis.lightSleepAllTime];
