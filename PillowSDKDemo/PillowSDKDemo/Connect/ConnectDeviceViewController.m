@@ -41,7 +41,7 @@
 - (NSArray *)numArray
 {
     if (!_numArray) {
-        self.numArray=@[@"3-4"];
+        self.numArray=@[@"46-0"];
     }
     return _numArray;
 }
