@@ -142,6 +142,45 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+//    [self getdeviceWrokStatus:nil];//refresh the button status
+}
+
+- (IBAction)getdeviceWrokStatus:(id)sender{
+    if (![Tool bleIsOpenShowToTextview:self.textView]) {
+        [self isShowRealDataBT:NO];
+        return ;
+    }
+    if (![Tool deviceIsConnected:self.selectPeripheral.peripheral ShowToTextview:self.textView]) {
+        [self isShowRealDataBT:NO];
+        return ;
+    }
+    [Tool outputResultWithStr:NSLocalizedString(@"getting_device_status", nil) textView:self.textView];
+    [SLPBLESharedManager pillow:self.selectPeripheral.peripheral getCollectionStatusWithTimeout:10.0 callback:^(SLPDataTransferStatus status, id data) {
+        if (status==SLPDataTransferStatus_Succeed) {
+            PillowCollectionStatus *workStatus=(PillowCollectionStatus *)data;
+            
+            NSLog(@"status--%d,flag--%d",workStatus.collectionStatus,workStatus.isCollecting);
+            
+            if (workStatus.isCollecting) {
+                self.stautLabel.text=NSLocalizedString(@"working_state_ing", nil);
+                self.stopCollectBT.enabled=YES;
+                self.startCollectBT.enabled=NO;
+                [self isShowRealDataBT:YES];
+            }
+            else
+            {
+                self.stopCollectBT.enabled=NO;
+                self.startCollectBT.enabled=YES;
+                self.stautLabel.text=NSLocalizedString(@"working_state_not", nil);
+            }
+            [Tool outputResultWithStr:[NSString stringWithFormat:NSLocalizedString(@"get_working_status", nil),self.stautLabel.text] textView:self.textView];
+        }
+        else
+        {
+            self.stautLabel.text=NSLocalizedString(@"failure", nil);
+            [Tool outputResultWithStr:NSLocalizedString(@"failure", nil) textView:self.textView];
+        }
+    }];
 }
 
 ///add realtime data
