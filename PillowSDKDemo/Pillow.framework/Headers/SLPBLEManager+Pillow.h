@@ -51,6 +51,11 @@
  */
 - (void)pillow:(CBPeripheral *)peripheral getEnvironmentalDataTimeout:(CGFloat)timeout completion:(SLPTransforCallback)handle;
 
+/*结束采集
+ */
+- (void)pillow:(CBPeripheral *)peripheral stopCollectionWithTimeout:(CGFloat)timeout
+      callback:(SLPTransforCallback)handle;
+
 /*查询采集状态
  回调返回 PillowCollectionStatus
  */
