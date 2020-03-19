@@ -16,6 +16,9 @@
 @property (nonatomic,assign) NSInteger status;//状态
 @property (nonatomic,assign) NSInteger statusValue;//状态值
 
+@property (nonatomic,assign) NSInteger temperture;//温度
+@property (nonatomic,assign) NSInteger humidity;//湿度
+
 @property (nonatomic,readonly) BOOL isOffBed;//是否为离床
 @property (nonatomic,readonly) BOOL isInit;
 @end

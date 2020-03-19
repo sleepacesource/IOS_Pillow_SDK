@@ -653,6 +653,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 				"zh-Hans",
@@ -943,6 +944,7 @@
 				INFOPLIST_FILE = PillowSDKDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = V3.0.0.2;
 				OTHER_LDFLAGS = (
 					"-force_load",
 					"$(SRCROOT)/BluetoothManager.framework/BluetoothManager",
@@ -967,6 +969,7 @@
 				INFOPLIST_FILE = PillowSDKDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = V3.0.0.2;
 				OTHER_LDFLAGS = (
 					"-force_load",
 					"$(SRCROOT)/BluetoothManager.framework/BluetoothManager",
