@@ -41,8 +41,15 @@ typedef NS_ENUM(int,SLPBleConnectStatus) {
 
 //查询设备连接状态
 - (SLPBleConnectStatus)checkDeviceConnecteStatus:(NSString *)deviceName;
+//通过设备查询连接状态
+- (SLPBleConnectStatus)checkPeripheralConnecteStatus:(CBPeripheral *)peripheral;
 
 - (void)_checkScan;
+
+- (BOOL)connectPeripheral:(CBPeripheral *)peripheral deviceCode:(NSString *)deviceCode deviceName:(NSString*)deviceName timeout:(CGFloat)timeout completion:(SLPBLEConnectHandle)handle;
+
+- (BOOL)connectPeripheral:(CBPeripheral *)peripheral deviceType:(SLPDeviceTypes)deviceType timeout:(CGFloat)timeout completion:(SLPBLEConnectHandle)handle;
+
 @end
 
 @class CBPeripheral;
