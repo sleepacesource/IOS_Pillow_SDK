@@ -23,6 +23,7 @@ typedef NS_ENUM(NSInteger,SLPDeviceCategory) {
     SLPDeviceCategory_Pillow,
     SLPDeviceCategory_Milky,
     SLPDeviceCategory_Binatone,
+    SLPDeviceCategory_Sal,
 };
 
 //TCP协议和蓝牙新协议的分隔符,每个包用分割符分开
@@ -44,4 +45,5 @@ static const Byte kSeparator[4] = {0x24,0x5F,0x40,0x2D};
 + (SLPDeviceCategory)deviceCategoryFromDeviceCode:(NSString *)deviceCode;
 + (SLPDeviceCategory)deviceCategoryFromDeviceType:(SLPDeviceTypes)deviceType;
 + (SLPDataTransferStatus)transforStatusFrom:(SLPDataTransferReturnStatus)code;
++ (SLPDeviceTypes)backDeviceTypeFormDeviceId:(NSString *)idstring;
 @end

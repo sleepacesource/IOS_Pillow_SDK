@@ -56,6 +56,7 @@
 - (void)pillow:(CBPeripheral *)peripheral stopCollectionWithTimeout:(CGFloat)timeout
       callback:(SLPTransforCallback)handle;
 
+
 /*查询采集状态
  回调返回 PillowCollectionStatus
  */
@@ -107,4 +108,5 @@ historyDownloadWithStartTime:(NSInteger)startTime
        endTime:(NSInteger)endTime
 eachDataCallback:(SLPTransforCallback)eachhandle
 finishCallback:(SLPTransforCallback)finishHandle;
+
 @end
