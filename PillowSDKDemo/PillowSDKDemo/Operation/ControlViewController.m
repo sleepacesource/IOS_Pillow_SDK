@@ -236,6 +236,18 @@
         self.stopCollectBT.enabled=YES;
 //        [self isShowRealDataBT:YES];
     }];
+    
+    
+    [[NSNotificationCenter defaultCenter]addObserverForName:kNotificationNameBLEPillowStartCollection object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification * _Nonnull note) {
+        
+        
+        NSLog(@"start collect---->");
+    }];
+    
+    
+    [[NSNotificationCenter defaultCenter]addObserverForName:kNotificationNameBLEPillowStopCollection object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification * _Nonnull note) {
+         NSLog(@"stop collect---->");
+    }];
 }
 
 - (IBAction)startRealtimeData:(id)sender {
