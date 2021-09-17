@@ -4,6 +4,10 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>.DS_Store</key>
+		<data>
+		ChpN7elnwWqUdWJYnKwxC9EnHeU=
+		</data>
 		<key>Headers/CRC.h</key>
 		<data>
 		LaWAMJm9Vjo0LcOcdCgH7Z4ha94=
@@ -38,7 +42,7 @@
 		</data>
 		<key>Headers/SLPDataTransferDef.h</key>
 		<data>
-		UVl8ClTmmXnx/aTqzXUlQaXw9PU=
+		NBq69unJtKXFUIIOeFUwHaanoKo=
 		</data>
 		<key>Headers/SLPDeviceInfo.h</key>
 		<data>
@@ -74,7 +78,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		d+2dK1fhWckyMMjmBN1UjnBCQH8=
+		+beVjMIADu1W9JdCeLdkfO0PyVM=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -183,11 +187,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			UVl8ClTmmXnx/aTqzXUlQaXw9PU=
+			NBq69unJtKXFUIIOeFUwHaanoKo=
 			</data>
 			<key>hash2</key>
 			<data>
-			eA1OEB4HENSL1LVAduWrAa1C4rtvmirU8fU1hSZGAgA=
+			MQmJsHe7cKIh2O5RQUSkf4yBGjsLv3zi+s9KsuLxBvI=
 			</data>
 		</dict>
 		<key>Headers/SLPDeviceInfo.h</key>
