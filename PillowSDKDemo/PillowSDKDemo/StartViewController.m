@@ -13,6 +13,7 @@
 #import "ControlViewController.h"
 #import "DataViewController.h"
 #import "AppDelegate.h"
+#import "SleepAidViewController.h"
 
 @interface StartViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *searchButton;
@@ -65,16 +66,20 @@
     ControlViewController *controlVC=[[ControlViewController alloc]initWithNibName:@"ControlViewController" bundle:nil];
     controlVC.title=NSLocalizedString(@"im_data", nil);
     controlVC.tabBarItem.image = [UIImage imageNamed:@"control.png"];
+    SleepAidViewController *sleepAidVC=[[SleepAidViewController alloc]initWithNibName:@"SleepAidViewController" bundle:nil];
+    sleepAidVC.title=@"控制";
+    sleepAidVC.tabBarItem.image = [UIImage imageNamed:@"control.png"];
     DataViewController *dataVC=[[DataViewController alloc]initWithNibName:@"DataViewController" bundle:nil];
     dataVC.title=NSLocalizedString(@"tab_data", nil);
     dataVC.tabBarItem.image = [UIImage imageNamed:@"data.png"];
     
     UINavigationController *un1=[[UINavigationController alloc]initWithRootViewController:deviceVC];
     UINavigationController *un2=[[UINavigationController alloc]initWithRootViewController:controlVC];
-    UINavigationController *un3=[[UINavigationController alloc]initWithRootViewController:dataVC];
+    UINavigationController *un3=[[UINavigationController alloc]initWithRootViewController:sleepAidVC];
+    UINavigationController *un4=[[UINavigationController alloc]initWithRootViewController:dataVC];
     
     UITabBarController *tabbarVC=[[UITabBarController alloc]init];
-    tabbarVC.viewControllers=[NSArray arrayWithObjects:un1,un2,un3,nil];
+    tabbarVC.viewControllers=[NSArray arrayWithObjects:un1,un2,un3,un4,nil];
     self.navigationController.navigationBar.hidden=YES;
     [self.navigationController pushViewController:tabbarVC animated:YES];
 }

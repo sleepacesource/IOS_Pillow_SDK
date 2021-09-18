@@ -16,6 +16,7 @@
 #import "PillowUpgradeInfo.h"
 #import "Pillow_HistoryData.h"
 #import "PEnvironmentalData.h"
+#import "PillowSleepAidInfo.h"
 @interface SLPBLEManager (Pillow)
 
 /*deviceName 设备名称 和设备ID区分一下
@@ -108,5 +109,23 @@ historyDownloadWithStartTime:(NSInteger)startTime
        endTime:(NSInteger)endTime
 eachDataCallback:(SLPTransforCallback)eachhandle
 finishCallback:(SLPTransforCallback)finishHandle;
+
+/* 助眠操作接口
+ musicEnable: 音乐开关  0: 关  1: 开
+ musicId: 音乐ID
+ volume: 音乐音量
+ circleMode: 循环模式    0列表播放 1单曲循环
+ lightEnable: 灯光开关  0: 关  1: 开
+ brightness: 灯光亮度     0  -  100
+ SLPLight: 灯光结构
+ smartEnable: 是否开启智能助眠  0: 关  1: 开
+ smartDuration: 助眠停止时长  单位分钟，默认45分钟,0睡着后再结束
+ */
+- (void)pillow:(CBPeripheral *)peripheral sleepAidOperation:(UInt8)musicEnable musicId:(UInt16)musicId volume:(UInt8)volume circleMode:(UInt8)circleMode lightEnable:(UInt8)lightEnable brightness:(UInt8)brightness light:(SLPLight *)light smartEnable:(UInt8)smartEnable smartDuration:(UInt16)smartDuration timeout:(CGFloat)timeout
+      callback:(SLPTransforCallback)handle;
+
+/* 获取助眠操作
+ */
+- (void)pillow:(CBPeripheral *)peripheral getSleepAidOperationWithTimeout:(CGFloat)timeout callback:(SLPTransforCallback)handle;
 
 @end

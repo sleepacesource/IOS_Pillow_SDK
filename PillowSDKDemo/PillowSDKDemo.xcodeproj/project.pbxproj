@@ -90,6 +90,15 @@
 		26EEAB11242B24AE000FD4AB /* BluetoothManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26EEAB0E242B24AE000FD4AB /* BluetoothManager.framework */; };
 		26EEAB12242B24AE000FD4AB /* Pillow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26EEAB0F242B24AE000FD4AB /* Pillow.framework */; };
 		26EEAB13242B24AE000FD4AB /* SLPCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26EEAB10242B24AE000FD4AB /* SLPCommon.framework */; };
+		8F2ACC7A26F5AF8500F63034 /* MusicInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F2ACC7826F5AF8500F63034 /* MusicInfo.m */; };
+		8F2ACC8326F5B1C800F63034 /* MusicListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F2ACC8026F5B1C800F63034 /* MusicListViewController.xib */; };
+		8F2ACC8426F5B1C800F63034 /* MusicListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F2ACC8226F5B1C800F63034 /* MusicListViewController.m */; };
+		8F2ACC8826F5B25200F63034 /* SelectItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F2ACC8526F5B25200F63034 /* SelectItemCell.m */; };
+		8F2ACC8926F5B25200F63034 /* SelectItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F2ACC8626F5B25200F63034 /* SelectItemCell.xib */; };
+		8F2ACC8D26F5B6D400F63034 /* Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F2ACC8C26F5B6D400F63034 /* Theme.m */; };
+		8F2ACC9026F5B6FD00F63034 /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F2ACC8F26F5B6FD00F63034 /* BaseTableViewCell.m */; };
+		8FA4886526F49841003F13D5 /* SleepAidViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA4886326F49841003F13D5 /* SleepAidViewController.m */; };
+		8FA4886626F49841003F13D5 /* SleepAidViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FA4886426F49841003F13D5 /* SleepAidViewController.xib */; };
 		A4424B85231537CD0002D35B /* P200A_HP00X_20190827_V1.11(0.0.2)_Release_Update.des in Resources */ = {isa = PBXBuildFile; fileRef = A4424B84231537CC0002D35B /* P200A_HP00X_20190827_V1.11(0.0.2)_Release_Update.des */; };
 /* End PBXBuildFile section */
 
@@ -240,6 +249,21 @@
 		26EEAB0E242B24AE000FD4AB /* BluetoothManager.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BluetoothManager.framework; sourceTree = "<group>"; };
 		26EEAB0F242B24AE000FD4AB /* Pillow.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Pillow.framework; sourceTree = "<group>"; };
 		26EEAB10242B24AE000FD4AB /* SLPCommon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SLPCommon.framework; sourceTree = "<group>"; };
+		8F2ACC7826F5AF8500F63034 /* MusicInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicInfo.m; sourceTree = "<group>"; };
+		8F2ACC7926F5AF8500F63034 /* MusicInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicInfo.h; sourceTree = "<group>"; };
+		8F2ACC8026F5B1C800F63034 /* MusicListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MusicListViewController.xib; sourceTree = "<group>"; };
+		8F2ACC8126F5B1C800F63034 /* MusicListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicListViewController.h; sourceTree = "<group>"; };
+		8F2ACC8226F5B1C800F63034 /* MusicListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicListViewController.m; sourceTree = "<group>"; };
+		8F2ACC8526F5B25200F63034 /* SelectItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectItemCell.m; sourceTree = "<group>"; };
+		8F2ACC8626F5B25200F63034 /* SelectItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectItemCell.xib; sourceTree = "<group>"; };
+		8F2ACC8726F5B25200F63034 /* SelectItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectItemCell.h; sourceTree = "<group>"; };
+		8F2ACC8B26F5B6D400F63034 /* Theme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Theme.h; sourceTree = "<group>"; };
+		8F2ACC8C26F5B6D400F63034 /* Theme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Theme.m; sourceTree = "<group>"; };
+		8F2ACC8E26F5B6FD00F63034 /* BaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewCell.h; sourceTree = "<group>"; };
+		8F2ACC8F26F5B6FD00F63034 /* BaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewCell.m; sourceTree = "<group>"; };
+		8FA4886226F49841003F13D5 /* SleepAidViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SleepAidViewController.h; sourceTree = "<group>"; };
+		8FA4886326F49841003F13D5 /* SleepAidViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SleepAidViewController.m; sourceTree = "<group>"; };
+		8FA4886426F49841003F13D5 /* SleepAidViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SleepAidViewController.xib; sourceTree = "<group>"; };
 		A4424B84231537CC0002D35B /* P200A_HP00X_20190827_V1.11(0.0.2)_Release_Update.des */ = {isa = PBXFileReference; lastKnownFileType = file; path = "P200A_HP00X_20190827_V1.11(0.0.2)_Release_Update.des"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -288,6 +312,8 @@
 		260493711F6B7C640035E2E8 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				8F2ACC7926F5AF8500F63034 /* MusicInfo.h */,
+				8F2ACC7826F5AF8500F63034 /* MusicInfo.m */,
 				260493E51F6B82090035E2E8 /* DealWithData.h */,
 				260493E61F6B82090035E2E8 /* DealWithData.m */,
 				260493E71F6B82090035E2E8 /* SimulateData.h */,
@@ -314,6 +340,11 @@
 		260493731F6B7C640035E2E8 /* CommonUI */ = {
 			isa = PBXGroup;
 			children = (
+				8F2ACC8E26F5B6FD00F63034 /* BaseTableViewCell.h */,
+				8F2ACC8F26F5B6FD00F63034 /* BaseTableViewCell.m */,
+				8F2ACC8726F5B25200F63034 /* SelectItemCell.h */,
+				8F2ACC8526F5B25200F63034 /* SelectItemCell.m */,
+				8F2ACC8626F5B25200F63034 /* SelectItemCell.xib */,
 				260493F71F6B821B0035E2E8 /* SLPUnderlineButton.h */,
 				260493F81F6B821B0035E2E8 /* SLPUnderlineButton.m */,
 				261EA1351F690FF40044BF3C /* SLPTitleValueArrowTableViewCell.h */,
@@ -351,6 +382,7 @@
 		261E9F841F690D7D0044BF3C /* PillowSDKDemo */ = {
 			isa = PBXGroup;
 			children = (
+				8F2ACC8A26F5B6D400F63034 /* Theme */,
 				261E9F881F690D7D0044BF3C /* AppDelegate.h */,
 				261E9F891F690D7D0044BF3C /* AppDelegate.m */,
 				261EA13A1F6910010044BF3C /* StartViewController.h */,
@@ -500,6 +532,9 @@
 		261EA1341F690FF40044BF3C /* Operation */ = {
 			isa = PBXGroup;
 			children = (
+				8F2ACC8126F5B1C800F63034 /* MusicListViewController.h */,
+				8F2ACC8226F5B1C800F63034 /* MusicListViewController.m */,
+				8F2ACC8026F5B1C800F63034 /* MusicListViewController.xib */,
 				261EA15B1F6910B10044BF3C /* DeviceViewController.h */,
 				261EA15C1F6910B10044BF3C /* DeviceViewController.m */,
 				261EA15D1F6910B10044BF3C /* DeviceViewController.xib */,
@@ -512,6 +547,9 @@
 				260493DE1F6B81FD0035E2E8 /* SignalViewController.h */,
 				260493DF1F6B81FD0035E2E8 /* SignalViewController.m */,
 				260493E01F6B81FD0035E2E8 /* SignalViewController.xib */,
+				8FA4886226F49841003F13D5 /* SleepAidViewController.h */,
+				8FA4886326F49841003F13D5 /* SleepAidViewController.m */,
+				8FA4886426F49841003F13D5 /* SleepAidViewController.xib */,
 			);
 			path = Operation;
 			sourceTree = "<group>";
@@ -533,6 +571,15 @@
 				26B4CEFF1F69280500E7EDD1 /* libc++.tbd */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8F2ACC8A26F5B6D400F63034 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				8F2ACC8B26F5B6D400F63034 /* Theme.h */,
+				8F2ACC8C26F5B6D400F63034 /* Theme.m */,
+			);
+			path = Theme;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -645,7 +692,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F2ACC8326F5B1C800F63034 /* MusicListViewController.xib in Resources */,
 				261E9F951F690D7D0044BF3C /* LaunchScreen.storyboard in Resources */,
+				8F2ACC8926F5B25200F63034 /* SelectItemCell.xib in Resources */,
 				261E9FF31F690F0E0044BF3C /* device_btn_refresh_nor@3x.png in Resources */,
 				261E9FBC1F690F050044BF3C /* Default-568h@2x.png in Resources */,
 				261E9F921F690D7D0044BF3C /* Assets.xcassets in Resources */,
@@ -653,6 +702,7 @@
 				261E9FFB1F690F0E0044BF3C /* leavebed_sm@3x.png in Resources */,
 				261EA15F1F6910B10044BF3C /* ControlViewController.xib in Resources */,
 				261E9FED1F690F0E0044BF3C /* about_logo@2x.png in Resources */,
+				8FA4886626F49841003F13D5 /* SleepAidViewController.xib in Resources */,
 				261E9FF01F690F0E0044BF3C /* data@2x.png in Resources */,
 				261E9FFF1F690F0E0044BF3C /* sun@3x.png in Resources */,
 				260493E41F6B81FD0035E2E8 /* SignalViewController.xib in Resources */,
@@ -709,6 +759,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F2ACC8D26F5B6D400F63034 /* Theme.m in Sources */,
 				260493F61F6B82120035E2E8 /* Tool.m in Sources */,
 				261EA10C1F690FB90044BF3C /* SBJsonStreamParserAccumulator.m in Sources */,
 				261EA1171F690FB90044BF3C /* UserObj.m in Sources */,
@@ -719,6 +770,7 @@
 				260493D91F6B81EE0035E2E8 /* ScanDeviceViewController.m in Sources */,
 				261EA14F1F6910080044BF3C /* MBProgressHUD.m in Sources */,
 				261EA1501F6910080044BF3C /* README.mdown in Sources */,
+				8F2ACC8826F5B25200F63034 /* SelectItemCell.m in Sources */,
 				261EA1091F690FB90044BF3C /* SBJson.m in Sources */,
 				261EA1161F690FB90044BF3C /* ToolKit.m in Sources */,
 				261EA15E1F6910B10044BF3C /* ControlViewController.m in Sources */,
@@ -728,6 +780,7 @@
 				261EA1061F690FB90044BF3C /* FixView.m in Sources */,
 				261EA1071F690FB90044BF3C /* HeartCurveView.m in Sources */,
 				260493E31F6B81FD0035E2E8 /* SignalViewController.m in Sources */,
+				8F2ACC7A26F5AF8500F63034 /* MusicInfo.m in Sources */,
 				261EA10A1F690FB90044BF3C /* SBJsonParser.m in Sources */,
 				261EA10F1F690FB90044BF3C /* SBJsonStreamWriter.m in Sources */,
 				261EA1621F6910B10044BF3C /* DeviceViewController.m in Sources */,
@@ -735,12 +788,15 @@
 				261EA10B1F690FB90044BF3C /* SBJsonStreamParser.m in Sources */,
 				261EA1111F690FB90044BF3C /* SBJsonStreamWriterState.m in Sources */,
 				261EA1381F690FF40044BF3C /* SLPTitleValueArrowTableViewCell.m in Sources */,
+				8F2ACC8426F5B1C800F63034 /* MusicListViewController.m in Sources */,
 				261EA10D1F690FB90044BF3C /* SBJsonStreamParserAdapter.m in Sources */,
 				261EA1101F690FB90044BF3C /* SBJsonStreamWriterAccumulator.m in Sources */,
 				261EA1141F690FB90044BF3C /* SBJsonWriter.m in Sources */,
 				260493ED1F6B82090035E2E8 /* DealWithData.m in Sources */,
 				260493F51F6B82120035E2E8 /* FontColor.m in Sources */,
 				261EA10E1F690FB90044BF3C /* SBJsonStreamParserState.m in Sources */,
+				8F2ACC9026F5B6FD00F63034 /* BaseTableViewCell.m in Sources */,
+				8FA4886526F49841003F13D5 /* SleepAidViewController.m in Sources */,
 				261EA1431F6910010044BF3C /* StartViewController.m in Sources */,
 				260493EE1F6B82090035E2E8 /* SimulateData.m in Sources */,
 				260493EF1F6B82090035E2E8 /* SimulateData+ScoreDeduction.m in Sources */,
