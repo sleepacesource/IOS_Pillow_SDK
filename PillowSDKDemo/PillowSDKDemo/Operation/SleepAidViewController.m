@@ -10,6 +10,7 @@
 
 #import "MusicInfo.h"
 #import "MusicListViewController.h"
+#import <Pillow/Pillow.h>
 
 @interface SleepAidViewController ()<UIScrollViewDelegate>
 
@@ -186,24 +187,87 @@
 
 - (void)playMusicWitCompletion:(void(^)(SLPDataTransferStatus status))completion
 {
-    
+    [SLPBLESharedManager pillow:self.selectPeripheral.peripheral sleepAidOperation:1 musicId:self.assistMusicID volume:self.volume circleMode:self.circleMode lightEnable:0 brightness:0 light:0 smartEnable:self.smartFlag smartDuration:self.smartDuration timeout:0 callback:^(SLPDataTransferStatus status, id data) {
+        if (completion) {
+            completion(status);
+        }
+    }];
 }
 
 - (void)stopMusicWitCompletion:(void(^)(SLPDataTransferStatus status))completion
 {
-
+    [SLPBLESharedManager pillow:self.selectPeripheral.peripheral sleepAidOperation:0 musicId:self.assistMusicID volume:self.volume circleMode:self.circleMode lightEnable:0 brightness:0 light:0 smartEnable:self.smartFlag smartDuration:self.smartDuration timeout:0 callback:^(SLPDataTransferStatus status, id data) {
+        if (completion) {
+            completion(status);
+        }
+    }];
 }
 
 - (IBAction)chooseMode:(UIButton *)sender {
 }
 
 - (IBAction)playMusic:(UIButton *)sender {
+    
+    __weak typeof(self) weakSelf = self;
+    if (sender.selected) {
+        
+        [self stopMusicWitCompletion:^(SLPDataTransferStatus status) {
+            if (status != SLPDataTransferStatus_Succeed) {
+//                [Utils showDeviceOperationFailed:status atViewController:weakSelf];
+            }else{
+                sender.selected = NO;
+                [weakSelf.playBtn setTitle:@"播放" forState:UIControlStateNormal];
+                weakSelf.isPlayingMusic = NO;
+            }
+        }];
+    }else{
+        [self playMusicWitCompletion:^(SLPDataTransferStatus status) {
+            if (status != SLPDataTransferStatus_Succeed) {
+//                [Utils showDeviceOperationFailed:status atViewController:weakSelf];
+            }else{
+                sender.selected = YES;
+                [weakSelf.playBtn setTitle:@"暂停" forState:UIControlStateNormal];
+                weakSelf.isPlayingMusic = YES;
+            }
+        }];
+    }
 }
 
+- (IBAction)sendVol:(UIButton *)sender {
+    [self.view endEditing:YES];
+    NSString *txt = self.volumeField.text;
+    UInt8 vol = (UInt8)[txt intValue];
+    
+    __weak typeof(self) weakSelf = self;
+    self.volume = vol;
+    [self playMusicWitCompletion:^(SLPDataTransferStatus status) {
+        if (status == SLPDataTransferStatus_Succeed) {
+            weakSelf.playBtn.selected = YES;
+            [weakSelf.playBtn setTitle:@"暂停" forState:UIControlStateNormal];
+            weakSelf.isPlayingMusic = YES;
+        }
+    }];
+}
+
+- (IBAction)chooseTime:(UIButton *)sender {
+}
+
+
 - (IBAction)chooseStop:(UIButton *)sender {
+    
 }
 
 - (IBAction)saveData:(UIButton *)sender {
+    __weak typeof(self) weakSelf = self;
+    if (self.isPlayingMusic) {
+        [self playMusicWitCompletion:^(SLPDataTransferStatus status) {
+            
+        }];
+    } else {
+        [self stopMusicWitCompletion:^(SLPDataTransferStatus status) {
+            
+        }];
+    }
 }
 
 -(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
