@@ -14,6 +14,7 @@
 #import "DataViewController.h"
 #import "AppDelegate.h"
 #import "SleepAidViewController.h"
+#import "SettingsViewController.h"
 
 @interface StartViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *searchButton;
@@ -63,12 +64,19 @@
     DeviceViewController *deviceVC=[[DeviceViewController alloc]initWithNibName:@"DeviceViewController" bundle:nil];
     deviceVC.title=NSLocalizedString(@"device_", nil);
     deviceVC.tabBarItem.image = [UIImage imageNamed:@"home.png"];
+    
     ControlViewController *controlVC=[[ControlViewController alloc]initWithNibName:@"ControlViewController" bundle:nil];
     controlVC.title=NSLocalizedString(@"im_data", nil);
     controlVC.tabBarItem.image = [UIImage imageNamed:@"control.png"];
+    
     SleepAidViewController *sleepAidVC=[[SleepAidViewController alloc]initWithNibName:@"SleepAidViewController" bundle:nil];
     sleepAidVC.title=@"控制";
     sleepAidVC.tabBarItem.image = [UIImage imageNamed:@"control.png"];
+    
+    SettingsViewController *settingsVC = [[SettingsViewController alloc] initWithNibName:@"SettingsViewController" bundle:nil];
+    settingsVC.title = @"设置";
+    settingsVC.tabBarItem.image = [UIImage imageNamed:@"control.png"];
+    
     DataViewController *dataVC=[[DataViewController alloc]initWithNibName:@"DataViewController" bundle:nil];
     dataVC.title=NSLocalizedString(@"tab_data", nil);
     dataVC.tabBarItem.image = [UIImage imageNamed:@"data.png"];
@@ -76,10 +84,11 @@
     UINavigationController *un1=[[UINavigationController alloc]initWithRootViewController:deviceVC];
     UINavigationController *un2=[[UINavigationController alloc]initWithRootViewController:controlVC];
     UINavigationController *un3=[[UINavigationController alloc]initWithRootViewController:sleepAidVC];
-    UINavigationController *un4=[[UINavigationController alloc]initWithRootViewController:dataVC];
+    UINavigationController *un4=[[UINavigationController alloc]initWithRootViewController:settingsVC];
+    UINavigationController *un5=[[UINavigationController alloc]initWithRootViewController:dataVC];
     
     UITabBarController *tabbarVC=[[UITabBarController alloc]init];
-    tabbarVC.viewControllers=[NSArray arrayWithObjects:un1,un2,un3,un4,nil];
+    tabbarVC.viewControllers=[NSArray arrayWithObjects:un1,un2,un3,un4,un5, nil];
     self.navigationController.navigationBar.hidden=YES;
     [self.navigationController pushViewController:tabbarVC animated:YES];
 }

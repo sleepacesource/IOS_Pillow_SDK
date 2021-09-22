@@ -14,6 +14,7 @@
 #import "MBProgressHUD.h"
 #import <Pillow/Pillow.h>
 #import "SleepAidViewController.h"
+#import "SettingsViewController.h"
 
 @interface ConnectDeviceViewController ()<UITextFieldDelegate,UIActionSheetDelegate>
 {
@@ -136,6 +137,12 @@
     sleepAidVC.selectPeripheral=self.selectPeripheral;
     sleepAidVC.userID=self.myTextfield.text;
     sleepAidVC.tabBarItem.image = [UIImage imageNamed:@"control.png"];
+    
+    SettingsViewController *settingsVC = [[SettingsViewController alloc] initWithNibName:@"SettingsViewController" bundle:nil];
+    settingsVC.title = @"设置";
+    settingsVC.selectPeripheral=self.selectPeripheral;
+    settingsVC.userID=self.myTextfield.text;
+    settingsVC.tabBarItem.image = [UIImage imageNamed:@"control.png"];
     
     DataViewController *dataVC=[[DataViewController alloc]initWithNibName:@"DataViewController" bundle:nil];
     dataVC.title=NSLocalizedString(@"tab_data", nil);

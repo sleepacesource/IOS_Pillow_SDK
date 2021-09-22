@@ -99,6 +99,14 @@
 		8F2ACC9026F5B6FD00F63034 /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F2ACC8F26F5B6FD00F63034 /* BaseTableViewCell.m */; };
 		8FA4886526F49841003F13D5 /* SleepAidViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA4886326F49841003F13D5 /* SleepAidViewController.m */; };
 		8FA4886626F49841003F13D5 /* SleepAidViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FA4886426F49841003F13D5 /* SleepAidViewController.xib */; };
+		8FB262E826FABBB700E63F4B /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB262E626FABBB700E63F4B /* SettingsViewController.m */; };
+		8FB262E926FABBB700E63F4B /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FB262E726FABBB700E63F4B /* SettingsViewController.xib */; };
+		8FB262ED26FAC1D900E63F4B /* BLEMuiscViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB262EB26FAC1D900E63F4B /* BLEMuiscViewController.m */; };
+		8FB262EE26FAC1D900E63F4B /* BLEMuiscViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FB262EC26FAC1D900E63F4B /* BLEMuiscViewController.xib */; };
+		8FB262F226FAC21A00E63F4B /* AlarmListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB262F026FAC21A00E63F4B /* AlarmListViewController.m */; };
+		8FB262F326FAC21A00E63F4B /* AlarmListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FB262F126FAC21A00E63F4B /* AlarmListViewController.xib */; };
+		8FB262F726FAC22900E63F4B /* AlarmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB262F526FAC22900E63F4B /* AlarmViewController.m */; };
+		8FB262F826FAC22900E63F4B /* AlarmViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FB262F626FAC22900E63F4B /* AlarmViewController.xib */; };
 		A4424B85231537CD0002D35B /* P200A_HP00X_20190827_V1.11(0.0.2)_Release_Update.des in Resources */ = {isa = PBXBuildFile; fileRef = A4424B84231537CC0002D35B /* P200A_HP00X_20190827_V1.11(0.0.2)_Release_Update.des */; };
 /* End PBXBuildFile section */
 
@@ -264,6 +272,18 @@
 		8FA4886226F49841003F13D5 /* SleepAidViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SleepAidViewController.h; sourceTree = "<group>"; };
 		8FA4886326F49841003F13D5 /* SleepAidViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SleepAidViewController.m; sourceTree = "<group>"; };
 		8FA4886426F49841003F13D5 /* SleepAidViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SleepAidViewController.xib; sourceTree = "<group>"; };
+		8FB262E526FABBB700E63F4B /* SettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		8FB262E626FABBB700E63F4B /* SettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		8FB262E726FABBB700E63F4B /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
+		8FB262EA26FAC1D900E63F4B /* BLEMuiscViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BLEMuiscViewController.h; sourceTree = "<group>"; };
+		8FB262EB26FAC1D900E63F4B /* BLEMuiscViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BLEMuiscViewController.m; sourceTree = "<group>"; };
+		8FB262EC26FAC1D900E63F4B /* BLEMuiscViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BLEMuiscViewController.xib; sourceTree = "<group>"; };
+		8FB262EF26FAC21A00E63F4B /* AlarmListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlarmListViewController.h; sourceTree = "<group>"; };
+		8FB262F026FAC21A00E63F4B /* AlarmListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlarmListViewController.m; sourceTree = "<group>"; };
+		8FB262F126FAC21A00E63F4B /* AlarmListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlarmListViewController.xib; sourceTree = "<group>"; };
+		8FB262F426FAC22900E63F4B /* AlarmViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlarmViewController.h; sourceTree = "<group>"; };
+		8FB262F526FAC22900E63F4B /* AlarmViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlarmViewController.m; sourceTree = "<group>"; };
+		8FB262F626FAC22900E63F4B /* AlarmViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlarmViewController.xib; sourceTree = "<group>"; };
 		A4424B84231537CC0002D35B /* P200A_HP00X_20190827_V1.11(0.0.2)_Release_Update.des */ = {isa = PBXFileReference; lastKnownFileType = file; path = "P200A_HP00X_20190827_V1.11(0.0.2)_Release_Update.des"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -550,6 +570,18 @@
 				8FA4886226F49841003F13D5 /* SleepAidViewController.h */,
 				8FA4886326F49841003F13D5 /* SleepAidViewController.m */,
 				8FA4886426F49841003F13D5 /* SleepAidViewController.xib */,
+				8FB262E526FABBB700E63F4B /* SettingsViewController.h */,
+				8FB262E626FABBB700E63F4B /* SettingsViewController.m */,
+				8FB262E726FABBB700E63F4B /* SettingsViewController.xib */,
+				8FB262EA26FAC1D900E63F4B /* BLEMuiscViewController.h */,
+				8FB262EB26FAC1D900E63F4B /* BLEMuiscViewController.m */,
+				8FB262EC26FAC1D900E63F4B /* BLEMuiscViewController.xib */,
+				8FB262EF26FAC21A00E63F4B /* AlarmListViewController.h */,
+				8FB262F026FAC21A00E63F4B /* AlarmListViewController.m */,
+				8FB262F126FAC21A00E63F4B /* AlarmListViewController.xib */,
+				8FB262F426FAC22900E63F4B /* AlarmViewController.h */,
+				8FB262F526FAC22900E63F4B /* AlarmViewController.m */,
+				8FB262F626FAC22900E63F4B /* AlarmViewController.xib */,
 			);
 			path = Operation;
 			sourceTree = "<group>";
@@ -696,9 +728,11 @@
 				261E9F951F690D7D0044BF3C /* LaunchScreen.storyboard in Resources */,
 				8F2ACC8926F5B25200F63034 /* SelectItemCell.xib in Resources */,
 				261E9FF31F690F0E0044BF3C /* device_btn_refresh_nor@3x.png in Resources */,
+				8FB262F826FAC22900E63F4B /* AlarmViewController.xib in Resources */,
 				261E9FBC1F690F050044BF3C /* Default-568h@2x.png in Resources */,
 				261E9F921F690D7D0044BF3C /* Assets.xcassets in Resources */,
 				261E9FF71F690F0E0044BF3C /* home@3x.png in Resources */,
+				8FB262EE26FAC1D900E63F4B /* BLEMuiscViewController.xib in Resources */,
 				261E9FFB1F690F0E0044BF3C /* leavebed_sm@3x.png in Resources */,
 				261EA15F1F6910B10044BF3C /* ControlViewController.xib in Resources */,
 				261E9FED1F690F0E0044BF3C /* about_logo@2x.png in Resources */,
@@ -727,6 +761,7 @@
 				261E9FBF1F690F050044BF3C /* Default@2x.png in Resources */,
 				A4424B85231537CD0002D35B /* P200A_HP00X_20190827_V1.11(0.0.2)_Release_Update.des in Resources */,
 				261EA1391F690FF40044BF3C /* SLPTitleValueArrowTableViewCell.xib in Resources */,
+				8FB262E926FABBB700E63F4B /* SettingsViewController.xib in Resources */,
 				260493DA1F6B81EE0035E2E8 /* ScanDeviceViewController.xib in Resources */,
 				261E9FF81F690F0E0044BF3C /* huxi_3-177@2x.png in Resources */,
 				261E9FBE1F690F050044BF3C /* Default-736h@3x.png in Resources */,
@@ -734,6 +769,7 @@
 				26B41BAD1F7DE01C0003994A /* sdk_index_icon_pillow@2x.png in Resources */,
 				261E9FF91F690F0E0044BF3C /* huxi_3-177@3x.png in Resources */,
 				261E9FF11F690F0E0044BF3C /* data@3x.png in Resources */,
+				8FB262F326FAC21A00E63F4B /* AlarmListViewController.xib in Resources */,
 				261E9FF61F690F0E0044BF3C /* home@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -771,6 +807,9 @@
 				261EA14F1F6910080044BF3C /* MBProgressHUD.m in Sources */,
 				261EA1501F6910080044BF3C /* README.mdown in Sources */,
 				8F2ACC8826F5B25200F63034 /* SelectItemCell.m in Sources */,
+				8FB262F726FAC22900E63F4B /* AlarmViewController.m in Sources */,
+				8FB262E826FABBB700E63F4B /* SettingsViewController.m in Sources */,
+				8FB262F226FAC21A00E63F4B /* AlarmListViewController.m in Sources */,
 				261EA1091F690FB90044BF3C /* SBJson.m in Sources */,
 				261EA1161F690FB90044BF3C /* ToolKit.m in Sources */,
 				261EA15E1F6910B10044BF3C /* ControlViewController.m in Sources */,
@@ -796,6 +835,7 @@
 				260493F51F6B82120035E2E8 /* FontColor.m in Sources */,
 				261EA10E1F690FB90044BF3C /* SBJsonStreamParserState.m in Sources */,
 				8F2ACC9026F5B6FD00F63034 /* BaseTableViewCell.m in Sources */,
+				8FB262ED26FAC1D900E63F4B /* BLEMuiscViewController.m in Sources */,
 				8FA4886526F49841003F13D5 /* SleepAidViewController.m in Sources */,
 				261EA1431F6910010044BF3C /* StartViewController.m in Sources */,
 				260493EE1F6B82090035E2E8 /* SimulateData.m in Sources */,
