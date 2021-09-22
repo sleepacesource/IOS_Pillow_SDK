@@ -14,7 +14,7 @@
 {
     UpgradeInfoObj *upgradeInfo=[[UpgradeInfoObj alloc]init];
     
-    NSString *filepath=[[NSBundle mainBundle] pathForResource:@"P200A_HP00X_20190827_V1.11(0.0.2)_Release_Update" ofType:@"des"];
+    NSString *filepath=[[NSBundle mainBundle] pathForResource:@"P102T-v1.13r(v2.0.1b)-g-20210816" ofType:@"img"];
     upgradeInfo.package=[NSData dataWithContentsOfFile:filepath];
     upgradeInfo.crcDes=1119821362;
     upgradeInfo.crcBin=256003259;

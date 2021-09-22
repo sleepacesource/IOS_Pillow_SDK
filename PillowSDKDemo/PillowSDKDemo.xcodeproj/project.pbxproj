@@ -90,7 +90,7 @@
 		26EEAB11242B24AE000FD4AB /* BluetoothManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26EEAB0E242B24AE000FD4AB /* BluetoothManager.framework */; };
 		26EEAB12242B24AE000FD4AB /* Pillow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26EEAB0F242B24AE000FD4AB /* Pillow.framework */; };
 		26EEAB13242B24AE000FD4AB /* SLPCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26EEAB10242B24AE000FD4AB /* SLPCommon.framework */; };
-		A4424B85231537CD0002D35B /* P200A_HP00X_20190827_V1.11(0.0.2)_Release_Update.des in Resources */ = {isa = PBXBuildFile; fileRef = A4424B84231537CC0002D35B /* P200A_HP00X_20190827_V1.11(0.0.2)_Release_Update.des */; };
+		8FB262FA26FACA7400E63F4B /* P102T-v1.13r(v2.0.1b)-g-20210816.img in Resources */ = {isa = PBXBuildFile; fileRef = 8FB262F926FACA7400E63F4B /* P102T-v1.13r(v2.0.1b)-g-20210816.img */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -240,7 +240,7 @@
 		26EEAB0E242B24AE000FD4AB /* BluetoothManager.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BluetoothManager.framework; sourceTree = "<group>"; };
 		26EEAB0F242B24AE000FD4AB /* Pillow.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Pillow.framework; sourceTree = "<group>"; };
 		26EEAB10242B24AE000FD4AB /* SLPCommon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SLPCommon.framework; sourceTree = "<group>"; };
-		A4424B84231537CC0002D35B /* P200A_HP00X_20190827_V1.11(0.0.2)_Release_Update.des */ = {isa = PBXFileReference; lastKnownFileType = file; path = "P200A_HP00X_20190827_V1.11(0.0.2)_Release_Update.des"; sourceTree = "<group>"; };
+		8FB262F926FACA7400E63F4B /* P102T-v1.13r(v2.0.1b)-g-20210816.img */ = {isa = PBXFileReference; lastKnownFileType = file; path = "P102T-v1.13r(v2.0.1b)-g-20210816.img"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -408,7 +408,7 @@
 		261E9FC11F690F0E0044BF3C /* package */ = {
 			isa = PBXGroup;
 			children = (
-				A4424B84231537CC0002D35B /* P200A_HP00X_20190827_V1.11(0.0.2)_Release_Update.des */,
+				8FB262F926FACA7400E63F4B /* P102T-v1.13r(v2.0.1b)-g-20210816.img */,
 			);
 			path = package;
 			sourceTree = "<group>";
@@ -651,6 +651,7 @@
 				261E9F921F690D7D0044BF3C /* Assets.xcassets in Resources */,
 				261E9FF71F690F0E0044BF3C /* home@3x.png in Resources */,
 				261E9FFB1F690F0E0044BF3C /* leavebed_sm@3x.png in Resources */,
+				8FB262FA26FACA7400E63F4B /* P102T-v1.13r(v2.0.1b)-g-20210816.img in Resources */,
 				261EA15F1F6910B10044BF3C /* ControlViewController.xib in Resources */,
 				261E9FED1F690F0E0044BF3C /* about_logo@2x.png in Resources */,
 				261E9FF01F690F0E0044BF3C /* data@2x.png in Resources */,
@@ -675,7 +676,6 @@
 				261EA1441F6910010044BF3C /* StartViewController.xib in Resources */,
 				26B41BAE1F7DE01C0003994A /* sdk_index_icon_pillow@3x.png in Resources */,
 				261E9FBF1F690F050044BF3C /* Default@2x.png in Resources */,
-				A4424B85231537CD0002D35B /* P200A_HP00X_20190827_V1.11(0.0.2)_Release_Update.des in Resources */,
 				261EA1391F690FF40044BF3C /* SLPTitleValueArrowTableViewCell.xib in Resources */,
 				260493DA1F6B81EE0035E2E8 /* ScanDeviceViewController.xib in Resources */,
 				261E9FF81F690F0E0044BF3C /* huxi_3-177@2x.png in Resources */,
@@ -930,7 +930,7 @@
 					"-force_load",
 					"$(SRCROOT)/Pillow.framework/Pillow",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.medicatech.PillowSDKDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.medicatech.P102TSDKDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -955,7 +955,7 @@
 					"-force_load",
 					"$(SRCROOT)/Pillow.framework/Pillow",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.medicatech.PillowSDKDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.medicatech.P102TSDKDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

@@ -96,6 +96,17 @@
 upgradePackage:(NSData *)package
       callback:(SLPTransforCallback)handle;
 
+/*ZP100/P401M/PHP1301/P102T升级
+ pkey:私钥
+hashCode: 哈希值
+ package:升级包
+ 回调返回 PillowUpgradeInfo
+ */
+- (void)pillow:(CBPeripheral *)peripheral upgradeDeviceWithPkey:(NSString *)pkey
+        hashCode:(NSString *)hashCode
+upgradePackage:(NSData *)package
+      callback:(SLPTransforCallback)handle;
+
 /*历史数据下载(全自动)
  type: 样本数据的人群类型
  startTime:开始时间戳
