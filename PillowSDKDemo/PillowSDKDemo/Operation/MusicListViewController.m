@@ -10,6 +10,8 @@
 
 #import "SelectItemCell.h"
 #import "MusicInfo.h"
+#import <Pillow/Pillow.h>
+#import "UtilsHeads.h"
 
 @interface MusicListViewController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -39,6 +41,12 @@
     if (self.mode == FromMode_Alarm) {
         self.saveBtn.hidden = YES;
     }
+}
+
+-(void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    
+    [self stopMusic];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellNibName:(NSString *)nibName{
@@ -99,11 +107,11 @@
 //    }
     __weak typeof(self) weakSelf = self;
     if (self.mode == FromMode_Alarm) {
-//        [SLPBLESharedManager bleNox:SharedDataManager.peripheral turnOnMusic:musicID volume:16 playMode:0 timeout:0 callback:^(SLPDataTransferStatus status, id data) {
-//            if (status != SLPDataTransferStatus_Succeed) {
-//                [Utils showDeviceOperationFailed:status atViewController:weakSelf];
-//            }
-//        }];
+        [SLPBLESharedManager pillow:SharedDataManager.peripheral playMusicWithOperation:1 musicId:musicID volume:6 timeout:0 callback:^(SLPDataTransferStatus status, id data) {
+            if (status != SLPDataTransferStatus_Succeed) {
+                [Utils showDeviceOperationFailed:status atViewController:weakSelf];
+            }
+        }];
     }
 }
 
@@ -115,6 +123,7 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+
 - (void)stopMusic
 {
     __weak typeof(self) weakSelf = self;
@@ -123,6 +132,11 @@
 //            [Utils showMessage:@"蓝牙未打开" controller:self];
 //            return;
 //        }
+        
+        [SLPBLESharedManager pillow:SharedDataManager.peripheral playMusicWithOperation:0 musicId:self.musicID volume:6 timeout:0 callback:^(SLPDataTransferStatus status, id data) {
+            
+        }];
+        
 //        [SLPBLESharedManager bleNox:SharedDataManager.peripheral turnOffMusicTimeout:0 callback:^(SLPDataTransferStatus status, id data) {
 //            if (status != SLPDataTransferStatus_Succeed) {
 //                [Utils showDeviceOperationFailed:status atViewController:weakSelf];

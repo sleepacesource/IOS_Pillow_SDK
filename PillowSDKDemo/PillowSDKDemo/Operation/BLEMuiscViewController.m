@@ -8,6 +8,9 @@
 
 #import "BLEMuiscViewController.h"
 
+#import <Pillow/Pillow.h>
+#import "UtilsHeads.h"
+
 @interface BLEMuiscViewController ()
 
 @property (weak, nonatomic) IBOutlet UIView *timeContainer;
@@ -16,8 +19,7 @@
 @property (weak, nonatomic) IBOutlet UIView *stopFlagContainer;
 @property (weak, nonatomic) IBOutlet UILabel *stopFlagLabel;
 
-@property (nonatomic, assign) UInt8 smartFlag;
-@property (nonatomic, assign) UInt16 smartDuration;
+@property (nonatomic, strong) PillowSmartStop *smartStopInfo;
 
 @end
 
@@ -26,10 +28,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.smartFlag = 0;
-    self.smartDuration = 45;
-    
     [self setUI];
+    
+    [self getData];
+}
+
+- (void)getData {
+    __weak typeof(self) weakSelf = self;
+    [SLPBLESharedManager pillow:SharedDataManager.peripheral getSmartStopWithTimeout:0 callback:^(SLPDataTransferStatus status, id data) {
+        if (status == SLPDataTransferStatus_Succeed) {
+            weakSelf.smartStopInfo = data;
+            if (weakSelf.smartStopInfo.duration == 0) {
+                weakSelf.smartStopInfo.duration = 45;
+            }
+            weakSelf.stopFlagLabel.text = [weakSelf getSmartFlagName:self.smartStopInfo.operation];
+            weakSelf.timeLabel.text = [NSString stringWithFormat:@"%d分钟", self.smartStopInfo.duration];
+        }
+    }];
 }
 
 - (NSString *)getSmartFlagName:(UInt8)smartFlag {
@@ -41,8 +56,8 @@
 }
 
 - (void)setUI {
-    self.stopFlagLabel.text = [self getSmartFlagName:self.smartFlag];
-    self.timeLabel.text = [NSString stringWithFormat:@"%d分钟", self.smartDuration];
+    self.stopFlagLabel.text = [self getSmartFlagName:self.smartStopInfo.operation];
+    self.timeLabel.text = [NSString stringWithFormat:@"%d分钟", self.smartStopInfo.duration];
     
     self.timeContainer.layer.masksToBounds = YES;
     self.timeContainer.layer.cornerRadius = 5;
@@ -55,6 +70,18 @@
     self.stopFlagContainer.layer.borderWidth = 1;
 }
 
+- (void)setSmartStopInfo {
+    __weak typeof(self) weakSelf = self;
+    [SLPBLESharedManager pillow:SharedDataManager.peripheral smartStopConfig:self.smartStopInfo timeout:0 callback:^(SLPDataTransferStatus status, id data) {
+        if (status != SLPDataTransferStatus_Succeed) {
+            [Utils showDeviceOperationFailed:status atViewController:weakSelf];
+        } else {
+            [Utils showMessage:@"保存成功" controller:weakSelf];
+        }
+        
+    }];
+}
+
 - (IBAction)chooseTime:(UIButton *)sender {
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"" message:@"定时结束" preferredStyle:UIAlertControllerStyleActionSheet];
     __weak typeof(self) weakSelf = self;
@@ -62,19 +89,19 @@
         
     }];
     UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"15分钟" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        weakSelf.smartDuration = 15;
+        weakSelf.smartStopInfo.duration = 15;
         weakSelf.timeLabel.text = @"15分钟";
     }];
     UIAlertAction *action2 = [UIAlertAction actionWithTitle:@"30分钟" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        weakSelf.smartDuration = 30;
+        weakSelf.smartStopInfo.duration = 30;
         weakSelf.timeLabel.text = @"30分钟";
     }];
     UIAlertAction *action3 = [UIAlertAction actionWithTitle:@"45分钟" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        weakSelf.smartDuration = 45;
+        weakSelf.smartStopInfo.duration = 45;
         weakSelf.timeLabel.text = @"45分钟";
     }];
     UIAlertAction *action4 = [UIAlertAction actionWithTitle:@"60分钟" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        weakSelf.smartDuration = 60;
+        weakSelf.smartStopInfo.duration = 60;
         weakSelf.timeLabel.text = @"60分钟";
         
     }];
@@ -93,11 +120,11 @@
         
     }];
     UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"关" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        weakSelf.smartFlag = 0;
+        weakSelf.smartStopInfo.operation = 0;
         weakSelf.stopFlagLabel.text = @"关";
     }];
     UIAlertAction *resetAction = [UIAlertAction actionWithTitle:@"开" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        weakSelf.smartFlag = 1;
+        weakSelf.smartStopInfo.operation = 1;
         weakSelf.stopFlagLabel.text = @"开";
     }];
     [alertController addAction:cancelAction];
@@ -108,6 +135,6 @@
 
 - (IBAction)saveData:(UIButton *)sender {
     __weak typeof(self) weakSelf = self;
-    
+    [self setSmartStopInfo];
 }
 @end

@@ -21,6 +21,8 @@ typedef void(^SelectMusicBlock)(NSInteger musicID);
 
 @property (nonatomic, assign) UInt16 musicID;
 
+@property (nonatomic, assign) UInt8 volume;
+
 @property (nonatomic, copy) NSArray *musicList;
 
 @property (nonatomic, copy) SelectMusicBlock musicBlock;

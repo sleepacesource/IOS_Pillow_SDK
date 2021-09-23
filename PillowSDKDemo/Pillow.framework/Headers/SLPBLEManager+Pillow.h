@@ -175,8 +175,11 @@ finishCallback:(SLPTransforCallback)finishHandle;
 - (void)pillow:(CBPeripheral *)peripheral leftBedAlarmConfig:(LeftBedAlarmInfo *)alarmInfo
        timeout:(CGFloat)timeout callback:(SLPTransforCallback)handle;
 
-/*
- 离枕闹钟获取
+/*离枕闹钟获取
  */
 - (void)pillow:(CBPeripheral *)peripheral getLeftBedAlarmInfoWithTimeout:(CGFloat)timeout callback:(SLPTransforCallback)handle;
+
+/*闹钟音乐试听功能
+ */
+- (void)pillow:(CBPeripheral *)peripheral playMusicWithOperation:(UInt8)operation musicId:(UInt16)musicId volume:(UInt8)volume timeout:(CGFloat)timeout callback:(SLPTransforCallback)handle;
 @end

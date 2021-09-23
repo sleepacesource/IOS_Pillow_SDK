@@ -110,6 +110,7 @@ typedef NS_ENUM(NSInteger,SLPBLEMessagetUniqTypes) {
     SLPBLEMessagetUniqType_PillowGetAlarmList, // P401M闹钟列表获取
     SLPBLEMessagetUniqType_PillowLeftBedAlarmConfig, // 离床闹钟设置
     SLPBLEMessagetUniqType_PillowGetLeftBedAlarm,   // 离床闹钟获取
+    SLPBLEMessagetUniqType_PillowPlayMusic, // 试听音乐
     //Mattress
     SLPBLEMessagetUniqType_Mattress_GetDeviceInfo,
     SLPBLEMessagetUniqType_Mattress_ConfigureWiFiSetting,

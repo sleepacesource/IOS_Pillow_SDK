@@ -439,7 +439,6 @@ static NSString *const kRowSnoozeTime = @"kRowSnoozeTime";
         TitleSwitchCell *sCell = (TitleSwitchCell *)[SLPUtils tableView:self.tableView cellNibName:@"TitleSwitchCell"];
         sCell.titleLabel.text = @"智能唤醒";
         sCell.switcher.on = self.alarmDataNew.smartFlag;
-        [Utils configCellTitleLabel:sCell.titleLabel];
         
         
         sCell.switchBlock = ^(UISwitch *sender) {
