@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MusicInfo : NSObject
 
-@property (nonatomic, assign) UInt16 musicID;
+@property (nonatomic, assign) NSInteger musicID;
 
 @property (nonatomic, copy) NSString *musicName;
 

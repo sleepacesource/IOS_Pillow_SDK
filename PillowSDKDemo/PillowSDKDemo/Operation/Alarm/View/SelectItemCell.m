@@ -13,6 +13,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    self.selectIcon.image = [UIImage imageNamed:@"list_icon_select"];
     self.selectIcon.hidden = YES;
 }
 

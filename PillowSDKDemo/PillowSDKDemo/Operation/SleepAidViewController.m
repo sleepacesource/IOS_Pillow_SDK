@@ -173,6 +173,7 @@
     vc.musicList = self.musicList;
     vc.musicID = self.assistMusicID;
     vc.mode = FromMode_SleepAid;
+    vc.title = @"音乐列表";
     __weak typeof(self) weakSelf = self;
     vc.musicBlock = ^(NSInteger musicID) {
         self.assistMusicID = musicID;

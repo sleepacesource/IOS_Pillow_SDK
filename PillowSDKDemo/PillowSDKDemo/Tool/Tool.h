@@ -30,5 +30,4 @@
 + (SLPHistoryData *)backLatestHistoryData:(NSMutableArray *)dataArray;
 
 +(void)writeStringToDocument:(NSString *)stirng;
-
 @end

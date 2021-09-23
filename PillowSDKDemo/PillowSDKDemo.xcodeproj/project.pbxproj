@@ -90,23 +90,66 @@
 		26EEAB11242B24AE000FD4AB /* BluetoothManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26EEAB0E242B24AE000FD4AB /* BluetoothManager.framework */; };
 		26EEAB12242B24AE000FD4AB /* Pillow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26EEAB0F242B24AE000FD4AB /* Pillow.framework */; };
 		26EEAB13242B24AE000FD4AB /* SLPCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26EEAB10242B24AE000FD4AB /* SLPCommon.framework */; };
-		8F2ACC7A26F5AF8500F63034 /* MusicInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F2ACC7826F5AF8500F63034 /* MusicInfo.m */; };
 		8F2ACC8326F5B1C800F63034 /* MusicListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F2ACC8026F5B1C800F63034 /* MusicListViewController.xib */; };
 		8F2ACC8426F5B1C800F63034 /* MusicListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F2ACC8226F5B1C800F63034 /* MusicListViewController.m */; };
-		8F2ACC8826F5B25200F63034 /* SelectItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F2ACC8526F5B25200F63034 /* SelectItemCell.m */; };
-		8F2ACC8926F5B25200F63034 /* SelectItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F2ACC8626F5B25200F63034 /* SelectItemCell.xib */; };
-		8F2ACC8D26F5B6D400F63034 /* Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F2ACC8C26F5B6D400F63034 /* Theme.m */; };
 		8F2ACC9026F5B6FD00F63034 /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F2ACC8F26F5B6FD00F63034 /* BaseTableViewCell.m */; };
 		8FA4886526F49841003F13D5 /* SleepAidViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA4886326F49841003F13D5 /* SleepAidViewController.m */; };
 		8FA4886626F49841003F13D5 /* SleepAidViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FA4886426F49841003F13D5 /* SleepAidViewController.xib */; };
+		8FAD04AC26FC19F0009300AB /* AlarmViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FAD048226FC19F0009300AB /* AlarmViewController.xib */; };
+		8FAD04AE26FC19F0009300AB /* WeekdaySelectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FAD048526FC19F0009300AB /* WeekdaySelectViewController.xib */; };
+		8FAD04AF26FC19F0009300AB /* AlarmListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FAD048626FC19F0009300AB /* AlarmListViewController.m */; };
+		8FAD04B126FC19F0009300AB /* AlarmListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FAD048826FC19F0009300AB /* AlarmListViewController.xib */; };
+		8FAD04B226FC19F0009300AB /* WeekdayInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FAD048B26FC19F0009300AB /* WeekdayInfo.m */; };
+		8FAD04B326FC19F0009300AB /* MusicInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FAD048D26FC19F0009300AB /* MusicInfo.m */; };
+		8FAD04B426FC19F0009300AB /* SLPWeekDay.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FAD048F26FC19F0009300AB /* SLPWeekDay.m */; };
+		8FAD04B526FC19F0009300AB /* AlarmDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FAD049126FC19F0009300AB /* AlarmDataModel.m */; };
+		8FAD04B626FC19F0009300AB /* SLPViewInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FAD049426FC19F0009300AB /* SLPViewInfo.m */; };
+		8FAD04B726FC19F0009300AB /* SLPLabelFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FAD049626FC19F0009300AB /* SLPLabelFooter.xib */; };
+		8FAD04B826FC19F0009300AB /* TitleValueSwitchCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FAD049726FC19F0009300AB /* TitleValueSwitchCellTableViewCell.xib */; };
+		8FAD04B926FC19F0009300AB /* TitleSwitchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FAD049926FC19F0009300AB /* TitleSwitchCell.xib */; };
+		8FAD04BA26FC19F0009300AB /* TitleSubTitleArrowCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FAD049A26FC19F0009300AB /* TitleSubTitleArrowCell.xib */; };
+		8FAD04BB26FC19F0009300AB /* TitleValueSwitchCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FAD049C26FC19F0009300AB /* TitleValueSwitchCellTableViewCell.m */; };
+		8FAD04BC26FC19F0009300AB /* SLPAlarmFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FAD049D26FC19F0009300AB /* SLPAlarmFooter.m */; };
+		8FAD04BD26FC19F0009300AB /* TitleSubTitleArrowCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FAD049E26FC19F0009300AB /* TitleSubTitleArrowCell.m */; };
+		8FAD04BE26FC19F0009300AB /* TitleSwitchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FAD049F26FC19F0009300AB /* TitleSwitchCell.m */; };
+		8FAD04BF26FC19F0009300AB /* SLPAlarmFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FAD04A026FC19F0009300AB /* SLPAlarmFooter.xib */; };
+		8FAD04C026FC19F0009300AB /* SLPLabelFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FAD04A126FC19F0009300AB /* SLPLabelFooter.m */; };
+		8FAD04C126FC19F0009300AB /* SelectItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FAD04A326FC19F0009300AB /* SelectItemCell.m */; };
+		8FAD04C226FC19F0009300AB /* SelectItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FAD04A426FC19F0009300AB /* SelectItemCell.xib */; };
+		8FAD04C326FC19F0009300AB /* WeekdaySelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FAD04A926FC19F0009300AB /* WeekdaySelectViewController.m */; };
+		8FAD04C426FC19F0009300AB /* AlarmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FAD04AA26FC19F0009300AB /* AlarmViewController.m */; };
+		8FAD04C726FC1A31009300AB /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FAD04C526FC1A31009300AB /* BaseViewController.m */; };
+		8FAD04D426FC1A68009300AB /* SLPLoadingBlockView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FAD04C926FC1A68009300AB /* SLPLoadingBlockView.xib */; };
+		8FAD04D526FC1A68009300AB /* DatePickerPopUpView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FAD04CB26FC1A68009300AB /* DatePickerPopUpView.xib */; };
+		8FAD04D626FC1A68009300AB /* PopUpView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FAD04CC26FC1A68009300AB /* PopUpView.xib */; };
+		8FAD04D726FC1A68009300AB /* PopUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FAD04CD26FC1A68009300AB /* PopUpView.m */; };
+		8FAD04D826FC1A68009300AB /* DatePickerPopUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FAD04CE26FC1A68009300AB /* DatePickerPopUpView.m */; };
+		8FAD04D926FC1A68009300AB /* SLPLoadingBlockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FAD04CF26FC1A68009300AB /* SLPLoadingBlockView.m */; };
+		8FAD04DA26FC1A68009300AB /* SLPPopBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FAD04D026FC1A68009300AB /* SLPPopBaseView.m */; };
+		8FAD04DE26FC1A95009300AB /* Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FAD04DD26FC1A95009300AB /* Theme.m */; };
+		8FAD04EC26FC1BEF009300AB /* Utils+UI.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FAD04E926FC1BEF009300AB /* Utils+UI.m */; };
+		8FAD04ED26FC1BEF009300AB /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FAD04EA26FC1BEF009300AB /* Utils.m */; };
+		8FAD04F026FC1F93009300AB /* SLPTableSectionData.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FAD04EF26FC1F93009300AB /* SLPTableSectionData.m */; };
+		8FAD050526FC1FFB009300AB /* SLPTime12.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FAD04F226FC1FFB009300AB /* SLPTime12.m */; };
+		8FAD050626FC1FFB009300AB /* SLPTime24.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FAD04F426FC1FFB009300AB /* SLPTime24.m */; };
+		8FAD050726FC1FFB009300AB /* TimePickerSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FAD04F826FC1FFB009300AB /* TimePickerSelectView.m */; };
+		8FAD050826FC1FFB009300AB /* SLPMinuteSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FAD04F926FC1FFB009300AB /* SLPMinuteSelectView.m */; };
+		8FAD050926FC1FFB009300AB /* HourMinutePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FAD04FA26FC1FFB009300AB /* HourMinutePicker.m */; };
+		8FAD050A26FC1FFB009300AB /* HourMinutePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FAD04FB26FC1FFB009300AB /* HourMinutePicker.xib */; };
+		8FAD050B26FC1FFB009300AB /* SLPMinutePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FAD04FC26FC1FFB009300AB /* SLPMinutePicker.m */; };
+		8FAD050C26FC1FFB009300AB /* SLPTimePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FAD04FD26FC1FFB009300AB /* SLPTimePicker.m */; };
+		8FAD050D26FC1FFB009300AB /* SLPMinuteSelectView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FAD050126FC1FFB009300AB /* SLPMinuteSelectView.xib */; };
+		8FAD050E26FC1FFB009300AB /* TimePickerSelectView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FAD050226FC1FFB009300AB /* TimePickerSelectView.xib */; };
+		8FAD051726FC21FD009300AB /* SLPUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FAD051326FC21FD009300AB /* SLPUtils.m */; };
+		8FAD051826FC21FD009300AB /* SLPUtils+Date.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FAD051426FC21FD009300AB /* SLPUtils+Date.m */; };
+		8FAD051926FC21FD009300AB /* SLPUtils+Data.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FAD051526FC21FD009300AB /* SLPUtils+Data.m */; };
+		8FAD051D26FC2C0E009300AB /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FAD051C26FC2C0E009300AB /* DataManager.m */; };
+		8FAD052526FC7230009300AB /* TitleSubTitleContentArrowCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FAD052326FC7230009300AB /* TitleSubTitleContentArrowCell.m */; };
+		8FAD052626FC7230009300AB /* TitleSubTitleContentArrowCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FAD052426FC7230009300AB /* TitleSubTitleContentArrowCell.xib */; };
 		8FB262E826FABBB700E63F4B /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB262E626FABBB700E63F4B /* SettingsViewController.m */; };
 		8FB262E926FABBB700E63F4B /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FB262E726FABBB700E63F4B /* SettingsViewController.xib */; };
 		8FB262ED26FAC1D900E63F4B /* BLEMuiscViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB262EB26FAC1D900E63F4B /* BLEMuiscViewController.m */; };
 		8FB262EE26FAC1D900E63F4B /* BLEMuiscViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FB262EC26FAC1D900E63F4B /* BLEMuiscViewController.xib */; };
-		8FB262F226FAC21A00E63F4B /* AlarmListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB262F026FAC21A00E63F4B /* AlarmListViewController.m */; };
-		8FB262F326FAC21A00E63F4B /* AlarmListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FB262F126FAC21A00E63F4B /* AlarmListViewController.xib */; };
-		8FB262F726FAC22900E63F4B /* AlarmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB262F526FAC22900E63F4B /* AlarmViewController.m */; };
-		8FB262F826FAC22900E63F4B /* AlarmViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FB262F626FAC22900E63F4B /* AlarmViewController.xib */; };
 		A4424B85231537CD0002D35B /* P200A_HP00X_20190827_V1.11(0.0.2)_Release_Update.des in Resources */ = {isa = PBXBuildFile; fileRef = A4424B84231537CC0002D35B /* P200A_HP00X_20190827_V1.11(0.0.2)_Release_Update.des */; };
 /* End PBXBuildFile section */
 
@@ -257,33 +300,109 @@
 		26EEAB0E242B24AE000FD4AB /* BluetoothManager.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BluetoothManager.framework; sourceTree = "<group>"; };
 		26EEAB0F242B24AE000FD4AB /* Pillow.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Pillow.framework; sourceTree = "<group>"; };
 		26EEAB10242B24AE000FD4AB /* SLPCommon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SLPCommon.framework; sourceTree = "<group>"; };
-		8F2ACC7826F5AF8500F63034 /* MusicInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicInfo.m; sourceTree = "<group>"; };
-		8F2ACC7926F5AF8500F63034 /* MusicInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicInfo.h; sourceTree = "<group>"; };
 		8F2ACC8026F5B1C800F63034 /* MusicListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MusicListViewController.xib; sourceTree = "<group>"; };
 		8F2ACC8126F5B1C800F63034 /* MusicListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicListViewController.h; sourceTree = "<group>"; };
 		8F2ACC8226F5B1C800F63034 /* MusicListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicListViewController.m; sourceTree = "<group>"; };
-		8F2ACC8526F5B25200F63034 /* SelectItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectItemCell.m; sourceTree = "<group>"; };
-		8F2ACC8626F5B25200F63034 /* SelectItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectItemCell.xib; sourceTree = "<group>"; };
-		8F2ACC8726F5B25200F63034 /* SelectItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectItemCell.h; sourceTree = "<group>"; };
-		8F2ACC8B26F5B6D400F63034 /* Theme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Theme.h; sourceTree = "<group>"; };
-		8F2ACC8C26F5B6D400F63034 /* Theme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Theme.m; sourceTree = "<group>"; };
 		8F2ACC8E26F5B6FD00F63034 /* BaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewCell.h; sourceTree = "<group>"; };
 		8F2ACC8F26F5B6FD00F63034 /* BaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewCell.m; sourceTree = "<group>"; };
 		8FA4886226F49841003F13D5 /* SleepAidViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SleepAidViewController.h; sourceTree = "<group>"; };
 		8FA4886326F49841003F13D5 /* SleepAidViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SleepAidViewController.m; sourceTree = "<group>"; };
 		8FA4886426F49841003F13D5 /* SleepAidViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SleepAidViewController.xib; sourceTree = "<group>"; };
+		8FAD048226FC19F0009300AB /* AlarmViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlarmViewController.xib; sourceTree = "<group>"; };
+		8FAD048326FC19F0009300AB /* WeekdaySelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeekdaySelectViewController.h; sourceTree = "<group>"; };
+		8FAD048526FC19F0009300AB /* WeekdaySelectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeekdaySelectViewController.xib; sourceTree = "<group>"; };
+		8FAD048626FC19F0009300AB /* AlarmListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmListViewController.m; sourceTree = "<group>"; };
+		8FAD048826FC19F0009300AB /* AlarmListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlarmListViewController.xib; sourceTree = "<group>"; };
+		8FAD048926FC19F0009300AB /* AlarmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmViewController.h; sourceTree = "<group>"; };
+		8FAD048B26FC19F0009300AB /* WeekdayInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeekdayInfo.m; sourceTree = "<group>"; };
+		8FAD048C26FC19F0009300AB /* AlarmDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmDataModel.h; sourceTree = "<group>"; };
+		8FAD048D26FC19F0009300AB /* MusicInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicInfo.m; sourceTree = "<group>"; };
+		8FAD048E26FC19F0009300AB /* SLPViewInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLPViewInfo.h; sourceTree = "<group>"; };
+		8FAD048F26FC19F0009300AB /* SLPWeekDay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLPWeekDay.m; sourceTree = "<group>"; };
+		8FAD049026FC19F0009300AB /* WeekdayInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeekdayInfo.h; sourceTree = "<group>"; };
+		8FAD049126FC19F0009300AB /* AlarmDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmDataModel.m; sourceTree = "<group>"; };
+		8FAD049226FC19F0009300AB /* MusicInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicInfo.h; sourceTree = "<group>"; };
+		8FAD049326FC19F0009300AB /* SLPWeekDay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLPWeekDay.h; sourceTree = "<group>"; };
+		8FAD049426FC19F0009300AB /* SLPViewInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLPViewInfo.m; sourceTree = "<group>"; };
+		8FAD049626FC19F0009300AB /* SLPLabelFooter.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SLPLabelFooter.xib; sourceTree = "<group>"; };
+		8FAD049726FC19F0009300AB /* TitleValueSwitchCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TitleValueSwitchCellTableViewCell.xib; sourceTree = "<group>"; };
+		8FAD049826FC19F0009300AB /* SLPLabelFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLPLabelFooter.h; sourceTree = "<group>"; };
+		8FAD049926FC19F0009300AB /* TitleSwitchCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TitleSwitchCell.xib; sourceTree = "<group>"; };
+		8FAD049A26FC19F0009300AB /* TitleSubTitleArrowCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TitleSubTitleArrowCell.xib; sourceTree = "<group>"; };
+		8FAD049B26FC19F0009300AB /* SelectItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectItemCell.h; sourceTree = "<group>"; };
+		8FAD049C26FC19F0009300AB /* TitleValueSwitchCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleValueSwitchCellTableViewCell.m; sourceTree = "<group>"; };
+		8FAD049D26FC19F0009300AB /* SLPAlarmFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLPAlarmFooter.m; sourceTree = "<group>"; };
+		8FAD049E26FC19F0009300AB /* TitleSubTitleArrowCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleSubTitleArrowCell.m; sourceTree = "<group>"; };
+		8FAD049F26FC19F0009300AB /* TitleSwitchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleSwitchCell.m; sourceTree = "<group>"; };
+		8FAD04A026FC19F0009300AB /* SLPAlarmFooter.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SLPAlarmFooter.xib; sourceTree = "<group>"; };
+		8FAD04A126FC19F0009300AB /* SLPLabelFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLPLabelFooter.m; sourceTree = "<group>"; };
+		8FAD04A226FC19F0009300AB /* TitleValueSwitchCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleValueSwitchCellTableViewCell.h; sourceTree = "<group>"; };
+		8FAD04A326FC19F0009300AB /* SelectItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectItemCell.m; sourceTree = "<group>"; };
+		8FAD04A426FC19F0009300AB /* SelectItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectItemCell.xib; sourceTree = "<group>"; };
+		8FAD04A526FC19F0009300AB /* TitleSwitchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleSwitchCell.h; sourceTree = "<group>"; };
+		8FAD04A626FC19F0009300AB /* TitleSubTitleArrowCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleSubTitleArrowCell.h; sourceTree = "<group>"; };
+		8FAD04A726FC19F0009300AB /* SLPAlarmFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLPAlarmFooter.h; sourceTree = "<group>"; };
+		8FAD04A826FC19F0009300AB /* AlarmListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmListViewController.h; sourceTree = "<group>"; };
+		8FAD04A926FC19F0009300AB /* WeekdaySelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeekdaySelectViewController.m; sourceTree = "<group>"; };
+		8FAD04AA26FC19F0009300AB /* AlarmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmViewController.m; sourceTree = "<group>"; };
+		8FAD04C526FC1A31009300AB /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		8FAD04C626FC1A31009300AB /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		8FAD04C926FC1A68009300AB /* SLPLoadingBlockView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SLPLoadingBlockView.xib; sourceTree = "<group>"; };
+		8FAD04CA26FC1A68009300AB /* SLPPopBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLPPopBaseView.h; sourceTree = "<group>"; };
+		8FAD04CB26FC1A68009300AB /* DatePickerPopUpView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DatePickerPopUpView.xib; sourceTree = "<group>"; };
+		8FAD04CC26FC1A68009300AB /* PopUpView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopUpView.xib; sourceTree = "<group>"; };
+		8FAD04CD26FC1A68009300AB /* PopUpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopUpView.m; sourceTree = "<group>"; };
+		8FAD04CE26FC1A68009300AB /* DatePickerPopUpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatePickerPopUpView.m; sourceTree = "<group>"; };
+		8FAD04CF26FC1A68009300AB /* SLPLoadingBlockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLPLoadingBlockView.m; sourceTree = "<group>"; };
+		8FAD04D026FC1A68009300AB /* SLPPopBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLPPopBaseView.m; sourceTree = "<group>"; };
+		8FAD04D126FC1A68009300AB /* SLPLoadingBlockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLPLoadingBlockView.h; sourceTree = "<group>"; };
+		8FAD04D226FC1A68009300AB /* DatePickerPopUpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatePickerPopUpView.h; sourceTree = "<group>"; };
+		8FAD04D326FC1A68009300AB /* PopUpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopUpView.h; sourceTree = "<group>"; };
+		8FAD04DC26FC1A95009300AB /* Theme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Theme.h; sourceTree = "<group>"; };
+		8FAD04DD26FC1A95009300AB /* Theme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Theme.m; sourceTree = "<group>"; };
+		8FAD04E726FC1BEF009300AB /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		8FAD04E826FC1BEF009300AB /* Utils+UI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Utils+UI.h"; sourceTree = "<group>"; };
+		8FAD04E926FC1BEF009300AB /* Utils+UI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Utils+UI.m"; sourceTree = "<group>"; };
+		8FAD04EA26FC1BEF009300AB /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
+		8FAD04EB26FC1BEF009300AB /* UtilsHeads.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UtilsHeads.h; sourceTree = "<group>"; };
+		8FAD04EE26FC1F93009300AB /* SLPTableSectionData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLPTableSectionData.h; sourceTree = "<group>"; };
+		8FAD04EF26FC1F93009300AB /* SLPTableSectionData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLPTableSectionData.m; sourceTree = "<group>"; };
+		8FAD04F226FC1FFB009300AB /* SLPTime12.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLPTime12.m; sourceTree = "<group>"; };
+		8FAD04F326FC1FFB009300AB /* SLPTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLPTime.h; sourceTree = "<group>"; };
+		8FAD04F426FC1FFB009300AB /* SLPTime24.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLPTime24.m; sourceTree = "<group>"; };
+		8FAD04F526FC1FFB009300AB /* SLPTime12.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLPTime12.h; sourceTree = "<group>"; };
+		8FAD04F626FC1FFB009300AB /* SLPTime24.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLPTime24.h; sourceTree = "<group>"; };
+		8FAD04F826FC1FFB009300AB /* TimePickerSelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimePickerSelectView.m; sourceTree = "<group>"; };
+		8FAD04F926FC1FFB009300AB /* SLPMinuteSelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLPMinuteSelectView.m; sourceTree = "<group>"; };
+		8FAD04FA26FC1FFB009300AB /* HourMinutePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HourMinutePicker.m; sourceTree = "<group>"; };
+		8FAD04FB26FC1FFB009300AB /* HourMinutePicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HourMinutePicker.xib; sourceTree = "<group>"; };
+		8FAD04FC26FC1FFB009300AB /* SLPMinutePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLPMinutePicker.m; sourceTree = "<group>"; };
+		8FAD04FD26FC1FFB009300AB /* SLPTimePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLPTimePicker.m; sourceTree = "<group>"; };
+		8FAD04FE26FC1FFB009300AB /* TimePickerSelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimePickerSelectView.h; sourceTree = "<group>"; };
+		8FAD04FF26FC1FFB009300AB /* SLPMinuteSelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLPMinuteSelectView.h; sourceTree = "<group>"; };
+		8FAD050026FC1FFB009300AB /* HourMinutePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HourMinutePicker.h; sourceTree = "<group>"; };
+		8FAD050126FC1FFB009300AB /* SLPMinuteSelectView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SLPMinuteSelectView.xib; sourceTree = "<group>"; };
+		8FAD050226FC1FFB009300AB /* TimePickerSelectView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimePickerSelectView.xib; sourceTree = "<group>"; };
+		8FAD050326FC1FFB009300AB /* SLPTimePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLPTimePicker.h; sourceTree = "<group>"; };
+		8FAD050426FC1FFB009300AB /* SLPMinutePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLPMinutePicker.h; sourceTree = "<group>"; };
+		8FAD051026FC21FD009300AB /* SLPUtils+Data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SLPUtils+Data.h"; sourceTree = "<group>"; };
+		8FAD051126FC21FD009300AB /* SLPUtilHeads.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLPUtilHeads.h; sourceTree = "<group>"; };
+		8FAD051226FC21FD009300AB /* SLPUtils+Date.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SLPUtils+Date.h"; sourceTree = "<group>"; };
+		8FAD051326FC21FD009300AB /* SLPUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLPUtils.m; sourceTree = "<group>"; };
+		8FAD051426FC21FD009300AB /* SLPUtils+Date.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SLPUtils+Date.m"; sourceTree = "<group>"; };
+		8FAD051526FC21FD009300AB /* SLPUtils+Data.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SLPUtils+Data.m"; sourceTree = "<group>"; };
+		8FAD051626FC21FD009300AB /* SLPUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLPUtils.h; sourceTree = "<group>"; };
+		8FAD051B26FC2C0E009300AB /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
+		8FAD051C26FC2C0E009300AB /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
+		8FAD052226FC7230009300AB /* TitleSubTitleContentArrowCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TitleSubTitleContentArrowCell.h; sourceTree = "<group>"; };
+		8FAD052326FC7230009300AB /* TitleSubTitleContentArrowCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TitleSubTitleContentArrowCell.m; sourceTree = "<group>"; };
+		8FAD052426FC7230009300AB /* TitleSubTitleContentArrowCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleSubTitleContentArrowCell.xib; sourceTree = "<group>"; };
 		8FB262E526FABBB700E63F4B /* SettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		8FB262E626FABBB700E63F4B /* SettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		8FB262E726FABBB700E63F4B /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
 		8FB262EA26FAC1D900E63F4B /* BLEMuiscViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BLEMuiscViewController.h; sourceTree = "<group>"; };
 		8FB262EB26FAC1D900E63F4B /* BLEMuiscViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BLEMuiscViewController.m; sourceTree = "<group>"; };
 		8FB262EC26FAC1D900E63F4B /* BLEMuiscViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BLEMuiscViewController.xib; sourceTree = "<group>"; };
-		8FB262EF26FAC21A00E63F4B /* AlarmListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlarmListViewController.h; sourceTree = "<group>"; };
-		8FB262F026FAC21A00E63F4B /* AlarmListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlarmListViewController.m; sourceTree = "<group>"; };
-		8FB262F126FAC21A00E63F4B /* AlarmListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlarmListViewController.xib; sourceTree = "<group>"; };
-		8FB262F426FAC22900E63F4B /* AlarmViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlarmViewController.h; sourceTree = "<group>"; };
-		8FB262F526FAC22900E63F4B /* AlarmViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlarmViewController.m; sourceTree = "<group>"; };
-		8FB262F626FAC22900E63F4B /* AlarmViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlarmViewController.xib; sourceTree = "<group>"; };
 		A4424B84231537CC0002D35B /* P200A_HP00X_20190827_V1.11(0.0.2)_Release_Update.des */ = {isa = PBXFileReference; lastKnownFileType = file; path = "P200A_HP00X_20190827_V1.11(0.0.2)_Release_Update.des"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -332,8 +451,7 @@
 		260493711F6B7C640035E2E8 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				8F2ACC7926F5AF8500F63034 /* MusicInfo.h */,
-				8F2ACC7826F5AF8500F63034 /* MusicInfo.m */,
+				8FAD051A26FC2C0E009300AB /* DataManager */,
 				260493E51F6B82090035E2E8 /* DealWithData.h */,
 				260493E61F6B82090035E2E8 /* DealWithData.m */,
 				260493E71F6B82090035E2E8 /* SimulateData.h */,
@@ -360,11 +478,12 @@
 		260493731F6B7C640035E2E8 /* CommonUI */ = {
 			isa = PBXGroup;
 			children = (
+				8FAD04F126FC1FFB009300AB /* SLPTime */,
+				8FAD04F726FC1FFB009300AB /* SLPTimePicker */,
+				8FAD04DB26FC1A95009300AB /* Theme */,
+				8FAD04C826FC1A68009300AB /* pop up */,
 				8F2ACC8E26F5B6FD00F63034 /* BaseTableViewCell.h */,
 				8F2ACC8F26F5B6FD00F63034 /* BaseTableViewCell.m */,
-				8F2ACC8726F5B25200F63034 /* SelectItemCell.h */,
-				8F2ACC8526F5B25200F63034 /* SelectItemCell.m */,
-				8F2ACC8626F5B25200F63034 /* SelectItemCell.xib */,
 				260493F71F6B821B0035E2E8 /* SLPUnderlineButton.h */,
 				260493F81F6B821B0035E2E8 /* SLPUnderlineButton.m */,
 				261EA1351F690FF40044BF3C /* SLPTitleValueArrowTableViewCell.h */,
@@ -402,7 +521,8 @@
 		261E9F841F690D7D0044BF3C /* PillowSDKDemo */ = {
 			isa = PBXGroup;
 			children = (
-				8F2ACC8A26F5B6D400F63034 /* Theme */,
+				8FAD050F26FC21FD009300AB /* SLPUtils */,
+				8FAD04E626FC1BEF009300AB /* utils */,
 				261E9F881F690D7D0044BF3C /* AppDelegate.h */,
 				261E9F891F690D7D0044BF3C /* AppDelegate.m */,
 				261EA13A1F6910010044BF3C /* StartViewController.h */,
@@ -552,6 +672,9 @@
 		261EA1341F690FF40044BF3C /* Operation */ = {
 			isa = PBXGroup;
 			children = (
+				8FAD04C626FC1A31009300AB /* BaseViewController.h */,
+				8FAD04C526FC1A31009300AB /* BaseViewController.m */,
+				8FAD048126FC19F0009300AB /* Alarm */,
 				8F2ACC8126F5B1C800F63034 /* MusicListViewController.h */,
 				8F2ACC8226F5B1C800F63034 /* MusicListViewController.m */,
 				8F2ACC8026F5B1C800F63034 /* MusicListViewController.xib */,
@@ -576,12 +699,6 @@
 				8FB262EA26FAC1D900E63F4B /* BLEMuiscViewController.h */,
 				8FB262EB26FAC1D900E63F4B /* BLEMuiscViewController.m */,
 				8FB262EC26FAC1D900E63F4B /* BLEMuiscViewController.xib */,
-				8FB262EF26FAC21A00E63F4B /* AlarmListViewController.h */,
-				8FB262F026FAC21A00E63F4B /* AlarmListViewController.m */,
-				8FB262F126FAC21A00E63F4B /* AlarmListViewController.xib */,
-				8FB262F426FAC22900E63F4B /* AlarmViewController.h */,
-				8FB262F526FAC22900E63F4B /* AlarmViewController.m */,
-				8FB262F626FAC22900E63F4B /* AlarmViewController.xib */,
 			);
 			path = Operation;
 			sourceTree = "<group>";
@@ -605,13 +722,163 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		8F2ACC8A26F5B6D400F63034 /* Theme */ = {
+		8FAD048126FC19F0009300AB /* Alarm */ = {
 			isa = PBXGroup;
 			children = (
-				8F2ACC8B26F5B6D400F63034 /* Theme.h */,
-				8F2ACC8C26F5B6D400F63034 /* Theme.m */,
+				8FAD04A826FC19F0009300AB /* AlarmListViewController.h */,
+				8FAD048626FC19F0009300AB /* AlarmListViewController.m */,
+				8FAD048826FC19F0009300AB /* AlarmListViewController.xib */,
+				8FAD048926FC19F0009300AB /* AlarmViewController.h */,
+				8FAD04AA26FC19F0009300AB /* AlarmViewController.m */,
+				8FAD048226FC19F0009300AB /* AlarmViewController.xib */,
+				8FAD048A26FC19F0009300AB /* Model */,
+				8FAD049526FC19F0009300AB /* View */,
+				8FAD048326FC19F0009300AB /* WeekdaySelectViewController.h */,
+				8FAD04A926FC19F0009300AB /* WeekdaySelectViewController.m */,
+				8FAD048526FC19F0009300AB /* WeekdaySelectViewController.xib */,
+			);
+			path = Alarm;
+			sourceTree = "<group>";
+		};
+		8FAD048A26FC19F0009300AB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8FAD048C26FC19F0009300AB /* AlarmDataModel.h */,
+				8FAD049126FC19F0009300AB /* AlarmDataModel.m */,
+				8FAD049226FC19F0009300AB /* MusicInfo.h */,
+				8FAD048D26FC19F0009300AB /* MusicInfo.m */,
+				8FAD04EE26FC1F93009300AB /* SLPTableSectionData.h */,
+				8FAD04EF26FC1F93009300AB /* SLPTableSectionData.m */,
+				8FAD048E26FC19F0009300AB /* SLPViewInfo.h */,
+				8FAD049426FC19F0009300AB /* SLPViewInfo.m */,
+				8FAD049326FC19F0009300AB /* SLPWeekDay.h */,
+				8FAD048F26FC19F0009300AB /* SLPWeekDay.m */,
+				8FAD049026FC19F0009300AB /* WeekdayInfo.h */,
+				8FAD048B26FC19F0009300AB /* WeekdayInfo.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8FAD049526FC19F0009300AB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8FAD049B26FC19F0009300AB /* SelectItemCell.h */,
+				8FAD04A326FC19F0009300AB /* SelectItemCell.m */,
+				8FAD04A426FC19F0009300AB /* SelectItemCell.xib */,
+				8FAD04A726FC19F0009300AB /* SLPAlarmFooter.h */,
+				8FAD049D26FC19F0009300AB /* SLPAlarmFooter.m */,
+				8FAD04A026FC19F0009300AB /* SLPAlarmFooter.xib */,
+				8FAD049826FC19F0009300AB /* SLPLabelFooter.h */,
+				8FAD04A126FC19F0009300AB /* SLPLabelFooter.m */,
+				8FAD049626FC19F0009300AB /* SLPLabelFooter.xib */,
+				8FAD04A626FC19F0009300AB /* TitleSubTitleArrowCell.h */,
+				8FAD049E26FC19F0009300AB /* TitleSubTitleArrowCell.m */,
+				8FAD049A26FC19F0009300AB /* TitleSubTitleArrowCell.xib */,
+				8FAD04A526FC19F0009300AB /* TitleSwitchCell.h */,
+				8FAD049F26FC19F0009300AB /* TitleSwitchCell.m */,
+				8FAD049926FC19F0009300AB /* TitleSwitchCell.xib */,
+				8FAD04A226FC19F0009300AB /* TitleValueSwitchCellTableViewCell.h */,
+				8FAD049C26FC19F0009300AB /* TitleValueSwitchCellTableViewCell.m */,
+				8FAD049726FC19F0009300AB /* TitleValueSwitchCellTableViewCell.xib */,
+				8FAD052226FC7230009300AB /* TitleSubTitleContentArrowCell.h */,
+				8FAD052326FC7230009300AB /* TitleSubTitleContentArrowCell.m */,
+				8FAD052426FC7230009300AB /* TitleSubTitleContentArrowCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8FAD04C826FC1A68009300AB /* pop up */ = {
+			isa = PBXGroup;
+			children = (
+				8FAD04C926FC1A68009300AB /* SLPLoadingBlockView.xib */,
+				8FAD04CA26FC1A68009300AB /* SLPPopBaseView.h */,
+				8FAD04CB26FC1A68009300AB /* DatePickerPopUpView.xib */,
+				8FAD04CC26FC1A68009300AB /* PopUpView.xib */,
+				8FAD04CD26FC1A68009300AB /* PopUpView.m */,
+				8FAD04CE26FC1A68009300AB /* DatePickerPopUpView.m */,
+				8FAD04CF26FC1A68009300AB /* SLPLoadingBlockView.m */,
+				8FAD04D026FC1A68009300AB /* SLPPopBaseView.m */,
+				8FAD04D126FC1A68009300AB /* SLPLoadingBlockView.h */,
+				8FAD04D226FC1A68009300AB /* DatePickerPopUpView.h */,
+				8FAD04D326FC1A68009300AB /* PopUpView.h */,
+			);
+			path = "pop up";
+			sourceTree = "<group>";
+		};
+		8FAD04DB26FC1A95009300AB /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				8FAD04DC26FC1A95009300AB /* Theme.h */,
+				8FAD04DD26FC1A95009300AB /* Theme.m */,
 			);
 			path = Theme;
+			sourceTree = "<group>";
+		};
+		8FAD04E626FC1BEF009300AB /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				8FAD04E726FC1BEF009300AB /* Utils.h */,
+				8FAD04EA26FC1BEF009300AB /* Utils.m */,
+				8FAD04E826FC1BEF009300AB /* Utils+UI.h */,
+				8FAD04E926FC1BEF009300AB /* Utils+UI.m */,
+				8FAD04EB26FC1BEF009300AB /* UtilsHeads.h */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		8FAD04F126FC1FFB009300AB /* SLPTime */ = {
+			isa = PBXGroup;
+			children = (
+				8FAD04F226FC1FFB009300AB /* SLPTime12.m */,
+				8FAD04F326FC1FFB009300AB /* SLPTime.h */,
+				8FAD04F426FC1FFB009300AB /* SLPTime24.m */,
+				8FAD04F526FC1FFB009300AB /* SLPTime12.h */,
+				8FAD04F626FC1FFB009300AB /* SLPTime24.h */,
+			);
+			path = SLPTime;
+			sourceTree = "<group>";
+		};
+		8FAD04F726FC1FFB009300AB /* SLPTimePicker */ = {
+			isa = PBXGroup;
+			children = (
+				8FAD04F826FC1FFB009300AB /* TimePickerSelectView.m */,
+				8FAD04F926FC1FFB009300AB /* SLPMinuteSelectView.m */,
+				8FAD04FA26FC1FFB009300AB /* HourMinutePicker.m */,
+				8FAD04FB26FC1FFB009300AB /* HourMinutePicker.xib */,
+				8FAD04FC26FC1FFB009300AB /* SLPMinutePicker.m */,
+				8FAD04FD26FC1FFB009300AB /* SLPTimePicker.m */,
+				8FAD04FE26FC1FFB009300AB /* TimePickerSelectView.h */,
+				8FAD04FF26FC1FFB009300AB /* SLPMinuteSelectView.h */,
+				8FAD050026FC1FFB009300AB /* HourMinutePicker.h */,
+				8FAD050126FC1FFB009300AB /* SLPMinuteSelectView.xib */,
+				8FAD050226FC1FFB009300AB /* TimePickerSelectView.xib */,
+				8FAD050326FC1FFB009300AB /* SLPTimePicker.h */,
+				8FAD050426FC1FFB009300AB /* SLPMinutePicker.h */,
+			);
+			path = SLPTimePicker;
+			sourceTree = "<group>";
+		};
+		8FAD050F26FC21FD009300AB /* SLPUtils */ = {
+			isa = PBXGroup;
+			children = (
+				8FAD051126FC21FD009300AB /* SLPUtilHeads.h */,
+				8FAD051626FC21FD009300AB /* SLPUtils.h */,
+				8FAD051326FC21FD009300AB /* SLPUtils.m */,
+				8FAD051026FC21FD009300AB /* SLPUtils+Data.h */,
+				8FAD051526FC21FD009300AB /* SLPUtils+Data.m */,
+				8FAD051226FC21FD009300AB /* SLPUtils+Date.h */,
+				8FAD051426FC21FD009300AB /* SLPUtils+Date.m */,
+			);
+			path = SLPUtils;
+			sourceTree = "<group>";
+		};
+		8FAD051A26FC2C0E009300AB /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				8FAD051B26FC2C0E009300AB /* DataManager.h */,
+				8FAD051C26FC2C0E009300AB /* DataManager.m */,
+			);
+			path = DataManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -726,50 +993,63 @@
 			files = (
 				8F2ACC8326F5B1C800F63034 /* MusicListViewController.xib in Resources */,
 				261E9F951F690D7D0044BF3C /* LaunchScreen.storyboard in Resources */,
-				8F2ACC8926F5B25200F63034 /* SelectItemCell.xib in Resources */,
+				8FAD050E26FC1FFB009300AB /* TimePickerSelectView.xib in Resources */,
 				261E9FF31F690F0E0044BF3C /* device_btn_refresh_nor@3x.png in Resources */,
-				8FB262F826FAC22900E63F4B /* AlarmViewController.xib in Resources */,
+				8FAD04AC26FC19F0009300AB /* AlarmViewController.xib in Resources */,
 				261E9FBC1F690F050044BF3C /* Default-568h@2x.png in Resources */,
 				261E9F921F690D7D0044BF3C /* Assets.xcassets in Resources */,
 				261E9FF71F690F0E0044BF3C /* home@3x.png in Resources */,
 				8FB262EE26FAC1D900E63F4B /* BLEMuiscViewController.xib in Resources */,
 				261E9FFB1F690F0E0044BF3C /* leavebed_sm@3x.png in Resources */,
+				8FAD050A26FC1FFB009300AB /* HourMinutePicker.xib in Resources */,
 				261EA15F1F6910B10044BF3C /* ControlViewController.xib in Resources */,
 				261E9FED1F690F0E0044BF3C /* about_logo@2x.png in Resources */,
 				8FA4886626F49841003F13D5 /* SleepAidViewController.xib in Resources */,
 				261E9FF01F690F0E0044BF3C /* data@2x.png in Resources */,
 				261E9FFF1F690F0E0044BF3C /* sun@3x.png in Resources */,
 				260493E41F6B81FD0035E2E8 /* SignalViewController.xib in Resources */,
+				8FAD04AE26FC19F0009300AB /* WeekdaySelectViewController.xib in Resources */,
+				8FAD04C226FC19F0009300AB /* SelectItemCell.xib in Resources */,
 				261E9FF41F690F0E0044BF3C /* heart_stop_s@2x.png in Resources */,
+				8FAD04BF26FC19F0009300AB /* SLPAlarmFooter.xib in Resources */,
+				8FAD04B926FC19F0009300AB /* TitleSwitchCell.xib in Resources */,
 				261E9FEE1F690F0E0044BF3C /* control@2x.png in Resources */,
 				261EA0001F690F0E0044BF3C /* tab_btn_scenes_home@2x.png in Resources */,
 				261E9FFD1F690F0E0044BF3C /* moon@3x.png in Resources */,
 				261E9FF21F690F0E0044BF3C /* device_btn_refresh_nor@2x.png in Resources */,
+				8FAD052626FC7230009300AB /* TitleSubTitleContentArrowCell.xib in Resources */,
 				261E9FFC1F690F0E0044BF3C /* moon@2x.png in Resources */,
 				261EA1631F6910B10044BF3C /* DeviceViewController.xib in Resources */,
 				261EA1641F69114F0044BF3C /* Localizable.strings in Resources */,
 				261EA14E1F6910080044BF3C /* LICENSE in Resources */,
+				8FAD04B126FC19F0009300AB /* AlarmListViewController.xib in Resources */,
 				261EA0011F690F0E0044BF3C /* tab_btn_scenes_home@3x.png in Resources */,
 				260493D81F6B81EE0035E2E8 /* ConnectDeviceViewController.xib in Resources */,
 				261E9FBD1F690F050044BF3C /* Default-667h@2x.png in Resources */,
 				261E9FFE1F690F0E0044BF3C /* sun@2x.png in Resources */,
 				261E9FFA1F690F0E0044BF3C /* leavebed_sm@2x.png in Resources */,
+				8FAD04D426FC1A68009300AB /* SLPLoadingBlockView.xib in Resources */,
+				8FAD04D626FC1A68009300AB /* PopUpView.xib in Resources */,
 				261E9FF51F690F0E0044BF3C /* heart_stop_s@3x.png in Resources */,
 				261EA1611F6910B10044BF3C /* DataViewController.xib in Resources */,
 				261EA1441F6910010044BF3C /* StartViewController.xib in Resources */,
 				26B41BAE1F7DE01C0003994A /* sdk_index_icon_pillow@3x.png in Resources */,
+				8FAD04B826FC19F0009300AB /* TitleValueSwitchCellTableViewCell.xib in Resources */,
 				261E9FBF1F690F050044BF3C /* Default@2x.png in Resources */,
+				8FAD04B726FC19F0009300AB /* SLPLabelFooter.xib in Resources */,
 				A4424B85231537CD0002D35B /* P200A_HP00X_20190827_V1.11(0.0.2)_Release_Update.des in Resources */,
 				261EA1391F690FF40044BF3C /* SLPTitleValueArrowTableViewCell.xib in Resources */,
 				8FB262E926FABBB700E63F4B /* SettingsViewController.xib in Resources */,
 				260493DA1F6B81EE0035E2E8 /* ScanDeviceViewController.xib in Resources */,
 				261E9FF81F690F0E0044BF3C /* huxi_3-177@2x.png in Resources */,
 				261E9FBE1F690F050044BF3C /* Default-736h@3x.png in Resources */,
+				8FAD050D26FC1FFB009300AB /* SLPMinuteSelectView.xib in Resources */,
 				261E9FEF1F690F0E0044BF3C /* control@3x.png in Resources */,
 				26B41BAD1F7DE01C0003994A /* sdk_index_icon_pillow@2x.png in Resources */,
+				8FAD04D526FC1A68009300AB /* DatePickerPopUpView.xib in Resources */,
+				8FAD04BA26FC19F0009300AB /* TitleSubTitleArrowCell.xib in Resources */,
 				261E9FF91F690F0E0044BF3C /* huxi_3-177@3x.png in Resources */,
 				261E9FF11F690F0E0044BF3C /* data@3x.png in Resources */,
-				8FB262F326FAC21A00E63F4B /* AlarmListViewController.xib in Resources */,
 				261E9FF61F690F0E0044BF3C /* home@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -795,54 +1075,84 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F2ACC8D26F5B6D400F63034 /* Theme.m in Sources */,
 				260493F61F6B82120035E2E8 /* Tool.m in Sources */,
 				261EA10C1F690FB90044BF3C /* SBJsonStreamParserAccumulator.m in Sources */,
 				261EA1171F690FB90044BF3C /* UserObj.m in Sources */,
 				261EA1151F690FB90044BF3C /* SleepView.m in Sources */,
 				261E9F8A1F690D7D0044BF3C /* AppDelegate.m in Sources */,
 				261EA1131F690FB90044BF3C /* SBJsonUTF8Stream.m in Sources */,
+				8FAD050726FC1FFB009300AB /* TimePickerSelectView.m in Sources */,
+				8FAD04DA26FC1A68009300AB /* SLPPopBaseView.m in Sources */,
+				8FAD050626FC1FFB009300AB /* SLPTime24.m in Sources */,
+				8FAD051D26FC2C0E009300AB /* DataManager.m in Sources */,
 				261E9F871F690D7D0044BF3C /* main.m in Sources */,
 				260493D91F6B81EE0035E2E8 /* ScanDeviceViewController.m in Sources */,
 				261EA14F1F6910080044BF3C /* MBProgressHUD.m in Sources */,
 				261EA1501F6910080044BF3C /* README.mdown in Sources */,
-				8F2ACC8826F5B25200F63034 /* SelectItemCell.m in Sources */,
-				8FB262F726FAC22900E63F4B /* AlarmViewController.m in Sources */,
 				8FB262E826FABBB700E63F4B /* SettingsViewController.m in Sources */,
-				8FB262F226FAC21A00E63F4B /* AlarmListViewController.m in Sources */,
 				261EA1091F690FB90044BF3C /* SBJson.m in Sources */,
+				8FAD04B526FC19F0009300AB /* AlarmDataModel.m in Sources */,
+				8FAD04B426FC19F0009300AB /* SLPWeekDay.m in Sources */,
+				8FAD051826FC21FD009300AB /* SLPUtils+Date.m in Sources */,
 				261EA1161F690FB90044BF3C /* ToolKit.m in Sources */,
 				261EA15E1F6910B10044BF3C /* ControlViewController.m in Sources */,
 				261EA1601F6910B10044BF3C /* DataViewController.m in Sources */,
 				260493F91F6B821B0035E2E8 /* SLPUnderlineButton.m in Sources */,
 				260493F01F6B82090035E2E8 /* UpgradeInfoObj.m in Sources */,
+				8FAD052526FC7230009300AB /* TitleSubTitleContentArrowCell.m in Sources */,
+				8FAD04B626FC19F0009300AB /* SLPViewInfo.m in Sources */,
 				261EA1061F690FB90044BF3C /* FixView.m in Sources */,
 				261EA1071F690FB90044BF3C /* HeartCurveView.m in Sources */,
 				260493E31F6B81FD0035E2E8 /* SignalViewController.m in Sources */,
-				8F2ACC7A26F5AF8500F63034 /* MusicInfo.m in Sources */,
+				8FAD04BB26FC19F0009300AB /* TitleValueSwitchCellTableViewCell.m in Sources */,
 				261EA10A1F690FB90044BF3C /* SBJsonParser.m in Sources */,
 				261EA10F1F690FB90044BF3C /* SBJsonStreamWriter.m in Sources */,
+				8FAD051726FC21FD009300AB /* SLPUtils.m in Sources */,
 				261EA1621F6910B10044BF3C /* DeviceViewController.m in Sources */,
+				8FAD04B326FC19F0009300AB /* MusicInfo.m in Sources */,
+				8FAD04ED26FC1BEF009300AB /* Utils.m in Sources */,
 				260493D71F6B81EE0035E2E8 /* ConnectDeviceViewController.m in Sources */,
+				8FAD04D726FC1A68009300AB /* PopUpView.m in Sources */,
 				261EA10B1F690FB90044BF3C /* SBJsonStreamParser.m in Sources */,
+				8FAD04D926FC1A68009300AB /* SLPLoadingBlockView.m in Sources */,
+				8FAD04EC26FC1BEF009300AB /* Utils+UI.m in Sources */,
 				261EA1111F690FB90044BF3C /* SBJsonStreamWriterState.m in Sources */,
+				8FAD050526FC1FFB009300AB /* SLPTime12.m in Sources */,
 				261EA1381F690FF40044BF3C /* SLPTitleValueArrowTableViewCell.m in Sources */,
 				8F2ACC8426F5B1C800F63034 /* MusicListViewController.m in Sources */,
+				8FAD051926FC21FD009300AB /* SLPUtils+Data.m in Sources */,
+				8FAD04C326FC19F0009300AB /* WeekdaySelectViewController.m in Sources */,
+				8FAD04C026FC19F0009300AB /* SLPLabelFooter.m in Sources */,
+				8FAD04C426FC19F0009300AB /* AlarmViewController.m in Sources */,
+				8FAD050B26FC1FFB009300AB /* SLPMinutePicker.m in Sources */,
 				261EA10D1F690FB90044BF3C /* SBJsonStreamParserAdapter.m in Sources */,
+				8FAD04C726FC1A31009300AB /* BaseViewController.m in Sources */,
+				8FAD04AF26FC19F0009300AB /* AlarmListViewController.m in Sources */,
 				261EA1101F690FB90044BF3C /* SBJsonStreamWriterAccumulator.m in Sources */,
+				8FAD04BC26FC19F0009300AB /* SLPAlarmFooter.m in Sources */,
+				8FAD04BE26FC19F0009300AB /* TitleSwitchCell.m in Sources */,
 				261EA1141F690FB90044BF3C /* SBJsonWriter.m in Sources */,
 				260493ED1F6B82090035E2E8 /* DealWithData.m in Sources */,
 				260493F51F6B82120035E2E8 /* FontColor.m in Sources */,
+				8FAD050826FC1FFB009300AB /* SLPMinuteSelectView.m in Sources */,
 				261EA10E1F690FB90044BF3C /* SBJsonStreamParserState.m in Sources */,
+				8FAD04D826FC1A68009300AB /* DatePickerPopUpView.m in Sources */,
+				8FAD04DE26FC1A95009300AB /* Theme.m in Sources */,
 				8F2ACC9026F5B6FD00F63034 /* BaseTableViewCell.m in Sources */,
+				8FAD04B226FC19F0009300AB /* WeekdayInfo.m in Sources */,
+				8FAD04BD26FC19F0009300AB /* TitleSubTitleArrowCell.m in Sources */,
+				8FAD04C126FC19F0009300AB /* SelectItemCell.m in Sources */,
+				8FAD04F026FC1F93009300AB /* SLPTableSectionData.m in Sources */,
 				8FB262ED26FAC1D900E63F4B /* BLEMuiscViewController.m in Sources */,
 				8FA4886526F49841003F13D5 /* SleepAidViewController.m in Sources */,
 				261EA1431F6910010044BF3C /* StartViewController.m in Sources */,
 				260493EE1F6B82090035E2E8 /* SimulateData.m in Sources */,
+				8FAD050C26FC1FFB009300AB /* SLPTimePicker.m in Sources */,
 				260493EF1F6B82090035E2E8 /* SimulateData+ScoreDeduction.m in Sources */,
 				261EA1081F690FB90044BF3C /* NSObject+SBJson.m in Sources */,
 				261EA1051F690FB90044BF3C /* FixTimeView.m in Sources */,
 				261EA1121F690FB90044BF3C /* SBJsonTokeniser.m in Sources */,
+				8FAD050926FC1FFB009300AB /* HourMinutePicker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -94,7 +94,7 @@
 - (void)playMusic:(NSInteger)musicID
 {
 //    if (![SLPBLESharedManager blueToothIsOpen]) {
-//        [Utils showMessage:LocalizedString(@"phone_bluetooth_not_open") controller:self];
+//        [Utils showMessage:@"蓝牙未打开" controller:self];
 //        return;
 //    }
     __weak typeof(self) weakSelf = self;
@@ -109,10 +109,8 @@
 
 - (void)saveData {
     
-    if (self.mode == FromMode_SleepAid) {
-        if (self.musicBlock) {
-            self.musicBlock(self.musicID);
-        }
+    if (self.musicBlock) {
+        self.musicBlock(self.musicID);
     }
     [self.navigationController popViewControllerAnimated:YES];
 }
@@ -122,7 +120,7 @@
     __weak typeof(self) weakSelf = self;
     if (self.mode == FromMode_Alarm) {
 //        if (![SLPBLESharedManager blueToothIsOpen]) {
-//            [Utils showMessage:LocalizedString(@"phone_bluetooth_not_open") controller:self];
+//            [Utils showMessage:@"蓝牙未打开" controller:self];
 //            return;
 //        }
 //        [SLPBLESharedManager bleNox:SharedDataManager.peripheral turnOffMusicTimeout:0 callback:^(SLPDataTransferStatus status, id data) {

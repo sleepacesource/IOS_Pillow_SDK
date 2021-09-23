@@ -98,6 +98,7 @@
     [Tool outputResultWithStr:NSLocalizedString(@"connecting_device", nil) textView:self.textView];
     
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    SharedDataManager.peripheral = self.selectPeripheral.peripheral;
     [SLPBLESharedManager pillow:self.selectPeripheral.peripheral loginWithDeviceName:self.selectPeripheral.name deviceCode:numberStr userId:[self.myTextfield.text integerValue] callback:^(SLPDataTransferStatus status, id data) {
         [MBProgressHUD hideHUDForView:self.view animated:YES];
         if (status==SLPDataTransferStatus_Succeed) {
@@ -154,10 +155,11 @@
     UINavigationController *un1=[[UINavigationController alloc]initWithRootViewController:deviceVC];
     UINavigationController *un2=[[UINavigationController alloc]initWithRootViewController:controlVC];
     UINavigationController *un3=[[UINavigationController alloc]initWithRootViewController:sleepAidVC];
-    UINavigationController *un4=[[UINavigationController alloc]initWithRootViewController:dataVC];
+    UINavigationController *un4=[[UINavigationController alloc]initWithRootViewController:settingsVC];
+    UINavigationController *un5=[[UINavigationController alloc]initWithRootViewController:dataVC];
     
     UITabBarController *tabbarVC=[[UITabBarController alloc]init];
-    tabbarVC.viewControllers=[NSArray arrayWithObjects:un1,un2,un3,un4,nil];
+    tabbarVC.viewControllers=[NSArray arrayWithObjects:un1,un2,un3,un4,un5,nil];
     self.navigationController.navigationBar.hidden=YES;
     [self.navigationController pushViewController:tabbarVC animated:YES];
 }

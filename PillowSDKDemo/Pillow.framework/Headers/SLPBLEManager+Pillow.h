@@ -17,6 +17,9 @@
 #import "Pillow_HistoryData.h"
 #import "PEnvironmentalData.h"
 #import "PillowSleepAidInfo.h"
+#import "PillowSmartStop.h"
+#import "PillowAlarmInfo.h"
+#import "LeftBedAlarmInfo.h"
 @interface SLPBLEManager (Pillow)
 
 /*deviceName 设备名称 和设备ID区分一下
@@ -97,6 +100,17 @@
 upgradePackage:(NSData *)package
       callback:(SLPTransforCallback)handle;
 
+/*ZP100/P401M/PHP1301/P102T升级
+ pkey:私钥
+hashCode: 哈希值
+ package:升级包
+ 回调返回 PillowUpgradeInfo
+ */
+- (void)pillow:(CBPeripheral *)peripheral upgradeDeviceWithPkey:(NSString *)pkey
+        hashCode:(NSString *)hashCode
+upgradePackage:(NSData *)package
+      callback:(SLPTransforCallback)handle;
+
 /*历史数据下载(全自动)
  type: 样本数据的人群类型
  startTime:开始时间戳
@@ -128,4 +142,41 @@ finishCallback:(SLPTransforCallback)finishHandle;
  */
 - (void)pillow:(CBPeripheral *)peripheral getSleepAidOperationWithTimeout:(CGFloat)timeout callback:(SLPTransforCallback)handle;
 
+/*
+ 蓝牙智能停止
+ PillowSmartStop
+ */
+- (void)pillow:(CBPeripheral *)peripheral smartStopConfig:(PillowSmartStop *)smartStopInfo timeout:(CGFloat)timeout
+      callback:(SLPTransforCallback)handle;
+
+/* 获取蓝牙智能停止
+ */
+- (void)pillow:(CBPeripheral *)peripheral getSmartStopWithTimeout:(CGFloat)timeout callback:(SLPTransforCallback)handle;
+
+/**
+ 获取闹钟列表
+ @param peripheral 蓝牙句柄
+ @param timeout 超时（单位秒）
+ @param handle 回调 返回 NSArray<SABAlarmInfo *>
+ */
+- (void)pillow:(CBPeripheral *)peripheral getAlarmListWithTimeout:(CGFloat)timeout callback:(SLPTransforCallback)handle;
+
+/*添加或修改闹铃
+ alarmInfo: 闹铃信息
+ timeout:超时
+ */
+- (void)pillow:(CBPeripheral *)peripheral alarmConfig:(PillowAlarmInfo *)alarmInfo
+       timeout:(CGFloat)timeout callback:(SLPTransforCallback)handle;
+
+/*离枕闹钟设置
+ alarmInfo: 闹铃信息
+ timeout:超时
+ */
+- (void)pillow:(CBPeripheral *)peripheral leftBedAlarmConfig:(LeftBedAlarmInfo *)alarmInfo
+       timeout:(CGFloat)timeout callback:(SLPTransforCallback)handle;
+
+/*
+ 离枕闹钟获取
+ */
+- (void)pillow:(CBPeripheral *)peripheral getLeftBedAlarmInfoWithTimeout:(CGFloat)timeout callback:(SLPTransforCallback)handle;
 @end
