@@ -10,11 +10,16 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SleepAidViewController">
             <connections>
+                <outlet property="chooseModeBtn" destination="bCh-Ks-qTl" id="wOL-Z4-Dlh"/>
+                <outlet property="chooseMusicBtn" destination="elD-Pw-FIK" id="JeC-Sg-eHS"/>
+                <outlet property="chooseStopBtn" destination="44t-Mm-IhN" id="yo1-2r-B2N"/>
+                <outlet property="chooseTimeBtn" destination="SWv-J2-FeW" id="1oC-AD-Qx1"/>
                 <outlet property="modeContainer" destination="cax-kV-NEk" id="i4f-iQ-8f7"/>
                 <outlet property="modeLabel" destination="Qju-4u-HsX" id="H2d-CR-XcG"/>
                 <outlet property="musicContainer" destination="xA3-JU-n2X" id="fiC-a2-3Zi"/>
                 <outlet property="musicNameLabel" destination="mHd-v5-f4E" id="anv-zX-qJw"/>
                 <outlet property="playBtn" destination="qYg-hQ-2Mx" id="ZYv-yc-9go"/>
+                <outlet property="saveBtn" destination="W4W-kS-luf" id="QBS-bC-59V"/>
                 <outlet property="sendVolBtn" destination="lPX-9k-6h0" id="iRB-4g-Ny7"/>
                 <outlet property="stopFlagContainer" destination="zME-bR-JQt" id="5V7-Q5-1wO"/>
                 <outlet property="stopFlagLabel" destination="OPr-tI-EwJ" id="G1u-P9-fQx"/>

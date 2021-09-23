@@ -146,11 +146,11 @@
 		8FAD051D26FC2C0E009300AB /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FAD051C26FC2C0E009300AB /* DataManager.m */; };
 		8FAD052526FC7230009300AB /* TitleSubTitleContentArrowCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FAD052326FC7230009300AB /* TitleSubTitleContentArrowCell.m */; };
 		8FAD052626FC7230009300AB /* TitleSubTitleContentArrowCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FAD052426FC7230009300AB /* TitleSubTitleContentArrowCell.xib */; };
+		8FAD052F26FC85CA009300AB /* P401M-v1.52r(v2.0.4b)-g-20210908.img in Resources */ = {isa = PBXBuildFile; fileRef = 8FAD052E26FC85CA009300AB /* P401M-v1.52r(v2.0.4b)-g-20210908.img */; };
 		8FB262E826FABBB700E63F4B /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB262E626FABBB700E63F4B /* SettingsViewController.m */; };
 		8FB262E926FABBB700E63F4B /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FB262E726FABBB700E63F4B /* SettingsViewController.xib */; };
 		8FB262ED26FAC1D900E63F4B /* BLEMuiscViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB262EB26FAC1D900E63F4B /* BLEMuiscViewController.m */; };
 		8FB262EE26FAC1D900E63F4B /* BLEMuiscViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FB262EC26FAC1D900E63F4B /* BLEMuiscViewController.xib */; };
-		A4424B85231537CD0002D35B /* P200A_HP00X_20190827_V1.11(0.0.2)_Release_Update.des in Resources */ = {isa = PBXBuildFile; fileRef = A4424B84231537CC0002D35B /* P200A_HP00X_20190827_V1.11(0.0.2)_Release_Update.des */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -397,13 +397,13 @@
 		8FAD052226FC7230009300AB /* TitleSubTitleContentArrowCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TitleSubTitleContentArrowCell.h; sourceTree = "<group>"; };
 		8FAD052326FC7230009300AB /* TitleSubTitleContentArrowCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TitleSubTitleContentArrowCell.m; sourceTree = "<group>"; };
 		8FAD052426FC7230009300AB /* TitleSubTitleContentArrowCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleSubTitleContentArrowCell.xib; sourceTree = "<group>"; };
+		8FAD052E26FC85CA009300AB /* P401M-v1.52r(v2.0.4b)-g-20210908.img */ = {isa = PBXFileReference; lastKnownFileType = file; path = "P401M-v1.52r(v2.0.4b)-g-20210908.img"; sourceTree = "<group>"; };
 		8FB262E526FABBB700E63F4B /* SettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		8FB262E626FABBB700E63F4B /* SettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		8FB262E726FABBB700E63F4B /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
 		8FB262EA26FAC1D900E63F4B /* BLEMuiscViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BLEMuiscViewController.h; sourceTree = "<group>"; };
 		8FB262EB26FAC1D900E63F4B /* BLEMuiscViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BLEMuiscViewController.m; sourceTree = "<group>"; };
 		8FB262EC26FAC1D900E63F4B /* BLEMuiscViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BLEMuiscViewController.xib; sourceTree = "<group>"; };
-		A4424B84231537CC0002D35B /* P200A_HP00X_20190827_V1.11(0.0.2)_Release_Update.des */ = {isa = PBXFileReference; lastKnownFileType = file; path = "P200A_HP00X_20190827_V1.11(0.0.2)_Release_Update.des"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -580,7 +580,7 @@
 		261E9FC11F690F0E0044BF3C /* package */ = {
 			isa = PBXGroup;
 			children = (
-				A4424B84231537CC0002D35B /* P200A_HP00X_20190827_V1.11(0.0.2)_Release_Update.des */,
+				8FAD052E26FC85CA009300AB /* P401M-v1.52r(v2.0.4b)-g-20210908.img */,
 			);
 			path = package;
 			sourceTree = "<group>";
@@ -1037,8 +1037,8 @@
 				8FAD04B826FC19F0009300AB /* TitleValueSwitchCellTableViewCell.xib in Resources */,
 				261E9FBF1F690F050044BF3C /* Default@2x.png in Resources */,
 				8FAD04B726FC19F0009300AB /* SLPLabelFooter.xib in Resources */,
-				A4424B85231537CD0002D35B /* P200A_HP00X_20190827_V1.11(0.0.2)_Release_Update.des in Resources */,
 				261EA1391F690FF40044BF3C /* SLPTitleValueArrowTableViewCell.xib in Resources */,
+				8FAD052F26FC85CA009300AB /* P401M-v1.52r(v2.0.4b)-g-20210908.img in Resources */,
 				8FB262E926FABBB700E63F4B /* SettingsViewController.xib in Resources */,
 				260493DA1F6B81EE0035E2E8 /* ScanDeviceViewController.xib in Resources */,
 				261E9FF81F690F0E0044BF3C /* huxi_3-177@2x.png in Resources */,

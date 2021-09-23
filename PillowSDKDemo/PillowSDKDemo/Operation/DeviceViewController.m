@@ -261,12 +261,17 @@
         return ;
     }
     
-    UpgradeInfoObj *upgradeInfo=[UpgradeInfoObj backUpgradeInfoFromDeviceNumber:self.deviceNumberString];
     self.upgradeLabel.text= NSLocalizedString(@"fireware_update", nil);
     [self isShowUpgradeView:YES];
     [Tool outputResultWithStr:NSLocalizedString(@"fireware_update", nil) textView:self.textView];
     [self stopRealtimeData];
-    [SLPBLESharedManager pillow:self.selectPeripheral.peripheral upgradeDeviceWithCrcDes:upgradeInfo.crcDes crcBin:upgradeInfo.crcBin upgradePackage:upgradeInfo.package callback:^(SLPDataTransferStatus status, id data) {
+    NSString *pkey = @"b92999dcdfa975c1334e335a392ac877ad60ee6baf38e947f753e859a5117ac0f3d0e5defc4390a7669e301df02969b45201a32b82f19a781fcc7a618db79803";
+    NSString *hashCode = @"d5466dbf6b08e0cedb28438d9ecd07b59d8ac66ca9c0bf4a219663227d559169";
+    
+    NSString *filepath = [[NSBundle mainBundle] pathForResource:@"P401M-v1.52r(v2.0.4b)-g-20210908" ofType:@"img"];
+    NSData *package = [NSData dataWithContentsOfFile:filepath];
+    [SLPBLESharedManager pillow:self.selectPeripheral.peripheral upgradeDeviceWithPkey:pkey hashCode:hashCode upgradePackage:package callback:^(SLPDataTransferStatus status, id data) {
+
         if (status==SLPDataTransferStatus_Succeed) {
             PillowUpgradeInfo *upgradeInfo=(PillowUpgradeInfo *)data;
             self.upgradeLabel.text=[NSString stringWithFormat:@"%.1f%%",upgradeInfo.progress*100];

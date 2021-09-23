@@ -10,6 +10,8 @@
 #import "BLEMuiscViewController.h"
 #import "AlarmListViewController.h"
 
+#import <Pillow/Pillow.h>
+
 @interface SettingsViewController ()<UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
@@ -39,7 +41,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
+    BOOL isConnected=self.selectPeripheral.peripheral&&[SLPBLESharedManager peripheralIsConnected:self.selectPeripheral.peripheral];
+    if (!isConnected) {
+        return;
+    }
     if (indexPath.row == 0) {
         BLEMuiscViewController *vc = [BLEMuiscViewController new];
         vc.title = @"蓝牙音乐";

@@ -10,6 +10,7 @@
 
 #import "MusicInfo.h"
 #import "MusicListViewController.h"
+#import "Tool.h"
 #import <Pillow/Pillow.h>
 
 @interface SleepAidViewController ()<UIScrollViewDelegate>
@@ -44,6 +45,13 @@
 @property (nonatomic, assign) UInt8 smartFlag;
 
 @property (nonatomic, assign) UInt16 smartDuration;
+@property (weak, nonatomic) IBOutlet UIButton *saveBtn;
+
+@property (weak, nonatomic) IBOutlet UIButton *chooseMusicBtn;
+@property (weak, nonatomic) IBOutlet UIButton *chooseModeBtn;
+@property (weak, nonatomic) IBOutlet UIButton *chooseTimeBtn;
+@property (weak, nonatomic) IBOutlet UIButton *chooseStopBtn;
+
 
 @end
 
@@ -92,6 +100,25 @@
     return _musicList;
 }
 
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [self deviceDisconenct];
+}
+
+- (void)deviceDisconenct
+{
+    BOOL isConnected=self.selectPeripheral.peripheral&&[SLPBLESharedManager peripheralIsConnected:self.selectPeripheral.peripheral];
+    self.playBtn.enabled=isConnected;
+    self.sendVolBtn.enabled=isConnected;
+    self.saveBtn.enabled=isConnected;
+    self.chooseMusicBtn.enabled=isConnected;
+    self.chooseModeBtn.enabled=isConnected;
+    self.chooseTimeBtn.enabled=isConnected;
+    self.chooseStopBtn.enabled=isConnected;
+    self.volumeField.enabled = isConnected;
+}
+
 -(void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     
@@ -109,6 +136,9 @@
     self.smartDuration = 45;
     
     [self setUI];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(deviceDisconenct) name:kNotificationNameBLEDisable object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(deviceDisconenct) name:kNotificationNameBLEDeviceDisconnect object:nil];
 }
 
 - (NSString *)getSmartFlagName:(UInt8)smartFlag {
@@ -128,6 +158,10 @@
 }
 
 - (void)setUI {
+    [Tool configSomeKindOfButtonLikeNomal:self.playBtn];
+    [Tool configSomeKindOfButtonLikeNomal:self.sendVolBtn];
+    [Tool configSomeKindOfButtonLikeNomal:self.saveBtn];
+    
     self.musicNameLabel.text = [self getMusicNameWithMusicID:self.assistMusicID];
     self.volumeField.text = [NSString stringWithFormat:@"%d", self.volume];
     self.modeLabel.text = [self modeTextWith:self.circleMode];
