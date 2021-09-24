@@ -1336,7 +1336,7 @@
 					"-force_load",
 					"$(SRCROOT)/Pillow.framework/Pillow",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.medicatech.PillowSDKDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.medicatech.P401MSDKDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -1361,7 +1361,7 @@
 					"-force_load",
 					"$(SRCROOT)/Pillow.framework/Pillow",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.medicatech.PillowSDKDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.medicatech.P401MSDKDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
