@@ -106,15 +106,28 @@
 
 -(void)startSigal
 {
-    [SLPBLESharedManager pillow:self.selectPeripheral.peripheral startOriginalDataWithTimeout:10.0 callback:^(SLPDataTransferStatus status, id data) {
-        if (status==SLPDataTransferStatus_Succeed) {
-            NSLog(@"开始原始实时数据成功。");
-        }
-        else
-        {
-            NSLog(@"开始原始实时数据失败");
-        }
-    }];
+//    [SLPBLESharedManager pillow:self.selectPeripheral.peripheral startOriginalDataWithTimeout:10.0 callback:^(SLPDataTransferStatus status, id data) {
+//        if (status==SLPDataTransferStatus_Succeed) {
+//            NSLog(@"开始原始实时数据成功。");
+//        }
+//        else
+//        {
+//            NSLog(@"开始原始实时数据失败");
+//        }
+//    }];
+}
+
+- (void)viewWillDisappear:(BOOL)animated{
+    
+//    [SLPBLESharedManager pillow:self.selectPeripheral.peripheral stopOriginalDataWithTimeout:10.0 callback:^(SLPDataTransferStatus status, id data) {
+//        if (status==SLPDataTransferStatus_Succeed) {
+//            NSLog(@"结束原始实时数据成功。");
+//        }
+//        else
+//        {
+//            NSLog(@"结束原始实时数据失败");
+//        }
+//    }];
 }
 
 -(void)initDataSource

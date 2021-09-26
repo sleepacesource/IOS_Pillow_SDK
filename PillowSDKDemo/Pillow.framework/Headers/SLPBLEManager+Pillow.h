@@ -77,13 +77,13 @@
 /*开始查看原始数据
  原始数据数据通过通知kNotificationNameBLEpillowOriginalData 广播出<kNotificationPostData:PillowOriginalData>
  */
-- (void)pillow:(CBPeripheral *)peripheral startOriginalDataWithTimeout:(CGFloat)timeout
-      callback:(SLPTransforCallback)handle;
+//- (void)pillow:(CBPeripheral *)peripheral startOriginalDataWithTimeout:(CGFloat)timeout
+//      callback:(SLPTransforCallback)handle;
 
 /*结束查看原始数据
  */
-- (void)pillow:(CBPeripheral *)peripheral stopOriginalDataWithTimeout:(CGFloat)timeout
-      callback:(SLPTransforCallback)handle;
+//- (void)pillow:(CBPeripheral *)peripheral stopOriginalDataWithTimeout:(CGFloat)timeout
+//      callback:(SLPTransforCallback)handle;
 
 /*升级
  crcDes:加密包CRC32

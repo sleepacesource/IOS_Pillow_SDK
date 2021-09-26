@@ -4,10 +4,6 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>.DS_Store</key>
-		<data>
-		r2s5HmXVVO+I5joxpiM7gWKLCMQ=
-		</data>
 		<key>Headers/CRC.h</key>
 		<data>
 		LaWAMJm9Vjo0LcOcdCgH7Z4ha94=
@@ -78,7 +74,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		+beVjMIADu1W9JdCeLdkfO0PyVM=
+		7MmbVf2UYd1PJPOt4Z+tlgEZygw=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>

@@ -162,22 +162,22 @@
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
-    [UIView animateWithDuration:0.5 animations:^{
-        CGRect rect=self.view.frame;
-        CGFloat y_value=rect.origin.y-120;
-        rect.origin.y=y_value;
-        self.view.frame=rect;
-    }];
+//    [UIView animateWithDuration:0.5 animations:^{
+//        CGRect rect=self.view.frame;
+//        CGFloat y_value=rect.origin.y-120;
+//        rect.origin.y=y_value;
+//        self.view.frame=rect;
+//    }];
 }
 
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
-    [UIView animateWithDuration:0.3 animations:^{
-        CGRect rect=self.view.frame;
-        CGFloat y_value=rect.origin.y+120;
-        rect.origin.y=y_value;
-        self.view.frame=rect;
-    }];
+//    [UIView animateWithDuration:0.3 animations:^{
+//        CGRect rect=self.view.frame;
+//        CGFloat y_value=rect.origin.y+120;
+//        rect.origin.y=y_value;
+//        self.view.frame=rect;
+//    }];
 }
 
 - (void)didReceiveMemoryWarning {
