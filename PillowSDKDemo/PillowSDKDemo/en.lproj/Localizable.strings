@@ -165,6 +165,8 @@
 "loaded_list"="Searching BLE devices…";
 "select_"="Select \"%@\"";
 "air_"="Null";
+"failure"="Failed";
+"time_out"="Time out";
 "connected_device"="Device Connected";
 "getting_device_name"="Getting Device Name…";
 "receive_device_name"="Get Device Name: %@";
@@ -183,3 +185,5 @@
 "get_working_status"="Get device working status: %@";
 "remark_1"="To ensure the accuracy of sleep analysis, set the length to 3 to 16 hours. And ensure that the connected device is saved.";
 "getting_real_time_data"="Getting real-time data";
+"load_list_complete"="BLE searching has been done";
+"connecting_device"="Connecting device...";
