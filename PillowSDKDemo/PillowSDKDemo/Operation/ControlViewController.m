@@ -20,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *startRealtimeDataBT;
 @property (weak, nonatomic) IBOutlet UIButton *checkSignalBT;
 @property (weak, nonatomic) IBOutlet UIButton *stopRealtimeDataBT;
+@property (weak, nonatomic) IBOutlet UIButton *createBT;
 @property (weak, nonatomic) IBOutlet UIScrollView *myscorollview;
 @property (strong, nonatomic) IBOutlet UIView *cView;
 
@@ -58,6 +59,7 @@
     [Tool configSomeKindOfButtonLikeNomal:self.startRealtimeDataBT];
     [Tool configSomeKindOfButtonLikeNomal:self.stopRealtimeDataBT];
     [Tool configSomeKindOfButtonLikeNomal:self.checkSignalBT];
+    [Tool configSomeKindOfButtonLikeNomal:self.createBT];
     self.myscorollview.contentSize=self.cView.frame.size;
     [self.myscorollview addSubview:self.cView];
     self.label1.text=NSLocalizedString(@"process", nil);
@@ -279,6 +281,11 @@
             [Tool outputResultWithStr:NSLocalizedString(@"failure", nil) textView:self.textView];
         }
     }];
+}
+
+- (IBAction)createReport:(id)sender {
+    
+    
 }
 
 - (IBAction)checkSingal:(id)sender {

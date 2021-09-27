@@ -13,6 +13,7 @@
                 <outlet property="breathValueLabel" destination="hnO-AW-sXt" id="YnM-xP-Utp"/>
                 <outlet property="cView" destination="mqW-hL-qbd" id="JCI-gg-u7a"/>
                 <outlet property="checkSignalBT" destination="Iyb-VZ-CgE" id="JY1-u7-sVm"/>
+                <outlet property="createBT" destination="mat-fG-iK8" id="JK0-Op-6kz"/>
                 <outlet property="getDeviceStatusBT" destination="FOz-U6-cS4" id="x8S-dx-9gy"/>
                 <outlet property="heartRateTitleLabel" destination="10T-8A-eYT" id="R4q-fJ-euQ"/>
                 <outlet property="heartRateValueLabel" destination="6x4-j0-A2Z" id="YEW-UZ-Ck3"/>
@@ -216,6 +217,17 @@
                                 <constraint firstAttribute="height" constant="1" id="FkP-AH-fcW"/>
                             </constraints>
                         </view>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mat-fG-iK8">
+                            <rect key="frame" x="15" y="313" width="290" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.1647058824" green="0.59215686270000001" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" title="生成报告">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="createReport:" destination="-1" eventType="touchUpInside" id="YEI-An-UP4"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
