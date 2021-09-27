@@ -130,6 +130,7 @@
     self.getDeviceStatusBT.enabled=isConnected;
     self.setAutoMonitorBT.enabled=isConnected;
     self.startCollectBT.enabled=isConnected;
+    self.createBT.enabled=isConnected;
     [self isShowRealDataBT:isConnected];
 
     if (isConnected) {
@@ -284,8 +285,27 @@
 }
 
 - (IBAction)createReport:(id)sender {
+    if (![Tool bleIsOpenShowToTextview:self.textView]) {
+        return ;
+    }
+    if (![Tool deviceIsConnected:self.selectPeripheral.peripheral ShowToTextview:self.textView]) {
+        return ;
+    }
+    [Tool outputResultWithStr:NSLocalizedString(@"notified_acquisition_off", nil) textView:self.textView];
     
-    
+    [SLPBLESharedManager pillow:self.selectPeripheral.peripheral stopCollectionWithTimeout:0 callback:^(SLPDataTransferStatus status, id data) {
+        if (status==SLPDataTransferStatus_Succeed) {
+            [Tool outputResultWithStr:NSLocalizedString(@"close_acquisition_success", nil) textView:self.textView];
+            self.sleepStatusValueLabel.text=@"--";
+            self.breathValueLabel.text=@"--";
+            self.heartRateValueLabel.text=@"--";
+            self.navigationController.tabBarController .selectedIndex = 4;
+        }
+        else
+        {
+            [Tool outputResultWithStr:NSLocalizedString(@"failure", nil) textView:self.textView];
+        }
+    }];
 }
 
 - (IBAction)checkSingal:(id)sender {

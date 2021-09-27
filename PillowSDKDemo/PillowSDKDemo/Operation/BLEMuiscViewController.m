@@ -10,7 +10,7 @@
 
 #import <Pillow/Pillow.h>
 #import "UtilsHeads.h"
-
+#import "Tool.h"
 @interface BLEMuiscViewController ()
 
 @property (weak, nonatomic) IBOutlet UIView *timeContainer;
@@ -21,6 +21,8 @@
 
 @property (nonatomic, strong) PillowSmartStop *smartStopInfo;
 
+@property (weak, nonatomic) IBOutlet UIButton *saveBT;
+
 @end
 
 @implementation BLEMuiscViewController
@@ -29,6 +31,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self setUI];
+    //default
+    self.smartStopInfo.duration = 45;
     
     [self getData];
 }
@@ -56,6 +60,8 @@
 }
 
 - (void)setUI {
+    
+    [Tool configSomeKindOfButtonLikeNomal:self.saveBT];
     self.stopFlagLabel.text = [self getSmartFlagName:self.smartStopInfo.operation];
     self.timeLabel.text = [NSString stringWithFormat:@"%d分钟", self.smartStopInfo.duration];
     
@@ -72,13 +78,13 @@
 
 - (void)setSmartStopInfo {
     __weak typeof(self) weakSelf = self;
+//    self.smartStopInfo.duration = 1;
     [SLPBLESharedManager pillow:SharedDataManager.peripheral smartStopConfig:self.smartStopInfo timeout:0 callback:^(SLPDataTransferStatus status, id data) {
         if (status != SLPDataTransferStatus_Succeed) {
             [Utils showDeviceOperationFailed:status atViewController:weakSelf];
         } else {
             [Utils showMessage:@"保存成功" controller:weakSelf];
         }
-        
     }];
 }
 
