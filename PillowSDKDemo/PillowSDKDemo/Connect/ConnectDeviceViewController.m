@@ -181,7 +181,7 @@
 {
     [UIView animateWithDuration:0.5 animations:^{
         CGRect rect=self.view.frame;
-        CGFloat y_value=rect.origin.y-120;
+        CGFloat y_value=rect.origin.y-60;
         rect.origin.y=y_value;
         self.view.frame=rect;
     }];
@@ -191,7 +191,7 @@
 {
     [UIView animateWithDuration:0.3 animations:^{
         CGRect rect=self.view.frame;
-        CGFloat y_value=rect.origin.y+120;
+        CGFloat y_value=rect.origin.y+60;
         rect.origin.y=y_value;
         self.view.frame=rect;
     }];

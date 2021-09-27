@@ -189,12 +189,9 @@
     [[NSNotificationCenter defaultCenter]addObserverForName:kNotificationNameBLEPillowRealtimeData object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification * _Nonnull note) {
         
         PillowRealTimeData *realData= [note.userInfo objectForKey:kNotificationPostData];
-        NSLog(@"sleep status->%ld,heartBeat-->%d,breath-->%d,temperture->%d,humidity->%d",(long)realData.status,realData.heartRate,realData.breathRate,realData.temperture,realData.humidity);
+        NSLog(@"sleep status->%ld,heartBeat-->%d,breath-->%d ",(long)realData.status,realData.heartRate,realData.breathRate);
         NSString *b_value=[NSString stringWithFormat:@"%d %@",realData.breathRate,NSLocalizedString(@"unit_respiration", nil)];
         NSString *h_value=[NSString stringWithFormat:@"%d %@",realData.heartRate,NSLocalizedString(@"unit_heart", nil)];
-        
-        NSString *temperture_value=[NSString stringWithFormat:@"%d",realData.temperture];
-        NSString *humidity_value=[NSString stringWithFormat:@"%d",realData.humidity];
         
         NSString *statusString;
         switch (realData.status) {
@@ -230,8 +227,6 @@
         [Tool outputResultWithStr:[NSString stringWithFormat:@"%@:%@",NSLocalizedString(@"sleep_state", nil),statusString] textView:self.textView];
         [Tool outputResultWithStr:[NSString stringWithFormat:@"%@:%@",NSLocalizedString(@"heartrate", nil),h_value] textView:self.textView];
         [Tool outputResultWithStr:[NSString stringWithFormat:@"%@:%@",NSLocalizedString(@"breathrate", nil),b_value] textView:self.textView];
-        [Tool outputResultWithStr:[NSString stringWithFormat:@"%@:%@",NSLocalizedString(@"temperture", nil),temperture_value] textView:self.textView];
-        [Tool outputResultWithStr:[NSString stringWithFormat:@"%@:%@",NSLocalizedString(@"humidity", nil),humidity_value] textView:self.textView];
         self.startCollectBT.enabled=NO;
         self.stopCollectBT.enabled=YES;
 //        [self isShowRealDataBT:YES];

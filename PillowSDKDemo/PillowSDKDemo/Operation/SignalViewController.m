@@ -106,15 +106,15 @@
 
 -(void)startSigal
 {
-    [SLPBLESharedManager pillow:self.selectPeripheral.peripheral startOriginalDataWithTimeout:10.0 callback:^(SLPDataTransferStatus status, id data) {
-        if (status==SLPDataTransferStatus_Succeed) {
-            NSLog(@"开始原始实时数据成功。");
-        }
-        else
-        {
-            NSLog(@"开始原始实时数据失败");
-        }
-    }];
+//    [SLPBLESharedManager pillow:self.selectPeripheral.peripheral startOriginalDataWithTimeout:10.0 callback:^(SLPDataTransferStatus status, id data) {
+//        if (status==SLPDataTransferStatus_Succeed) {
+//            NSLog(@"开始原始实时数据成功。");
+//        }
+//        else
+//        {
+//            NSLog(@"开始原始实时数据失败");
+//        }
+//    }];
 }
 
 -(void)initDataSource
