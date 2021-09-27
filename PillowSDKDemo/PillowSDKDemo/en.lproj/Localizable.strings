@@ -187,3 +187,8 @@
 "getting_real_time_data"="Getting real-time data";
 "load_list_complete"="BLE searching has been done";
 "connecting_device"="Connecting device...";
+"upgrading_device"="Upgrading device: %@";
+"sent_successfully"="Successful";
+"upgrading_device"="Upgrading device: %@";
+"update_completed"="Firmware upgrad complete";
+"connect_device_successfully"="Device connection is successful";
