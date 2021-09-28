@@ -192,3 +192,4 @@
 "upgrading_device"="Upgrading device: %@";
 "update_completed"="Firmware upgrad complete";
 "connect_device_successfully"="Device connection is successful";
+"create_report" = "Generate sleep report";

@@ -78,6 +78,8 @@
     [self.startRealtimeDataBT setTitle:NSLocalizedString(@"view_data", nil) forState:UIControlStateNormal];
     [self.stopRealtimeDataBT setTitle:NSLocalizedString(@"off_data", nil) forState:UIControlStateNormal];
     [self.checkSignalBT setTitle:NSLocalizedString(@"view_signal_strength", nil) forState:UIControlStateNormal];
+    [self.createTeportBT setTitle:NSLocalizedString(@"create_report", nil) forState:UIControlStateNormal];
+    
     self.breathTitleLabel.text=NSLocalizedString(@"breathrate", nil);
     self.heartRateTitleLabel.text=NSLocalizedString(@"heartrate", nil);
     self.sleepStatusTitleLabel.text=NSLocalizedString(@"sleep_state", nil);
