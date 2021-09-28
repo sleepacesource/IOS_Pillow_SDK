@@ -64,12 +64,9 @@
                 }
             }
             
-            if (array.count > 0) {
-                SharedDataManager.alarmList = array;
-                wealSelf.alarmList = array;
-                [wealSelf.tableView reloadData];
-            }
-            
+            wealSelf.alarmList = array;
+            [wealSelf.tableView reloadData];
+            SharedDataManager.alarmList = array;
         }
         
     }];
@@ -123,7 +120,11 @@
 #pragma mark - tableView delegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.alarmList.count > 0 ? 2 + self.alarmList.count : 0;
+    NSInteger extroNum = 1;
+    if (self.leftBedAlarmInfo.isOpen) {
+        extroNum = 2;
+    }
+    return self.alarmList.count > 0 ? extroNum + self.alarmList.count : 0;
 }
 
 - (NSString *)getLeftOperationStr:(UInt8)operation {
@@ -154,19 +155,44 @@
         cell.switchBlock = ^(UISwitch *sender) {
             weakSelf.leftBedAlarmInfo.isOpen = sender.on;
             [weakSelf configLeftBedAlarmInfo];
+            [weakSelf.tableView reloadData];
         };
         
         tempCell = cell;
     } else if(indexPath.row == 1) {
-        TitleSubTitleArrowCell *baseCell = (TitleSubTitleArrowCell *)[SLPUtils tableView:self.tableView cellNibName:@"TitleSubTitleArrowCell"];
-        baseCell.titleLabel.text = @"离枕后";
-        baseCell.subTitleLabel.text = [self getLeftOperationStr:self.leftBedAlarmInfo.operation];
-        [Utils configCellTitleLabel:baseCell.textLabel];
-        tempCell = baseCell;
+        if (self.leftBedAlarmInfo.isOpen) {
+            TitleSubTitleArrowCell *baseCell = (TitleSubTitleArrowCell *)[SLPUtils tableView:self.tableView cellNibName:@"TitleSubTitleArrowCell"];
+            baseCell.titleLabel.text = @"离枕后";
+            baseCell.subTitleLabel.text = [self getLeftOperationStr:self.leftBedAlarmInfo.operation];
+            [Utils configCellTitleLabel:baseCell.textLabel];
+            tempCell = baseCell;
+        } else {
+            TitleValueSwitchCellTableViewCell *cell = (TitleValueSwitchCellTableViewCell *)[SLPUtils tableView:tableView cellNibName:@"TitleValueSwitchCellTableViewCell"];
+            
+            PillowAlarmInfo *alarmData = [self.alarmList objectAtIndex:indexPath.row - 1];
+            cell.titleLabel.text = [self getAlarmTimeStringWithDataModle:alarmData];
+            cell.subTitleLbl.text = [SLPWeekDay getAlarmRepeatDayStringWithWeekDay:alarmData.repeat];
+            cell.switcher.on = alarmData.isOpen;
+            
+            __weak typeof(self) weakSelf = self;
+            cell.switchBlock = ^(UISwitch *sender) {
+                if (sender.on) {
+                    [weakSelf turnOnAlarmWithAlarm:alarmData];
+                }else{
+                    [weakSelf turnOffAlarmWithAlarm:alarmData];
+                }
+            };
+            
+            tempCell = cell;
+        }
+        
     } else {
         TitleValueSwitchCellTableViewCell *cell = (TitleValueSwitchCellTableViewCell *)[SLPUtils tableView:tableView cellNibName:@"TitleValueSwitchCellTableViewCell"];
-        
-        PillowAlarmInfo *alarmData = [self.alarmList objectAtIndex:indexPath.row - 2];
+        NSInteger index = indexPath.row - 1;
+        if (self.leftBedAlarmInfo.isOpen) {
+            index = indexPath.row - 2;
+        }
+        PillowAlarmInfo *alarmData = [self.alarmList objectAtIndex:index];
         cell.titleLabel.text = [self getAlarmTimeStringWithDataModle:alarmData];
         cell.subTitleLbl.text = [SLPWeekDay getAlarmRepeatDayStringWithWeekDay:alarmData.repeat];
         cell.switcher.on = alarmData.isOpen;
@@ -226,12 +252,18 @@
         return;
     }
     if (indexPath.row == 1) {
-        [self goSelectLeftBedOperation];
-        return;
+        if (self.leftBedAlarmInfo.isOpen) {
+            [self goSelectLeftBedOperation];
+            return;
+        }
     }
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    PillowAlarmInfo *alarmData = [self.alarmList objectAtIndex:indexPath.row - 2];
+    NSInteger index = indexPath.row - 1;
+    if (self.leftBedAlarmInfo.isOpen) {
+        index = indexPath.row - 2;
+    }
+    PillowAlarmInfo *alarmData = [self.alarmList objectAtIndex:index];
     
     [self goAlarmVCWithAlarmData:alarmData];
 }
@@ -274,8 +306,12 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.row == 0 || indexPath.row == 1) {
+    if (indexPath.row == 0 ) {
         return 60;
+    } else if (indexPath.row == 1) {
+        if (self.leftBedAlarmInfo.isOpen) {
+            return 60;
+        }
     }
     
     return 80;
