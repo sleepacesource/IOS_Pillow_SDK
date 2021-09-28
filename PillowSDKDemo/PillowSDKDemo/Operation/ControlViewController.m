@@ -20,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *startRealtimeDataBT;
 @property (weak, nonatomic) IBOutlet UIButton *checkSignalBT;
 @property (weak, nonatomic) IBOutlet UIButton *stopRealtimeDataBT;
+@property (weak, nonatomic) IBOutlet UIButton *createBT;
 @property (weak, nonatomic) IBOutlet UIScrollView *myscorollview;
 @property (strong, nonatomic) IBOutlet UIView *cView;
 
@@ -58,6 +59,7 @@
     [Tool configSomeKindOfButtonLikeNomal:self.startRealtimeDataBT];
     [Tool configSomeKindOfButtonLikeNomal:self.stopRealtimeDataBT];
     [Tool configSomeKindOfButtonLikeNomal:self.checkSignalBT];
+    [Tool configSomeKindOfButtonLikeNomal:self.createBT];
     self.myscorollview.contentSize=self.cView.frame.size;
     [self.myscorollview addSubview:self.cView];
     self.label1.text=NSLocalizedString(@"process", nil);
@@ -128,6 +130,7 @@
     self.getDeviceStatusBT.enabled=isConnected;
     self.setAutoMonitorBT.enabled=isConnected;
     self.startCollectBT.enabled=isConnected;
+    self.createBT.enabled=isConnected;
     [self isShowRealDataBT:isConnected];
 
     if (isConnected) {
@@ -189,12 +192,9 @@
     [[NSNotificationCenter defaultCenter]addObserverForName:kNotificationNameBLEPillowRealtimeData object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification * _Nonnull note) {
         
         PillowRealTimeData *realData= [note.userInfo objectForKey:kNotificationPostData];
-        NSLog(@"sleep status->%ld,heartBeat-->%d,breath-->%d,temperture->%d,humidity->%d",(long)realData.status,realData.heartRate,realData.breathRate,realData.temperture,realData.humidity);
+        NSLog(@"sleep status->%ld,heartBeat-->%d,breath-->%d ",(long)realData.status,realData.heartRate,realData.breathRate);
         NSString *b_value=[NSString stringWithFormat:@"%d %@",realData.breathRate,NSLocalizedString(@"unit_respiration", nil)];
         NSString *h_value=[NSString stringWithFormat:@"%d %@",realData.heartRate,NSLocalizedString(@"unit_heart", nil)];
-        
-        NSString *temperture_value=[NSString stringWithFormat:@"%d",realData.temperture];
-        NSString *humidity_value=[NSString stringWithFormat:@"%d",realData.humidity];
         
         NSString *statusString;
         switch (realData.status) {
@@ -230,8 +230,6 @@
         [Tool outputResultWithStr:[NSString stringWithFormat:@"%@:%@",NSLocalizedString(@"sleep_state", nil),statusString] textView:self.textView];
         [Tool outputResultWithStr:[NSString stringWithFormat:@"%@:%@",NSLocalizedString(@"heartrate", nil),h_value] textView:self.textView];
         [Tool outputResultWithStr:[NSString stringWithFormat:@"%@:%@",NSLocalizedString(@"breathrate", nil),b_value] textView:self.textView];
-        [Tool outputResultWithStr:[NSString stringWithFormat:@"%@:%@",NSLocalizedString(@"temperture", nil),temperture_value] textView:self.textView];
-        [Tool outputResultWithStr:[NSString stringWithFormat:@"%@:%@",NSLocalizedString(@"humidity", nil),humidity_value] textView:self.textView];
         self.startCollectBT.enabled=NO;
         self.stopCollectBT.enabled=YES;
 //        [self isShowRealDataBT:YES];
@@ -281,6 +279,30 @@
         else
         {
             NSLog(@"%@",NSLocalizedString(@"stop realtime data failed", nil));
+            [Tool outputResultWithStr:NSLocalizedString(@"failure", nil) textView:self.textView];
+        }
+    }];
+}
+
+- (IBAction)createReport:(id)sender {
+    if (![Tool bleIsOpenShowToTextview:self.textView]) {
+        return ;
+    }
+    if (![Tool deviceIsConnected:self.selectPeripheral.peripheral ShowToTextview:self.textView]) {
+        return ;
+    }
+    [Tool outputResultWithStr:NSLocalizedString(@"notified_acquisition_off", nil) textView:self.textView];
+    
+    [SLPBLESharedManager pillow:self.selectPeripheral.peripheral stopCollectionWithTimeout:0 callback:^(SLPDataTransferStatus status, id data) {
+        if (status==SLPDataTransferStatus_Succeed) {
+            [Tool outputResultWithStr:NSLocalizedString(@"close_acquisition_success", nil) textView:self.textView];
+            self.sleepStatusValueLabel.text=@"--";
+            self.breathValueLabel.text=@"--";
+            self.heartRateValueLabel.text=@"--";
+            self.navigationController.tabBarController .selectedIndex = 4;
+        }
+        else
+        {
             [Tool outputResultWithStr:NSLocalizedString(@"failure", nil) textView:self.textView];
         }
     }];

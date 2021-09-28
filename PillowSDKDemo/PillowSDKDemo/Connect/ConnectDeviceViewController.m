@@ -162,6 +162,7 @@
     tabbarVC.viewControllers=[NSArray arrayWithObjects:un1,un2,un3,un4,un5,nil];
     self.navigationController.navigationBar.hidden=YES;
     [self.navigationController pushViewController:tabbarVC animated:YES];
+    
 }
 
 - (IBAction)selectDeviceNumber:(id)sender {
@@ -181,7 +182,7 @@
 {
     [UIView animateWithDuration:0.5 animations:^{
         CGRect rect=self.view.frame;
-        CGFloat y_value=rect.origin.y-120;
+        CGFloat y_value=rect.origin.y-60;
         rect.origin.y=y_value;
         self.view.frame=rect;
     }];
@@ -191,7 +192,7 @@
 {
     [UIView animateWithDuration:0.3 animations:^{
         CGRect rect=self.view.frame;
-        CGFloat y_value=rect.origin.y+120;
+        CGFloat y_value=rect.origin.y+60;
         rect.origin.y=y_value;
         self.view.frame=rect;
     }];
