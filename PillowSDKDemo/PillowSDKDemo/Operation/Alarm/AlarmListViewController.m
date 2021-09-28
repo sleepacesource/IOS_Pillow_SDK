@@ -18,6 +18,7 @@
 #import "SLPUtilHeads.h"
 #import "TitleSubTitleArrowCell.h"
 #import "TitleSwitchCell.h"
+#import "Tool.h"
 
 @interface AlarmListViewController ()<UITableViewDataSource, UITableViewDelegate, AlarmViewControllerDelegate>
 
@@ -37,9 +38,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    [self loadData];
-    
     [self setUI];
+}
+
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [self loadData];
 }
 
 - (void)loadData
@@ -55,7 +60,6 @@
     [SLPBLESharedManager pillow:SharedDataManager.peripheral getAlarmListWithTimeout:0 callback:^(SLPDataTransferStatus status, id data) {
         NSArray *tempList = (NSArray *)data;
         if (tempList.count) {
-            
             NSMutableArray *array = [NSMutableArray array];
             for (int i = 0; i < tempList.count; i++) {
                 PillowAlarmInfo *info = [tempList objectAtIndex:i];
@@ -63,24 +67,20 @@
                     [array addObject:info];
                 }
             }
-            
             if (array.count > 0) {
                 SharedDataManager.alarmList = array;
                 wealSelf.alarmList = array;
                 [wealSelf.tableView reloadData];
             }
-            
         }
-        
     }];
-    
-    
 }
 
 - (void)setUI
 {
     self.titleLabel.text = @"闹钟";
     [self.addButton setTitle:@"添加" forState:UIControlStateNormal];
+    [Tool configSomeKindOfButtonLikeNomal:self.addButton];
     
     self.alarmList = SharedDataManager.alarmList;
     if (self.alarmList && self.alarmList.count > 0) {

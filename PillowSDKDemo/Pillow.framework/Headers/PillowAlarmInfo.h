@@ -26,7 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) UInt8 repeat;
 @property (nonatomic, assign) UInt8 snoozeTime;//贪睡次数
 @property (nonatomic, assign) UInt8 snoozeLength;//贪睡时长
-@property (nonatomic, assign) UInt8 volume;//音量大小 0-16
+@property (nonatomic, assign) UInt8 volume;//音量大小 0-8
 @property (nonatomic, assign) UInt8 brightness;//亮度 0-100
 @property (nonatomic, assign) UInt16 musicID;//音乐ID
 @property (nonatomic, assign) UInt32 timestamp;//时间戳 设置/修改闹钟时的标准时间戳（用于单次闹钟）
