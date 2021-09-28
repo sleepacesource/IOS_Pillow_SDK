@@ -323,7 +323,7 @@ static NSString *const kRowSnoozeTime = @"kRowSnoozeTime";
 - (void)showVolumeSelector
 {
     NSMutableArray *values = [NSMutableArray array];
-    for (int i = 1; i <= 16; i++) {
+    for (int i = 1; i <= 8; i++) {
         [values addObject:@(i)];
     }
     SLPMinuteSelectView *minuteSelectView = [SLPMinuteSelectView minuteSelectViewWithValues:values];

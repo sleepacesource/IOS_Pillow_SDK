@@ -265,10 +265,10 @@
     [self isShowUpgradeView:YES];
     [Tool outputResultWithStr:NSLocalizedString(@"fireware_update", nil) textView:self.textView];
     [self stopRealtimeData];
-    NSString *pkey = @"b92999dcdfa975c1334e335a392ac877ad60ee6baf38e947f753e859a5117ac0f3d0e5defc4390a7669e301df02969b45201a32b82f19a781fcc7a618db79803";
-    NSString *hashCode = @"d5466dbf6b08e0cedb28438d9ecd07b59d8ac66ca9c0bf4a219663227d559169";
+    NSString *pkey = @"e5d55010c63ffd4383acd9559cafaf49d6e424da108cec679224264dcfc948143f30e2b8fab8b341058d307ce761863baa17b426c1a89bb4e4159d85398b4e21";
+    NSString *hashCode = @"bdc0903d2e47edefc453f4a8b588af60680abec935e9d6484cbdc0c5fa4d4f57";
     
-    NSString *filepath = [[NSBundle mainBundle] pathForResource:@"P401M-v1.52r(v2.0.4b)-g-20210908" ofType:@"img"];
+    NSString *filepath = [[NSBundle mainBundle] pathForResource:@"P401M-v1.52r(v2.0.4b)-g-20210924" ofType:@"img"];
     NSData *package = [NSData dataWithContentsOfFile:filepath];
     [SLPBLESharedManager pillow:self.selectPeripheral.peripheral upgradeDeviceWithPkey:pkey hashCode:hashCode upgradePackage:package callback:^(SLPDataTransferStatus status, id data) {
 
