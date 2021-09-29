@@ -134,3 +134,17 @@
 "app_name"="Auto Pillow SDK";
 "update_success"="Firmware Update Complete";
 "create_report" = "Generate sleep report";
+"loaded_list"="Searching BLE devices…";
+"select_"="Select \"%@\"";
+"loaded__list"="The Bluetooth device list is being loaded";
+"get_device_name"="Get Device Name";
+"load_list_complete"="BLE searching has been done";
+"connection_disabled"="The connection is disabled";
+"not_bluetooth"="Bluetooth is off";
+"prompt_bluetooth"="Prompt to turn on the Bluetooth";
+"userid_judgment"="Check if the UserID is non-null";
+"non_empty"="Non-null";
+"failure"="Failed";
+"time_out"="Time out";
+"alarm" = "Alarm";
+"add alarm" = "Add Alarm";

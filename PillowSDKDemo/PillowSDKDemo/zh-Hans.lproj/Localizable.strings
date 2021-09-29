@@ -134,3 +134,16 @@
 "app_name"="Auto Pillow SDK";
 "update_success"="升级成功";
 "create_report" = "生成报告";
+"loaded_list"="正在加载蓝牙设备列表…";
+"select_"="选择“%@”";
+"get_device_name"="获取设备名";
+"load_list_complete"="加载蓝牙设备列表完成";
+"connection_disabled"="连接禁用了";
+"not_bluetooth"="手机蓝牙未开启";
+"prompt_bluetooth"="提示打开蓝牙";
+"userid_judgment"="UserID非空判断";
+"non_empty"="非空";
+"connecting_device"="正在连接设备…";
+"connect_device_successfully"="连接设备成功";
+"failure"="失败";
+"time_out"="超时";
