@@ -77,13 +77,13 @@
 /*开始查看原始数据
  原始数据数据通过通知kNotificationNameBLEpillowOriginalData 广播出<kNotificationPostData:PillowOriginalData>
  */
-- (void)pillow:(CBPeripheral *)peripheral startOriginalDataWithTimeout:(CGFloat)timeout
-      callback:(SLPTransforCallback)handle;
+//- (void)pillow:(CBPeripheral *)peripheral startOriginalDataWithTimeout:(CGFloat)timeout
+//      callback:(SLPTransforCallback)handle;
 
 /*结束查看原始数据
  */
-- (void)pillow:(CBPeripheral *)peripheral stopOriginalDataWithTimeout:(CGFloat)timeout
-      callback:(SLPTransforCallback)handle;
+//- (void)pillow:(CBPeripheral *)peripheral stopOriginalDataWithTimeout:(CGFloat)timeout
+//      callback:(SLPTransforCallback)handle;
 
 /*升级
  crcDes:加密包CRC32
@@ -93,6 +93,17 @@
  */
 - (void)pillow:(CBPeripheral *)peripheral upgradeDeviceWithCrcDes:(long)crcDes
         crcBin:(long)crcBin
+upgradePackage:(NSData *)package
+      callback:(SLPTransforCallback)handle;
+
+/*ZP100/P401M/PHP1301/P102T升级
+ pkey:私钥
+hashCode: 哈希值
+ package:升级包
+ 回调返回 PillowUpgradeInfo
+ */
+- (void)pillow:(CBPeripheral *)peripheral upgradeDeviceWithPkey:(NSString *)pkey
+        hashCode:(NSString *)hashCode
 upgradePackage:(NSData *)package
       callback:(SLPTransforCallback)handle;
 
