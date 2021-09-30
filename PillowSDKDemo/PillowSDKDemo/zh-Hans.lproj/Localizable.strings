@@ -84,7 +84,7 @@
 "view_signal_strength"="查看信号强度";
 "start_collection"="开始采集";
 "imitate_data"="模拟数据";
-"sleep_analysis"="睡眠分析";
+"sleep_analysis"="同步报告";
 "out_bed"="离床";
 "sleep_"="睡着";
 "wake_"="清醒";
@@ -194,3 +194,5 @@
 "upgrading_device"="正在升级设备：%@";
 "update_completed"="升级完成";
 "create_report" = "生成报告";
+"nothing"="无";
+"no_data"="历史数据为空";

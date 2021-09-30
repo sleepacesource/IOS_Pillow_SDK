@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina4_0" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -25,7 +23,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="执行过程:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6z4-GP-DwU">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="执行过程:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6z4-GP-DwU">
                     <rect key="frame" x="15" y="85" width="223" height="21"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="21" id="4ZQ-gT-oZr"/>
@@ -35,12 +33,12 @@
                     <color key="textColor" red="0.50980392159999999" green="0.57254901960000004" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gtw-TT-o3v">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gtw-TT-o3v">
                     <rect key="frame" x="15" y="116" width="290" height="200"/>
                     <subviews>
                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2hP-az-HSh">
                             <rect key="frame" x="0.0" y="0.0" width="290" height="200"/>
-                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                         </textView>
@@ -54,7 +52,7 @@
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="没有找到？点击刷新" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SIP-W2-z4D">
-                    <rect key="frame" x="16" y="130" width="288" height="44"/>
+                    <rect key="frame" x="16" y="365" width="288" height="44"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="44" id="DbK-vn-Qop"/>
                     </constraints>
@@ -63,7 +61,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lyR-Ho-voQ">
-                    <rect key="frame" x="16" y="130" width="289" height="44"/>
+                    <rect key="frame" x="16" y="365" width="289" height="44"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="44" id="haM-G2-6vb"/>
                     </constraints>
@@ -73,7 +71,7 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="选择设备ID" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xmV-KV-cwe">
-                    <rect key="frame" x="15" y="85" width="290" height="40"/>
+                    <rect key="frame" x="15" y="320" width="290" height="40"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="qCl-le-RHQ"/>
                     </constraints>
@@ -81,7 +79,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TTj-62-P2t">
-                    <rect key="frame" x="0.0" y="174" width="320" height="394"/>
+                    <rect key="frame" x="0.0" y="409" width="320" height="159"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
             </subviews>
@@ -99,7 +97,7 @@
                 <constraint firstItem="TTj-62-P2t" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Pqe-gq-0MC"/>
                 <constraint firstItem="6z4-GP-DwU" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="85" id="X5r-bl-KBz"/>
                 <constraint firstAttribute="trailing" secondItem="SIP-W2-z4D" secondAttribute="trailing" constant="16" id="aHB-zV-nCc"/>
-                <constraint firstItem="xmV-KV-cwe" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="85" id="cgl-hg-TJf"/>
+                <constraint firstItem="xmV-KV-cwe" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="320" id="cgl-hg-TJf"/>
                 <constraint firstItem="lyR-Ho-voQ" firstAttribute="top" secondItem="xmV-KV-cwe" secondAttribute="bottom" constant="5" id="dNc-Tr-dPb"/>
                 <constraint firstItem="xmV-KV-cwe" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="e9r-Dh-65R"/>
                 <constraint firstAttribute="trailing" secondItem="gtw-TT-o3v" secondAttribute="trailing" constant="15" id="r1b-5U-fMv"/>
@@ -111,5 +109,8 @@
     </objects>
     <resources>
         <image name="device_btn_refresh_nor.png" width="44" height="44"/>
+        <systemColor name="groupTableViewBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

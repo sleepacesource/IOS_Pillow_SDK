@@ -54,6 +54,11 @@
     // Do any additional setup after loading the view from its nib.
     [self setUI];
     [self addLeftItem];
+    [self loadReport];
+}
+
+- (void)viewWillDisappear:(BOOL)animated{
+    [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"creatReport"];
 }
 
 - (void)setUI
@@ -175,6 +180,12 @@
     //呼吸暂停、离床、心跳暂停都在这添加
     [sleepview sampleSleepData:obj.sleepStateStr status:obj.statusString];
     [sleepview setNeedsDisplay];
+}
+
+- (void)loadReport{
+    if ([[NSUserDefaults standardUserDefaults]objectForKey:@"creatReport"]) {
+        [self analysisSleep:nil];
+    }
 }
 
 ///数据分析

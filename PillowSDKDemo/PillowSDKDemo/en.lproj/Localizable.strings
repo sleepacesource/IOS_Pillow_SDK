@@ -84,7 +84,7 @@
 "view_signal_strength"="View Signal Strength";
 "start_collection"="Start Collecting";
 "imitate_data"="Simulation Data";
-"sleep_analysis"="Sleep Analysis";
+"sleep_analysis"="Sync report";
 "out_bed"="Left Bed";
 "sleep_"="Fall Asleep";
 "wake_"="Awake";
@@ -193,3 +193,5 @@
 "update_completed"="Firmware upgrad complete";
 "connect_device_successfully"="Device connection is successful";
 "create_report" = "Generate sleep report";
+"nothing"="Nothing";
+"no_data"="No historical data";

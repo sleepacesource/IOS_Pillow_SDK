@@ -13,5 +13,6 @@
 
 @property(nonatomic,strong) SLPPeripheralInfo *selectPeripheral;
 @property(nonatomic,strong) NSString *userID;
+@property(nonatomic,assign) BOOL report;
 
 @end

@@ -191,7 +191,6 @@
             self.deviceIdLabel.text=NSLocalizedString(@"failure", nil);
             [Tool outputResultWithStr:NSLocalizedString(@"failure", nil) textView:self.textView];
         }
-        
     }];
 }
 
@@ -267,16 +266,16 @@
     [Tool outputResultWithStr:NSLocalizedString(@"fireware_update", nil) textView:self.textView];
     [self stopRealtimeData];
     
-    NSString *pkey = @"ac885cc374b6a366c2b342dc4d9afa7881898e30d00057b2941424f583bcd4eebc4cdcae1a67c17d7f64410953495bff53d5e91351e71f5944a5eda46b2f9ef7";
-    NSString *hashCode = @"32bc2065ccc980051543985fabf9b88599ebb2b463af22170b14ac0087c8a48c";
+    NSString *pkey = @"e3d6554a8b26a9950695f53e81a738ae304319d3f8bfac7a9b15f1d7fa4ddf024247dbdff47f233afe41a9b5b3d2c57f18e1a576d2603f8d5fd1133ec4f3de5e";
+    NSString *hashCode = @"1a78b5e87e034f74938469715b0c8a5ad1527315d5800ec5cbc59c3d63200d57";
     
-    NSString *filepath = [[NSBundle mainBundle] pathForResource:@"P102T-v1.13r(v2.0.1b)-g-20210816" ofType:@"img"];
+    NSString *filepath = [[NSBundle mainBundle] pathForResource:@"P102T-v1.13r(v2.0.1b)-g-20210927" ofType:@"img"];
     NSData *package = [NSData dataWithContentsOfFile:filepath];
     [SLPBLESharedManager pillow:self.selectPeripheral.peripheral upgradeDeviceWithPkey:pkey hashCode:hashCode upgradePackage:package callback:^(SLPDataTransferStatus status, id data) {
         if (status==SLPDataTransferStatus_Succeed) {
             PillowUpgradeInfo *upgradeInfo=(PillowUpgradeInfo *)data;
             self.upgradeLabel.text=[NSString stringWithFormat:@"%.1f%%",upgradeInfo.progress*100];
-            self.ugLabel.text=[NSString stringWithFormat:@"%.1f%%  升级中...",upgradeInfo.progress*100];
+            self.ugLabel.text =[NSString stringWithFormat:NSLocalizedString(@"upgrading_device", nil),self.upgradeLabel.text];
             [Tool outputResultWithStr:[NSString stringWithFormat:NSLocalizedString(@"upgrading_device", nil),self.upgradeLabel.text] textView:self.textView];
             if (upgradeInfo.progress==1) {
                 self.upgradeLabel.text=NSLocalizedString(@"update_success", nil);

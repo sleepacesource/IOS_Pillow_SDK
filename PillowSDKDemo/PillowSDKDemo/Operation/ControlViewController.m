@@ -11,6 +11,7 @@
 #import <Pillow/Pillow.h>
 #import "Tool.h"
 #import "SignalViewController.h"
+#import "DataViewController.h"
 
 @interface ControlViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *getDeviceStatusBT;
@@ -202,7 +203,8 @@
             self.sleepStatusValueLabel.text=@"--";
             self.breathValueLabel.text=@"--";
             self.heartRateValueLabel.text=@"--";
-            self.navigationController.tabBarController .selectedIndex = 2;
+            [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"creatReport"];
+            self.navigationController.tabBarController.selectedIndex = 2;
         }
         else
         {
