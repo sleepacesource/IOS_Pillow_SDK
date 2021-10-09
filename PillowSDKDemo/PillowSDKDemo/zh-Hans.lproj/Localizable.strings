@@ -255,3 +255,6 @@
 "WorkDay"="工作日";
 "Signal"="仅一次";
 "EveryDay"="每天";
+"device_confirm" = "设备二次确认";
+"send_confirm" = "已发送确认信息";
+"receive_confirm" = "已收到确认信息";

@@ -182,4 +182,11 @@ finishCallback:(SLPTransforCallback)finishHandle;
 /*闹钟音乐试听功能
  */
 - (void)pillow:(CBPeripheral *)peripheral playMusicWithOperation:(UInt8)operation musicId:(UInt16)musicId volume:(UInt8)volume timeout:(CGFloat)timeout callback:(SLPTransforCallback)handle;
+
+/**
+ 绑定设备时，等待设备二次确认接口，避免被强制绑定
+ */
+- (void)pillow:(CBPeripheral *)peripheral waitConfirmWithTimeout:(CGFloat)timeout
+      callback:(SLPTransforCallback)handle;
+
 @end

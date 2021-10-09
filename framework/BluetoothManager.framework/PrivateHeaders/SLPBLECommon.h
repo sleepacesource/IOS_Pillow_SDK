@@ -111,6 +111,7 @@ typedef NS_ENUM(NSInteger,SLPBLEMessagetUniqTypes) {
     SLPBLEMessagetUniqType_PillowLeftBedAlarmConfig, // 离床闹钟设置
     SLPBLEMessagetUniqType_PillowGetLeftBedAlarm,   // 离床闹钟获取
     SLPBLEMessagetUniqType_PillowPlayMusic, // 试听音乐
+    
     //Mattress
     SLPBLEMessagetUniqType_Mattress_GetDeviceInfo,
     SLPBLEMessagetUniqType_Mattress_ConfigureWiFiSetting,
@@ -325,7 +326,8 @@ typedef NS_ENUM(UInt8, MusicOperation) {
 typedef NS_ENUM(NSInteger,SLPBLEPillowPostMessageType) {
     SLPBLEPillowPostMessageType_RealtimeData = 0x07,//pillow 实时数据
     SLPBLEPillowPostMessageType_OriginalData = 0x1D,//pillow 原始数据
-    SLPBLEPillowPostMessageType_PillowPostStatus = 0x05//pillow 控制盒状态上报
+    SLPBLEPillowPostMessageType_PillowPostStatus = 0x05,//pillow 控制盒状态上报
+
 };
 
 typedef NS_ENUM(NSInteger,SLPBLERestonPostMessageType) {

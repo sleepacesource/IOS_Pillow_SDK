@@ -36,6 +36,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *connectTitleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *devcieInfoTitleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *upgradeTitleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *label2;
+@property (weak, nonatomic) IBOutlet UILabel *label3;
+@property (weak, nonatomic) IBOutlet UIButton *confirmBT;
 
 @property (strong, nonatomic) UILabel *ugLabel;
 
@@ -49,6 +52,7 @@
     
     [self setUI];
     [self addLeftItem];
+    [self addNotifaction];
 }
 
 - (void)setUI
@@ -59,6 +63,7 @@
     [Tool configSomeKindOfButtonLikeNomal:self.getVersionBT];
     [Tool configSomeKindOfButtonLikeNomal:self.upgradeBT];
     [Tool configSomeKindOfButtonLikeNomal:self.disconnectDeviceBT];
+    [Tool configSomeKindOfButtonLikeNomal:self.confirmBT];
     [self.disconnectDeviceBT setLineWidth:1.0];
     
     self.myscorollview.contentSize=self.cView.frame.size;
@@ -67,8 +72,11 @@
     self.connectTitleLabel.text=NSLocalizedString(@"connect_device", nil);
     self.devcieInfoTitleLabel.text=NSLocalizedString(@"device_info", nil);
     self.upgradeTitleLabel.text=NSLocalizedString(@"fireware_info", nil);
+    self.label2.text=NSLocalizedString(@"device_confirm", nil);
+    
     self.label1.textColor=[FontColor C4];
     self.label1.font=[FontColor T3];
+    
     self.connectTitleLabel.textColor=[FontColor C4];
     self.connectTitleLabel.font=[FontColor T3];
     self.devcieInfoTitleLabel.textColor=[FontColor C4];
@@ -85,6 +93,9 @@
     self.versionLabel.font=[FontColor T3];
     self.upgradeLabel.textColor=[FontColor C3];
     self.upgradeLabel.font=[FontColor T3];
+    self.label3.textColor=[FontColor C3];
+    self.label3.font=[FontColor T3];
+    
     [Tool configureLabelBorder:self.deviceNameLabel];
     [Tool configureLabelBorder:self.deviceIdLabel];
     [Tool configureLabelBorder:self.powerLabel];
@@ -96,6 +107,7 @@
     [self.getVersionBT setTitle:NSLocalizedString(@"obtain_fireware_version", nil) forState:UIControlStateNormal];
     [self.upgradeBT setTitle:NSLocalizedString(@"fireware_update", nil) forState:UIControlStateNormal];
     [self.disconnectDeviceBT setTitle:NSLocalizedString(@"disconnect", nil) forState:UIControlStateNormal];
+    [self.confirmBT setTitle:NSLocalizedString(@"device_confirm", nil) forState:UIControlStateNormal];
     self.textView.layer.borderWidth=1.0f;
     self.textView.layer.borderColor=[UIColor lightGrayColor].CGColor;
     self.textView.layer.cornerRadius=2.0f;
@@ -114,6 +126,11 @@
     self.navigationItem.leftBarButtonItem=listItem;
 }
 
+- (void)addNotifaction{
+    [[NSNotificationCenter defaultCenter]addObserverForName:kNotificationNameBLEPillowWaitConfirm object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification * _Nonnull note) {
+        [Tool outputResultWithStr:NSLocalizedString(@"receive_confirm", nil) textView:self.textView];
+    }];
+}
 - (void)clickBack
 {
     BOOL isConnected=self.selectPeripheral.peripheral&&[SLPBLESharedManager peripheralIsConnected:self.selectPeripheral.peripheral];
@@ -128,6 +145,10 @@
     //
     [self deviceDisconenct];
     [Tool outputResultWithStr:nil textView:self.textView];
+}
+
+- (void)viewWillDisappear:(BOOL)animated{
+    self.label3.text = @"";
 }
 
 - (void)deviceDisconenct
@@ -223,6 +244,28 @@
         }
     }];
 }
+
+- (IBAction)getDeviceWaitConfirm:(id)sender {
+    if (![Tool bleIsOpenShowToTextview:self.textView]) {
+        return ;
+    }
+    
+    if (![Tool deviceIsConnected:self.selectPeripheral.peripheral ShowToTextview:self.textView]) {
+        return ;
+    }
+    [Tool outputResultWithStr:NSLocalizedString(@"device_confirm", nil) textView:self.textView];
+    [SLPBLESharedManager pillow:self.selectPeripheral.peripheral waitConfirmWithTimeout:10.0 callback:^(SLPDataTransferStatus status, id data) {
+        if (status==SLPDataTransferStatus_Succeed) {
+            self.label3.text=NSLocalizedString(@"send_confirm", nil);
+        }
+        else
+        {
+            self.label3.text= NSLocalizedString(@"failure", nil);
+            [Tool outputResultWithStr:NSLocalizedString(@"failure", nil) textView:self.textView];
+        }
+    }];
+}
+
 
 - (IBAction)getDeviceVersion:(id)sender {
     if (![Tool bleIsOpenShowToTextview:self.textView]) {

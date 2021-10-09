@@ -35,4 +35,11 @@
  */
 #define kNotificationNameBLEPillowStopCollection @"kNotificationNameBLEPillowStopCollection"//Pillow停止采集
 
+/*
+ object: 蓝牙设备的句柄 CBPeripheral *peripheral
+ userInfo: nil
+ */
+#define kNotificationNameBLEPillowWaitConfirm @"kNotificationNameBLEPillowWaitConfirm"//设备连续按两下等待确认通知发送
+
+
 #endif /* SLPPillowDef_h */

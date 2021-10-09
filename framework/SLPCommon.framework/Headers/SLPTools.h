@@ -25,7 +25,7 @@ static const NSInteger kHttpAddressLength = 128;
 + (UInt64)byteToUInt64:(Byte *)byte;
 + (int32_t)byteToInt32:(Byte *)byte;
 + (int16_t)byteToInt16:(Byte *)byte;
-+ (int8_t)byteToInt8:(Byte *)byte;
++ (UInt8)byteToInt8:(Byte *)byte;
 +(short)bytesToShort:(Byte *)src;
 
 +(int32_t)byteToInt32_SmallPort:(NSData *)data;
