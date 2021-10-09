@@ -76,7 +76,7 @@
     [self.startCollectBT setTitle:NSLocalizedString(@"start_collection", nil) forState:UIControlStateNormal];
     [self.stopCollectBT setTitle:NSLocalizedString(@"off_collection", nil) forState:UIControlStateNormal];
     [self.startRealtimeDataBT setTitle:NSLocalizedString(@"view_data", nil) forState:UIControlStateNormal];
-    [self.stopRealtimeDataBT setTitle:NSLocalizedString(@"off_data", nil) forState:UIControlStateNormal];
+    [self.startRealtimeDataBT setTitle:NSLocalizedString(@"off_data", nil) forState:UIControlStateSelected];
     [self.checkSignalBT setTitle:NSLocalizedString(@"view_signal_strength", nil) forState:UIControlStateNormal];
     [self.createBT setTitle:NSLocalizedString(@"create_report",nil) forState:UIControlStateNormal];
     self.breathTitleLabel.text=NSLocalizedString(@"breathrate", nil);
@@ -133,7 +133,7 @@
     self.startCollectBT.enabled=isConnected;
     self.createBT.enabled=isConnected;
     [self isShowRealDataBT:isConnected];
-
+    
     if (isConnected) {
         self.stopCollectBT.enabled=!self.startCollectBT.enabled;
     }
@@ -146,7 +146,7 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-//    [self getdeviceWrokStatus:nil];//refresh the button status
+    //    [self getdeviceWrokStatus:nil];//refresh the button status
 }
 
 - (IBAction)getdeviceWrokStatus:(id)sender{
@@ -233,7 +233,7 @@
         [Tool outputResultWithStr:[NSString stringWithFormat:@"%@:%@",NSLocalizedString(@"breathrate", nil),b_value] textView:self.textView];
         self.startCollectBT.enabled=NO;
         self.stopCollectBT.enabled=YES;
-//        [self isShowRealDataBT:YES];
+        //        [self isShowRealDataBT:YES];
     }];
 }
 
@@ -244,21 +244,43 @@
     if (![Tool deviceIsConnected:self.selectPeripheral.peripheral ShowToTextview:self.textView]) {
         return ;
     }
-    [Tool outputResultWithStr:NSLocalizedString(@"getting_real_time_data", nil) textView:self.textView];
-    [SLPBLESharedManager pillow:self.selectPeripheral.peripheral startRealTimeDataWithTimeout:10.0 callback:^(SLPDataTransferStatus status, id data) {
-        if (status==SLPDataTransferStatus_Succeed) {
-            NSLog(@"%@",NSLocalizedString(@"start realtime data succeed", nil));
-            [Tool outputResultWithStr:NSLocalizedString(@"notice_successful", nil) textView:self.textView];
-        }
-        else
-        {
-            self.sleepStatusValueLabel.text=@"--";
-            self.breathValueLabel.text=@"--";
-            self.heartRateValueLabel.text=@"--";
-            NSLog(@"%@",NSLocalizedString(@"start realtime data failed", nil));
-            [Tool outputResultWithStr:NSLocalizedString(@"failure", nil) textView:self.textView];
-        }
-    }];
+    
+    if (self.startRealtimeDataBT.isSelected) {
+        [Tool outputResultWithStr:NSLocalizedString(@"stopping_data", nil) textView:self.textView];
+        [SLPBLESharedManager pillow:self.selectPeripheral.peripheral stopRealTimeDataWithTimeout:10.0 callback:^(SLPDataTransferStatus status, id data) {
+            if (status==SLPDataTransferStatus_Succeed) {
+                self.startRealtimeDataBT.selected = !self.startRealtimeDataBT.isSelected;
+                self.sleepStatusValueLabel.text=@"--";
+                self.breathValueLabel.text=@"--";
+                self.heartRateValueLabel.text=@"--";
+                NSLog(@"%@",NSLocalizedString(@"stop_data_successfully", nil));
+                [Tool outputResultWithStr:NSLocalizedString(@"stop_data_successfully", nil) textView:self.textView];
+            }
+            else
+            {
+                NSLog(@"%@",NSLocalizedString(@"stop realtime data failed", nil));
+                [Tool outputResultWithStr:NSLocalizedString(@"failure", nil) textView:self.textView];
+            }
+        }];
+    }
+    else{
+        [Tool outputResultWithStr:NSLocalizedString(@"getting_real_time_data", nil) textView:self.textView];
+        [SLPBLESharedManager pillow:self.selectPeripheral.peripheral startRealTimeDataWithTimeout:10.0 callback:^(SLPDataTransferStatus status, id data) {
+            self.startRealtimeDataBT.selected = !self.startRealtimeDataBT.isSelected;
+            if (status==SLPDataTransferStatus_Succeed) {
+                NSLog(@"%@",NSLocalizedString(@"start realtime data succeed", nil));
+                [Tool outputResultWithStr:NSLocalizedString(@"notice_successful", nil) textView:self.textView];
+            }
+            else
+            {
+                self.sleepStatusValueLabel.text=@"--";
+                self.breathValueLabel.text=@"--";
+                self.heartRateValueLabel.text=@"--";
+                NSLog(@"%@",NSLocalizedString(@"start realtime data failed", nil));
+                [Tool outputResultWithStr:NSLocalizedString(@"failure", nil) textView:self.textView];
+            }
+        }];
+    }
 }
 
 - (IBAction)stopRealtimeData:(id)sender {
@@ -268,21 +290,7 @@
     if (![Tool deviceIsConnected:self.selectPeripheral.peripheral ShowToTextview:self.textView]) {
         return ;
     }
-    [Tool outputResultWithStr:NSLocalizedString(@"stopping_data", nil) textView:self.textView];
-    [SLPBLESharedManager pillow:self.selectPeripheral.peripheral stopRealTimeDataWithTimeout:10.0 callback:^(SLPDataTransferStatus status, id data) {
-        if (status==SLPDataTransferStatus_Succeed) {
-            self.sleepStatusValueLabel.text=@"--";
-            self.breathValueLabel.text=@"--";
-            self.heartRateValueLabel.text=@"--";
-            NSLog(@"%@",NSLocalizedString(@"stop_data_successfully", nil));
-            [Tool outputResultWithStr:NSLocalizedString(@"stop_data_successfully", nil) textView:self.textView];
-        }
-        else
-        {
-            NSLog(@"%@",NSLocalizedString(@"stop realtime data failed", nil));
-            [Tool outputResultWithStr:NSLocalizedString(@"failure", nil) textView:self.textView];
-        }
-    }];
+   
 }
 
 - (IBAction)createReport:(id)sender {
@@ -300,6 +308,7 @@
             self.sleepStatusValueLabel.text=@"--";
             self.breathValueLabel.text=@"--";
             self.heartRateValueLabel.text=@"--";
+            [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"creatReport"];
             self.navigationController.tabBarController .selectedIndex = 4;
         }
         else

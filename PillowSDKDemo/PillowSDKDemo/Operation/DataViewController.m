@@ -54,6 +54,8 @@
     // Do any additional setup after loading the view from its nib.
     [self setUI];
     [self addLeftItem];
+    [self loadReport];
+
 }
 
 - (void)setUI
@@ -88,6 +90,10 @@
     self.textView.layer.cornerRadius=2.0f;
     self.textView.textColor=[FontColor C3];
     self.textView.font=[FontColor T4];
+}
+
+- (void)viewWillDisappear:(BOOL)animated{
+    [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"creatReport"];
 }
 
 - (void)addLeftItem
@@ -175,6 +181,12 @@
     //呼吸暂停、离床、心跳暂停都在这添加
     [sleepview sampleSleepData:obj.sleepStateStr status:obj.statusString];
     [sleepview setNeedsDisplay];
+}
+
+- (void)loadReport{
+    if ([[NSUserDefaults standardUserDefaults]objectForKey:@"creatReport"]) {
+        [self analysisSleep:nil];
+    }
 }
 
 ///数据分析

@@ -63,37 +63,37 @@
         
         MusicInfo *musicInfo = [[MusicInfo alloc] init];
         musicInfo.musicID = 31163;
-        musicInfo.musicName = @"海浪";
+        musicInfo.musicName = NSLocalizedString(@"Ocean Sea Waves", nil);
         [_musicList addObject:musicInfo];
         
         musicInfo = [[MusicInfo alloc] init];
         musicInfo.musicID = 31164;
-        musicInfo.musicName = @"雨";
+        musicInfo.musicName =NSLocalizedString( @"Sleeping_music_07", nil);
         [_musicList addObject:musicInfo];
         
         musicInfo = [[MusicInfo alloc] init];
         musicInfo.musicID = 31162;
-        musicInfo.musicName = @"冬日暖阳";
+        musicInfo.musicName = NSLocalizedString( @"Sleeping_music_05", nil);
         [_musicList addObject:musicInfo];
         
         musicInfo = [[MusicInfo alloc] init];
         musicInfo.musicID = 31155;
-        musicInfo.musicName = @"月光";
+        musicInfo.musicName = NSLocalizedString( @"Sleeping_music_01", nil);
         [_musicList addObject:musicInfo];
         
         musicInfo = [[MusicInfo alloc] init];
         musicInfo.musicID = 31156;
-        musicInfo.musicName = @"小小的我";
+        musicInfo.musicName = NSLocalizedString( @"Sleeping_music_02", nil);
         [_musicList addObject:musicInfo];
         
         musicInfo = [[MusicInfo alloc] init];
         musicInfo.musicID = 31157;
-        musicInfo.musicName = @"让旅程开始";
+        musicInfo.musicName = NSLocalizedString( @"Sleeping_music_03", nil);
         [_musicList addObject:musicInfo];
         
         musicInfo = [[MusicInfo alloc] init];
         musicInfo.musicID = 31160;
-        musicInfo.musicName = @"凯特人的摇篮曲";
+        musicInfo.musicName = NSLocalizedString( @"Sleeping_music_04", nil);
         [_musicList addObject:musicInfo];
     }
     
@@ -143,18 +143,18 @@
 
 - (NSString *)getSmartFlagName:(UInt8)smartFlag {
     if (smartFlag == 1) {
-        return @"开";
+        return NSLocalizedString( @"ON", nil);
     }
     
-    return @"关";
+    return NSLocalizedString( @"OFF", nil);
 }
 
 - (NSString *)modeTextWith:(UInt8)mode {
     if (mode == 1) {
-        return @"单曲循环";
+        return NSLocalizedString( @"music_single_cycle", nil);
     }
     
-    return @"列表循环";
+    return NSLocalizedString( @"music_order_play", nil);
 }
 
 - (void)setUI {
@@ -166,7 +166,7 @@
     self.volumeField.text = [NSString stringWithFormat:@"%d", self.volume];
     self.modeLabel.text = [self modeTextWith:self.circleMode];
     self.stopFlagLabel.text = [self getSmartFlagName:self.smartFlag];
-    self.timeLabel.text = [NSString stringWithFormat:@"%d分钟", self.smartDuration];
+    self.timeLabel.text = [NSString stringWithFormat:@"%d%@", self.smartDuration,NSLocalizedString( @"unit_m", nil)];
     
     self.musicContainer.layer.masksToBounds = YES;
     self.musicContainer.layer.cornerRadius = 5;
@@ -207,7 +207,7 @@
     vc.musicList = self.musicList;
     vc.musicID = self.assistMusicID;
     vc.mode = FromMode_SleepAid;
-    vc.title = @"音乐列表";
+    vc.title = NSLocalizedString( @"music_list", nil);
     __weak typeof(self) weakSelf = self;
     vc.musicBlock = ^(NSInteger musicID) {
         self.assistMusicID = musicID;
@@ -241,19 +241,19 @@
 }
 
 - (IBAction)chooseMode:(UIButton *)sender {
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"" message:@"循环模式" preferredStyle:UIAlertControllerStyleActionSheet];
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"" message:NSLocalizedString(@"cycle_mode", nil) preferredStyle:UIAlertControllerStyleActionSheet];
     __weak typeof(self) weakSelf = self;
-    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"cancel", nil) style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
         
     }];
-    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"列表循环" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"music_order_play", nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         weakSelf.circleMode = 0;
         weakSelf.modeLabel.text = [self modeTextWith:weakSelf.circleMode];
         if (weakSelf.isPlayingMusic) {
             [weakSelf playMusicWitCompletion:nil];
         }
     }];
-    UIAlertAction *resetAction = [UIAlertAction actionWithTitle:@"单曲循环" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertAction *resetAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"music_single_cycle", nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         weakSelf.circleMode = 1;
         weakSelf.modeLabel.text = [self modeTextWith:weakSelf.circleMode];
         if (weakSelf.isPlayingMusic) {
@@ -276,7 +276,7 @@
 //                [Utils showDeviceOperationFailed:status atViewController:weakSelf];
             }else{
                 sender.selected = NO;
-                [weakSelf.playBtn setTitle:@"播放" forState:UIControlStateNormal];
+                [weakSelf.playBtn setTitle:NSLocalizedString(@"play", nil) forState:UIControlStateNormal];
                 [Tool configSomeKindOfButtonLikeNomal:weakSelf.playBtn];
                 weakSelf.isPlayingMusic = NO;
             }
@@ -287,7 +287,7 @@
 //                [Utils showDeviceOperationFailed:status atViewController:weakSelf];
             }else{
                 sender.selected = YES;
-                [weakSelf.playBtn setTitle:@"暂停" forState:UIControlStateNormal];
+                [weakSelf.playBtn setTitle:NSLocalizedString(@"pause", nil) forState:UIControlStateNormal];
                 [Tool configSomeKindOfButtonLikeNomal:weakSelf.playBtn];
                 weakSelf.isPlayingMusic = YES;
             }
@@ -305,33 +305,38 @@
     [self playMusicWitCompletion:^(SLPDataTransferStatus status) {
         if (status == SLPDataTransferStatus_Succeed) {
             weakSelf.playBtn.selected = YES;
-            [weakSelf.playBtn setTitle:@"暂停" forState:UIControlStateNormal];
+            [weakSelf.playBtn setTitle:NSLocalizedString(@"pause", nil) forState:UIControlStateNormal];
             weakSelf.isPlayingMusic = YES;
         }
     }];
 }
 
 - (IBAction)chooseTime:(UIButton *)sender {
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"" message:@"定时结束" preferredStyle:UIAlertControllerStyleActionSheet];
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"" message:NSLocalizedString(@"sleep_aid_time_off", nil) preferredStyle:UIAlertControllerStyleActionSheet];
     __weak typeof(self) weakSelf = self;
-    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"cancel", nil) style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
         
     }];
-    UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"15分钟" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    NSString * str1 = [NSString stringWithFormat:@"15%@",NSLocalizedString( @"unit_m", nil)];
+    NSString * str2 = [NSString stringWithFormat:@"30%@",NSLocalizedString( @"unit_m", nil)];
+    NSString * str3 = [NSString stringWithFormat:@"45%@",NSLocalizedString( @"unit_m", nil)];
+    NSString * str4 = [NSString stringWithFormat:@"60%@",NSLocalizedString( @"unit_m", nil)];
+    
+    UIAlertAction *action1 = [UIAlertAction actionWithTitle:str1 style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         weakSelf.smartDuration = 15;
-        weakSelf.timeLabel.text = @"15分钟";
+        weakSelf.timeLabel.text = str1;
     }];
-    UIAlertAction *action2 = [UIAlertAction actionWithTitle:@"30分钟" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertAction *action2 = [UIAlertAction actionWithTitle:str2 style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         weakSelf.smartDuration = 30;
-        weakSelf.timeLabel.text = @"30分钟";
+        weakSelf.timeLabel.text = str2;
     }];
-    UIAlertAction *action3 = [UIAlertAction actionWithTitle:@"45分钟" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertAction *action3 = [UIAlertAction actionWithTitle:str3 style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         weakSelf.smartDuration = 45;
-        weakSelf.timeLabel.text = @"45分钟";
+        weakSelf.timeLabel.text = str3;
     }];
-    UIAlertAction *action4 = [UIAlertAction actionWithTitle:@"60分钟" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertAction *action4 = [UIAlertAction actionWithTitle:str4 style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         weakSelf.smartDuration = 60;
-        weakSelf.timeLabel.text = @"60分钟";
+        weakSelf.timeLabel.text = str4;
         
     }];
     [alertController addAction:cancelAction];
@@ -344,21 +349,21 @@
 
 
 - (IBAction)chooseStop:(UIButton *)sender {
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"" message:@"智能停止播放" preferredStyle:UIAlertControllerStyleActionSheet];
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"" message:NSLocalizedString(@"smart_stop_play", nil) preferredStyle:UIAlertControllerStyleActionSheet];
     __weak typeof(self) weakSelf = self;
-    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"cancel", nil) style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
         
     }];
-    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"关" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"OFF", nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         weakSelf.smartFlag = 0;
-        weakSelf.stopFlagLabel.text = @"关";
+        weakSelf.stopFlagLabel.text = NSLocalizedString(@"OFF", nil);
 //        if (weakSelf.isPlayingMusic) {
 //            [weakSelf playMusicWitCompletion:nil];
 //        }
     }];
-    UIAlertAction *resetAction = [UIAlertAction actionWithTitle:@"开" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertAction *resetAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"ON", nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         weakSelf.smartFlag = 1;
-        weakSelf.stopFlagLabel.text = @"开";
+        weakSelf.stopFlagLabel.text = NSLocalizedString(@"ON", nil);
 //        if (weakSelf.isPlayingMusic) {
 //            [weakSelf playMusicWitCompletion:nil];
 //        }

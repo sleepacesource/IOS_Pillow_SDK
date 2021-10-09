@@ -196,3 +196,20 @@
 "create_report" = "生成报告";
 "nothing"="无";
 "no_data"="历史数据为空";
+
+"Ocean Sea Waves"="海浪";
+"Sleeping_music_07": "雨";
+"Sleeping_music_05": "冬日暖阳";
+"Sleeping_music_01": "月光";
+"Sleeping_music_02": "小小的我";
+"Sleeping_music_03": "让旅程开始";
+"Sleeping_music_04": "凯特人的摇篮曲";
+"ON" = "开";
+"OFF"= "关";
+"music_order_play"="列表循环";
+"music_single_cycle"="单曲循环";
+"music_list" = "音乐列表";
+"cycle_mode" = "循环模式";
+"play" = "播放";
+"pause" = "暂停";
+"smart_stop_play" = "智能停止播放";
