@@ -33,9 +33,9 @@
 {
 //    self.titleLabel.text = LocalizedString(@"music_list");
     
-    [self.saveBtn setTitle:@"保存" forState:UIControlStateNormal];
+    [self.saveBtn setTitle:NSLocalizedString(@"save", nil) forState:UIControlStateNormal];
     
-    UIBarButtonItem *item1 = [[UIBarButtonItem alloc] initWithTitle:@"保存" style:UIBarButtonItemStylePlain target:self action:@selector(saveData)];
+    UIBarButtonItem *item1 = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"save", nil) style:UIBarButtonItemStylePlain target:self action:@selector(saveData)];
     self.navigationItem.rightBarButtonItem = item1;
     
     if (self.mode == FromMode_Alarm) {

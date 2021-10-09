@@ -32,9 +32,9 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
-    cell.textLabel.text = @"蓝牙音乐";
+    cell.textLabel.text = NSLocalizedString(@"blue_music", nil);
     if (indexPath.row == 1) {
-        cell.textLabel.text = @"闹钟";
+        cell.textLabel.text = NSLocalizedString(@"alarm", nil);
     }
     return cell;
 }
@@ -47,11 +47,11 @@
     }
     if (indexPath.row == 0) {
         BLEMuiscViewController *vc = [BLEMuiscViewController new];
-        vc.title = @"蓝牙音乐";
+        vc.title = NSLocalizedString(@"blue_music", nil);
         [self.navigationController pushViewController:vc animated:YES];
     } else if (indexPath.row == 1) {
         AlarmListViewController *vc = [AlarmListViewController new];
-        vc.title = @"闹钟";
+        vc.title = NSLocalizedString(@"alarm", nil);
         [self.navigationController pushViewController:vc animated:YES];
     }
 }

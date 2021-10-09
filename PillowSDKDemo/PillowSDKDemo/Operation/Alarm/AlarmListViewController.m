@@ -78,7 +78,7 @@
 {
     self.titleLabel.text = NSLocalizedString(@"alarm", nil);
     [Tool configSomeKindOfButtonLikeNomal:self.addButton];
-    [self.addButton setTitle:NSLocalizedString(@"add alarm", nil) forState:UIControlStateNormal];
+    [self.addButton setTitle:NSLocalizedString(@"add_alarm", nil) forState:UIControlStateNormal];
     
     self.alarmList = SharedDataManager.alarmList;
     if (self.alarmList && self.alarmList.count > 0) {
@@ -89,7 +89,7 @@
 - (void)goAddAlarm
 {
     if (self.alarmList.count >= 5) {
-        [Utils showMessage:@"最多添加5个" controller:self];
+        [Utils showMessage:NSLocalizedString(@"max_count_per_device", nil) controller:self];
         return;
     }
     
@@ -111,7 +111,7 @@
         }
     }
     AlarmViewController *vc = [AlarmViewController new];
-    vc.title = @"添加闹钟";
+    vc.title = NSLocalizedString(@"add_alarm", nil);
     vc.delegate = self;
     vc.addAlarmID = alarmID;
     vc.alarmPageType = AlarmPageType_Add;
@@ -129,9 +129,9 @@
 }
 
 - (NSString *)getLeftOperationStr:(UInt8)operation {
-    NSString *str = @"贪睡";
+    NSString *str = NSLocalizedString(@"snooze_", nil);
     if (operation == 1) {
-        str = @"关闭闹钟";
+        str = NSLocalizedString(@"turn_off_alarm", nil);
     }
     
     return  str;
@@ -149,7 +149,7 @@
     if (indexPath.row == 0) {
         TitleSwitchCell *cell = (TitleSwitchCell *)[SLPUtils tableView:tableView cellNibName:@"TitleSwitchCell"];
         
-        cell.titleLabel.text = @"离床闹钟";
+        cell.titleLabel.text = NSLocalizedString(@"leave_bed_alarm", nil);
         cell.switcher.on = self.leftBedAlarmInfo.isOpen;
         
         __weak typeof(self) weakSelf = self;
@@ -163,7 +163,7 @@
     } else if(indexPath.row == 1) {
         if (self.leftBedAlarmInfo.isOpen) {
             TitleSubTitleArrowCell *baseCell = (TitleSubTitleArrowCell *)[SLPUtils tableView:self.tableView cellNibName:@"TitleSubTitleArrowCell"];
-            baseCell.titleLabel.text = @"离枕后";
+            baseCell.titleLabel.text = NSLocalizedString(@"off_pillow", nil);
             baseCell.subTitleLabel.text = [self getLeftOperationStr:self.leftBedAlarmInfo.operation];
             [Utils configCellTitleLabel:baseCell.textLabel];
             tempCell = baseCell;
@@ -217,7 +217,7 @@
 {
     if (![SLPBLESharedManager blueToothIsOpen]) {
         [self.tableView reloadData];
-        [Utils showMessage:@"蓝牙未打开" controller:self];
+        [Utils showMessage:NSLocalizedString(@"not_bluetooth", nil) controller:self];
         return;
     }
     __weak typeof(self) weakSelf = self;
@@ -234,7 +234,7 @@
 {
     if (![SLPBLESharedManager blueToothIsOpen]) {
         [self.tableView reloadData];
-        [Utils showMessage:@"蓝牙未打开" controller:self];
+        [Utils showMessage:NSLocalizedString(@"not_bluetooth", nil) controller:self];
         return;
     }
     __weak typeof(self) weakSelf = self;
@@ -270,17 +270,17 @@
 }
 
 - (void)goSelectLeftBedOperation {
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"" message:@"离枕后" preferredStyle:UIAlertControllerStyleActionSheet];
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"" message:NSLocalizedString(@"off_pillow", nil) preferredStyle:UIAlertControllerStyleActionSheet];
     __weak typeof(self) weakSelf = self;
-    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"cancel", nil) style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
         
     }];
-    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"关闭闹钟" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"turn_off_alarm", nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         weakSelf.leftBedAlarmInfo.operation = 1;
         [weakSelf configLeftBedAlarmInfo];
         [weakSelf.tableView reloadData];
     }];
-    UIAlertAction *resetAction = [UIAlertAction actionWithTitle:@"贪睡" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertAction *resetAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"snooze_", nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         weakSelf.leftBedAlarmInfo.operation = 0;
         [weakSelf configLeftBedAlarmInfo];
         [weakSelf.tableView reloadData];
@@ -299,7 +299,7 @@
 {
     AlarmViewController *vc = [AlarmViewController new];
     vc.delegate = self;
-    vc.title = @"编辑闹钟";
+    vc.title = NSLocalizedString(@"edit_alarm", nil);
     vc.orignalAlarmData = alarmData;
     vc.alarmPageType = AlarmPageType_edit;
     [self.navigationController pushViewController:vc animated:YES];

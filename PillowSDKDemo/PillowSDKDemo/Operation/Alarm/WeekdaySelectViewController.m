@@ -31,17 +31,16 @@
 
 - (void)setUI
 {
-    self.titleLabel.text = @"重复";
+    self.titleLabel.text = NSLocalizedString(@"replay", nil);
+    self.weekdayList = [NSArray arrayWithObjects:NSLocalizedString(@"Monday", nil), NSLocalizedString(@"Tuesday", nil), NSLocalizedString(@"Wednesday", nil), NSLocalizedString(@"Thursday", nil), NSLocalizedString(@"Friday", nil), NSLocalizedString(@"Saturday", nil), NSLocalizedString(@"Sunday", nil), nil];
     
-    self.weekdayList = [NSArray arrayWithObjects:@"周一", @"周二", @"周三", @"周四", @"周五", @"周六", @"周日", nil];
-    
-    [self.saveBtn setTitle:@"保存" forState:UIControlStateNormal];
+    [self.saveBtn setTitle:NSLocalizedString(@"save", nil) forState:UIControlStateNormal];
     
     self.weekDayNew = self.selectWeekDay;
     
     self.selectWeekDayList = [self getRepeatDays:self.weekDayNew];
     
-    UIBarButtonItem *item1 = [[UIBarButtonItem alloc] initWithTitle:@"保存" style:UIBarButtonItemStylePlain target:self action:@selector(saveData)];
+    UIBarButtonItem *item1 = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"save", nil) style:UIBarButtonItemStylePlain target:self action:@selector(saveData)];
     self.navigationItem.rightBarButtonItem = item1;
 }
 

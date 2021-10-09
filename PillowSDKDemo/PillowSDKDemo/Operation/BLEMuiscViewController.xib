@@ -10,6 +10,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BLEMuiscViewController">
             <connections>
+                <outlet property="labe1" destination="cB0-7h-FLi" id="IsW-O7-VB6"/>
+                <outlet property="labe2" destination="cP7-1b-jv6" id="yIA-Cm-ydp"/>
                 <outlet property="saveBT" destination="1eO-P1-xXS" id="3eS-IX-0uN"/>
                 <outlet property="stopFlagContainer" destination="KOT-tk-Tzm" id="pir-lc-GtV"/>
                 <outlet property="stopFlagLabel" destination="n0H-sI-J6E" id="aTl-O0-OjS"/>

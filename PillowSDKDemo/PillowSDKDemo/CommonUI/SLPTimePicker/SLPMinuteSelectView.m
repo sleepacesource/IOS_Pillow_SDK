@@ -47,8 +47,8 @@
     [self.maskView setBackgroundColor:[Theme colorOf:[UIColor blackColor] alpha:0.8]];
     self.btnBackgroundView.backgroundColor = [Theme C5];
     [self.backgroundView setBackgroundColor:[Theme C9]];
-    [self.finishBtn setTitle:@"完成" forState:UIControlStateNormal];
-    [self.cancelBtn setTitle:@"取消" forState:UIControlStateNormal];
+    [self.finishBtn setTitle:NSLocalizedString(@"confirm", nil) forState:UIControlStateNormal];
+    [self.cancelBtn setTitle:NSLocalizedString(@"cancel", nil) forState:UIControlStateNormal];
     [self.finishBtn setTitleColor:[Theme C2] forState:UIControlStateNormal];
     [self.finishBtn.titleLabel setFont:[Theme T2]];
     [self.cancelBtn setTitleColor:[Theme C4] forState:UIControlStateNormal];

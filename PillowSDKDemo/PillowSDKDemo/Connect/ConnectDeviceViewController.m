@@ -134,13 +134,13 @@
     controlVC.userID=self.myTextfield.text;
     
     SleepAidViewController *sleepAidVC=[[SleepAidViewController alloc]initWithNibName:@"SleepAidViewController" bundle:nil];
-    sleepAidVC.title=@"控制";
+    sleepAidVC.title= NSLocalizedString(@"control_", nil);
     sleepAidVC.selectPeripheral=self.selectPeripheral;
     sleepAidVC.userID=self.myTextfield.text;
     sleepAidVC.tabBarItem.image = [UIImage imageNamed:@"control.png"];
     
     SettingsViewController *settingsVC = [[SettingsViewController alloc] initWithNibName:@"SettingsViewController" bundle:nil];
-    settingsVC.title = @"设置";
+    settingsVC.title = NSLocalizedString(@"setting", nil);
     settingsVC.selectPeripheral=self.selectPeripheral;
     settingsVC.userID=self.myTextfield.text;
     settingsVC.tabBarItem.image = [UIImage imageNamed:@"control.png"];

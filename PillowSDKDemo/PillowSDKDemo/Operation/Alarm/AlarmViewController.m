@@ -66,27 +66,27 @@ static NSString *const kRowSnoozeTime = @"kRowSnoozeTime";
         
         MusicInfo *musicInfo = [[MusicInfo alloc] init];
         musicInfo.musicID = 31166;
-        musicInfo.musicName = @"晨之语";
+        musicInfo.musicName = NSLocalizedString(@"music_list_1", nil);
         [_musicList addObject:musicInfo];
         
         musicInfo = [[MusicInfo alloc] init];
         musicInfo.musicID = 31167;
-        musicInfo.musicName = @"春溪小曲";
+        musicInfo.musicName = NSLocalizedString(@"music_list_2", nil);
         [_musicList addObject:musicInfo];
         
         musicInfo = [[MusicInfo alloc] init];
         musicInfo.musicID = 31168;
-        musicInfo.musicName = @"低吟浅唱";
+        musicInfo.musicName = NSLocalizedString(@"music_list_3", nil);
         [_musicList addObject:musicInfo];
         
         musicInfo = [[MusicInfo alloc] init];
         musicInfo.musicID = 31169;
-        musicInfo.musicName = @"慵懒的早晨";
+        musicInfo.musicName = NSLocalizedString(@"music_list_4", nil);
         [_musicList addObject:musicInfo];
         
         musicInfo = [[MusicInfo alloc] init];
         musicInfo.musicID = 31170;
-        musicInfo.musicName = @"八音盒";
+        musicInfo.musicName = NSLocalizedString(@"music_list_5", nil);
         [_musicList addObject:musicInfo];
     }
     
@@ -110,21 +110,21 @@ static NSString *const kRowSnoozeTime = @"kRowSnoozeTime";
     self.tableView.tableHeaderView = view;
     self.alarmDataNew = [[PillowAlarmInfo alloc] init];
     if (self.alarmPageType == AlarmPageType_Add) {
-        self.titleLabel.text = @"添加闹钟";
+        self.titleLabel.text = NSLocalizedString(@"add_alarm", nil);
         [self initDefaultAlarmData];
     }else{
-        self.titleLabel.text = @"编辑闹钟";
+        self.titleLabel.text = NSLocalizedString(@"edit_alarm", nil);
         
         [self initAlarmDataWithOriginal];
     }
     
-    UIBarButtonItem *item1 = [[UIBarButtonItem alloc] initWithTitle:@"保存" style:UIBarButtonItemStylePlain target:self action:@selector(saveData)];
+    UIBarButtonItem *item1 = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"save", nil) style:UIBarButtonItemStylePlain target:self action:@selector(saveData)];
     self.navigationItem.rightBarButtonItem = item1;
 }
 
 - (void)saveData {
     if (![SLPBLESharedManager blueToothIsOpen]) {
-        [Utils showMessage:@"蓝牙未打开" controller:self];
+        [Utils showMessage:NSLocalizedString(@"not_bluetooth", nil) controller:self];
         return;
     }
     
@@ -138,7 +138,7 @@ static NSString *const kRowSnoozeTime = @"kRowSnoozeTime";
                 [self.delegate editAlarmInfoAndShouldReload];
             }
 
-            [Utils showMessage:@"保存成功" controller:weakSelf];
+            [Utils showMessage:NSLocalizedString(@"save_succeed", nil) controller:weakSelf];
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                 [weakSelf.navigationController popViewControllerAnimated:YES];
             });
@@ -374,7 +374,7 @@ static NSString *const kRowSnoozeTime = @"kRowSnoozeTime";
     vc.musicID = self.alarmDataNew.musicID;
     vc.musicList = self.musicList;
     vc.mode = FromMode_Alarm;
-    vc.title = @"音乐列表";
+    vc.title = NSLocalizedString(@"music_list", nil);
     __weak typeof(self) weakSelf = self;
     vc.musicBlock = ^(NSInteger musicID) {
         weakSelf.alarmDataNew.musicID = musicID;
@@ -413,31 +413,31 @@ static NSString *const kRowSnoozeTime = @"kRowSnoozeTime";
     
     if ([rowName isEqualToString:kRowTime]) {
         TitleSubTitleArrowCell *baseCell = (TitleSubTitleArrowCell *)[SLPUtils tableView:self.tableView cellNibName:@"TitleSubTitleArrowCell"];
-        baseCell.titleLabel.text = @"时间";
+        baseCell.titleLabel.text = NSLocalizedString(@"time", nil);
         baseCell.subTitleLabel.text = [self getAlarmTimeStringWithDataModle:self.alarmDataNew];
         [Utils configCellTitleLabel:baseCell.textLabel];
         cell = baseCell;
     }else if ([rowName isEqualToString:kRowRepeat]){
         TitleSubTitleArrowCell *baseCell = (TitleSubTitleArrowCell *)[SLPUtils tableView:self.tableView cellNibName:@"TitleSubTitleArrowCell"];
-        baseCell.titleLabel.text = @"重复";
+        baseCell.titleLabel.text = NSLocalizedString(@"replay", nil);
         baseCell.subTitleLabel.text = [SLPWeekDay getAlarmRepeatDayStringWithWeekDay:self.alarmDataNew.repeat];
         [Utils configCellTitleLabel:baseCell.textLabel];
         cell = baseCell;
     }else if ([rowName isEqualToString:kRowMusic]){
         TitleSubTitleArrowCell *baseCell = (TitleSubTitleArrowCell *)[SLPUtils tableView:self.tableView cellNibName:@"TitleSubTitleArrowCell"];
-        baseCell.titleLabel.text = @"音乐";
+        baseCell.titleLabel.text =NSLocalizedString(@"music", nil);
         baseCell.subTitleLabel.text = [self getMusicNameWithMusicID:self.alarmDataNew.musicID];
         [Utils configCellTitleLabel:baseCell.textLabel];
         cell = baseCell;
     }else if([rowName isEqualToString:kRowMusicVolumn]){
         TitleSubTitleArrowCell *baseCell = (TitleSubTitleArrowCell *)[SLPUtils tableView:self.tableView cellNibName:@"TitleSubTitleArrowCell"];
-        baseCell.titleLabel.text = @"音量";
+        baseCell.titleLabel.text = NSLocalizedString(@"volume", nil);
         baseCell.subTitleLabel.text = [NSString stringWithFormat:@"%d", self.alarmDataNew.volume];
         [Utils configCellTitleLabel:baseCell.textLabel];
         cell = baseCell;
     } else if ([rowName isEqualToString:kRowSmartWake]) {
         TitleSwitchCell *sCell = (TitleSwitchCell *)[SLPUtils tableView:self.tableView cellNibName:@"TitleSwitchCell"];
-        sCell.titleLabel.text = @"智能唤醒";
+        sCell.titleLabel.text = NSLocalizedString(@"smart_wake", nil);
         sCell.switcher.on = self.alarmDataNew.smartFlag;
         
         
@@ -449,17 +449,17 @@ static NSString *const kRowSnoozeTime = @"kRowSnoozeTime";
         cell = sCell;
     } else if ([rowName isEqualToString:kRowWakeTime]) {
         TitleSubTitleContentArrowCell *baseCell = (TitleSubTitleContentArrowCell *)[SLPUtils tableView:self.tableView cellNibName:@"TitleSubTitleContentArrowCell"];
-        baseCell.titleLabel.text = @"唤醒范围";
-        NSString *timeStr = [NSString stringWithFormat:@"%d%@", self.alarmDataNew.smartOffset, @"分钟"];
+        baseCell.titleLabel.text = NSLocalizedString(@"wake_range", nil);
+        NSString *timeStr = [NSString stringWithFormat:@"%d%@", self.alarmDataNew.smartOffset, NSLocalizedString(@"unit_m", nil)];
         baseCell.subTitleLabel.text = timeStr;
-        baseCell.contentLabel.text = @"打开后，闹钟将会在设置的时间范围内且您睡得最浅的时候唤醒您";
+        baseCell.contentLabel.text = NSLocalizedString(@"wake_explain", nil);
         [Utils configCellTitleLabel:baseCell.textLabel];
         cell = baseCell;
     }
     
     else if ([rowName isEqualToString:kRowSnooze]){
         TitleSwitchCell *sCell = (TitleSwitchCell *)[SLPUtils tableView:self.tableView cellNibName:@"TitleSwitchCell"];
-        sCell.titleLabel.text = @"贪睡次数";
+        sCell.titleLabel.text = NSLocalizedString(@"snooze_count", nil);
         sCell.switcher.on = self.alarmDataNew.snoozeTime;
         [Utils configCellTitleLabel:sCell.titleLabel];
         
@@ -472,10 +472,10 @@ static NSString *const kRowSnoozeTime = @"kRowSnoozeTime";
         cell = sCell;
     }else if ([rowName isEqualToString:kRowSnoozeTime]){
         TitleSubTitleContentArrowCell *baseCell = (TitleSubTitleContentArrowCell *)[SLPUtils tableView:self.tableView cellNibName:@"TitleSubTitleContentArrowCell"];
-        baseCell.titleLabel.text = @"贪睡时长";
-        NSString *timeStr = [NSString stringWithFormat:@"%d%@", self.alarmDataNew.snoozeLength, @"分钟"];
+        baseCell.titleLabel.text = NSLocalizedString(@"snooze_time", nil);
+        NSString *timeStr = [NSString stringWithFormat:@"%d%@", self.alarmDataNew.snoozeLength, NSLocalizedString(@"unit_m", nil)];
         baseCell.subTitleLabel.text = timeStr;
-        baseCell.contentLabel.text = @"打开后，闹钟响起时，短按音乐键进入贪睡模式，贪睡3次后自动关闭闹钟";
+        baseCell.contentLabel.text = NSLocalizedString(@"snooze_content", nil);
         [Utils configCellTitleLabel:baseCell.textLabel];
         cell = baseCell;
     }
@@ -514,7 +514,7 @@ static NSString *const kRowSnoozeTime = @"kRowSnoozeTime";
 - (void)startPreView
 {
     if (![SLPBLESharedManager blueToothIsOpen]) {
-        [Utils showMessage:@"蓝牙未打开" controller:self];
+        [Utils showMessage:NSLocalizedString(@"not_bluetooth", nil) controller:self];
         return;
     }
     __weak typeof(self) weakSelf = self;
@@ -530,7 +530,7 @@ static NSString *const kRowSnoozeTime = @"kRowSnoozeTime";
 - (void)stopPreView
 {
     if (![SLPBLESharedManager blueToothIsOpen]) {
-        [Utils showMessage:@"蓝牙未打开" controller:self];
+        [Utils showMessage:NSLocalizedString(@"not_bluetooth", nil) controller:self];
         return;
     }
     __weak typeof(self) weakSelf = self;
@@ -546,7 +546,7 @@ static NSString *const kRowSnoozeTime = @"kRowSnoozeTime";
 -(void)deleteBtnTapped
 {
     if (![SLPBLESharedManager blueToothIsOpen]) {
-        [Utils showMessage:@"蓝牙未打开" controller:self];
+        [Utils showMessage:NSLocalizedString(@"not_bluetooth", nil) controller:self];
         return;
     }
     __weak typeof(self) weakSelf = self;
@@ -559,7 +559,7 @@ static NSString *const kRowSnoozeTime = @"kRowSnoozeTime";
                 [self.delegate editAlarmInfoAndShouldReload];
             }
 
-            [Utils showMessage:@"删除成功" controller:weakSelf];
+            [Utils showMessage:NSLocalizedString(@"delete_succeed", nil) controller:weakSelf];
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                 [weakSelf.navigationController popViewControllerAnimated:YES];
             });

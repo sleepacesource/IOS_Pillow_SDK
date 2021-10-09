@@ -22,6 +22,8 @@
 @property (nonatomic, strong) PillowSmartStop *smartStopInfo;
 
 @property (weak, nonatomic) IBOutlet UIButton *saveBT;
+@property (weak, nonatomic) IBOutlet UILabel *labe1;
+@property (weak, nonatomic) IBOutlet UILabel *labe2;
 
 @end
 
@@ -46,24 +48,24 @@
                 weakSelf.smartStopInfo.duration = 45;
             }
             weakSelf.stopFlagLabel.text = [weakSelf getSmartFlagName:self.smartStopInfo.operation];
-            weakSelf.timeLabel.text = [NSString stringWithFormat:@"%d分钟", self.smartStopInfo.duration];
+            weakSelf.timeLabel.text = [NSString stringWithFormat:@"%d%@", self.smartStopInfo.duration,NSLocalizedString(@"unit_m", nil)];
         }
     }];
 }
 
 - (NSString *)getSmartFlagName:(UInt8)smartFlag {
     if (smartFlag == 1) {
-        return @"开";
+        return NSLocalizedString(@"ON", nil);
     }
     
-    return @"关";
+    return NSLocalizedString(@"OFF", nil);
 }
 
 - (void)setUI {
     
     [Tool configSomeKindOfButtonLikeNomal:self.saveBT];
     self.stopFlagLabel.text = [self getSmartFlagName:self.smartStopInfo.operation];
-    self.timeLabel.text = [NSString stringWithFormat:@"%d分钟", self.smartStopInfo.duration];
+    self.timeLabel.text = [NSString stringWithFormat:@"%d%@", self.smartStopInfo.duration,NSLocalizedString(@"unit_m", nil)];
     
     self.timeContainer.layer.masksToBounds = YES;
     self.timeContainer.layer.cornerRadius = 5;
@@ -74,6 +76,11 @@
     self.stopFlagContainer.layer.cornerRadius = 5;
     self.stopFlagContainer.layer.borderColor = [UIColor lightGrayColor].CGColor;
     self.stopFlagContainer.layer.borderWidth = 1;
+    
+    [self.saveBT setTitle:NSLocalizedString(@"save", nil) forState:UIControlStateNormal];
+    self.labe1.text = NSLocalizedString( @"time_end", nil);
+    self.labe2.text = NSLocalizedString( @"smart_stop_play", nil);
+    
 }
 
 - (void)setSmartStopInfo {
@@ -83,32 +90,36 @@
         if (status != SLPDataTransferStatus_Succeed) {
             [Utils showDeviceOperationFailed:status atViewController:weakSelf];
         } else {
-            [Utils showMessage:@"保存成功" controller:weakSelf];
+            [Utils showMessage:NSLocalizedString(@"save_succeed", nil) controller:weakSelf];
         }
     }];
 }
 
 - (IBAction)chooseTime:(UIButton *)sender {
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"" message:@"定时结束" preferredStyle:UIAlertControllerStyleActionSheet];
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"" message:NSLocalizedString(@"time_end", nil) preferredStyle:UIAlertControllerStyleActionSheet];
     __weak typeof(self) weakSelf = self;
-    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"cancel", nil) style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
         
     }];
-    UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"15分钟" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    NSString * str1 = [NSString stringWithFormat:@"15%@",NSLocalizedString( @"unit_m", nil)];
+    NSString * str2 = [NSString stringWithFormat:@"30%@",NSLocalizedString( @"unit_m", nil)];
+    NSString * str3 = [NSString stringWithFormat:@"45%@",NSLocalizedString( @"unit_m", nil)];
+    NSString * str4 = [NSString stringWithFormat:@"60%@",NSLocalizedString( @"unit_m", nil)];
+    UIAlertAction *action1 = [UIAlertAction actionWithTitle:str1 style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         weakSelf.smartStopInfo.duration = 15;
-        weakSelf.timeLabel.text = @"15分钟";
+        weakSelf.timeLabel.text = str1;
     }];
-    UIAlertAction *action2 = [UIAlertAction actionWithTitle:@"30分钟" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertAction *action2 = [UIAlertAction actionWithTitle:str2 style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         weakSelf.smartStopInfo.duration = 30;
-        weakSelf.timeLabel.text = @"30分钟";
+        weakSelf.timeLabel.text = str2;
     }];
-    UIAlertAction *action3 = [UIAlertAction actionWithTitle:@"45分钟" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertAction *action3 = [UIAlertAction actionWithTitle:str3 style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         weakSelf.smartStopInfo.duration = 45;
-        weakSelf.timeLabel.text = @"45分钟";
+        weakSelf.timeLabel.text = str3;
     }];
-    UIAlertAction *action4 = [UIAlertAction actionWithTitle:@"60分钟" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertAction *action4 = [UIAlertAction actionWithTitle:str4 style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         weakSelf.smartStopInfo.duration = 60;
-        weakSelf.timeLabel.text = @"60分钟";
+        weakSelf.timeLabel.text = str4;
         
     }];
     [alertController addAction:cancelAction];
@@ -120,18 +131,18 @@
 }
 
 - (IBAction)chooseStop:(UIButton *)sender {
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"" message:@"智能停止播放" preferredStyle:UIAlertControllerStyleActionSheet];
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"" message:NSLocalizedString(@"smart_stop_play", nil) preferredStyle:UIAlertControllerStyleActionSheet];
     __weak typeof(self) weakSelf = self;
-    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"cancel", nil) style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
         
     }];
-    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"关" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"OFF", nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         weakSelf.smartStopInfo.operation = 0;
-        weakSelf.stopFlagLabel.text = @"关";
+        weakSelf.stopFlagLabel.text = NSLocalizedString(@"OFF", nil);
     }];
-    UIAlertAction *resetAction = [UIAlertAction actionWithTitle:@"开" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertAction *resetAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"ON", nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         weakSelf.smartStopInfo.operation = 1;
-        weakSelf.stopFlagLabel.text = @"开";
+        weakSelf.stopFlagLabel.text = NSLocalizedString(@"ON", nil);
     }];
     [alertController addAction:cancelAction];
     [alertController addAction:okAction];

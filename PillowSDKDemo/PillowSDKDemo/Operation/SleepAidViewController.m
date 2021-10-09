@@ -31,6 +31,11 @@
 
 @property (weak, nonatomic) IBOutlet UIView *stopFlagContainer;
 @property (weak, nonatomic) IBOutlet UILabel *stopFlagLabel;
+@property (weak, nonatomic) IBOutlet UILabel *labe1;
+@property (weak, nonatomic) IBOutlet UILabel *labe2;
+@property (weak, nonatomic) IBOutlet UILabel *labe3;
+@property (weak, nonatomic) IBOutlet UILabel *labe4;
+@property (weak, nonatomic) IBOutlet UILabel *labe5;
 
 @property (nonatomic, strong) NSMutableArray *musicList;
 
@@ -167,6 +172,15 @@
     self.modeLabel.text = [self modeTextWith:self.circleMode];
     self.stopFlagLabel.text = [self getSmartFlagName:self.smartFlag];
     self.timeLabel.text = [NSString stringWithFormat:@"%d%@", self.smartDuration,NSLocalizedString( @"unit_m", nil)];
+    
+    [self.playBtn setTitle:NSLocalizedString(@"play", nil) forState:UIControlStateNormal];
+    [self.saveBtn setTitle:NSLocalizedString(@"save", nil) forState:UIControlStateNormal];
+    [self.sendVolBtn setTitle:NSLocalizedString(@"send", nil) forState:UIControlStateNormal];
+    self.labe1.text = NSLocalizedString( @"music", nil);
+    self.labe2.text = NSLocalizedString( @"cycle_mode", nil);
+    self.labe3.text = NSLocalizedString( @"volume", nil);
+    self.labe4.text = NSLocalizedString( @"time_end", nil);
+    self.labe5.text = NSLocalizedString( @"smart_stop_play", nil);
     
     self.musicContainer.layer.masksToBounds = YES;
     self.musicContainer.layer.cornerRadius = 5;

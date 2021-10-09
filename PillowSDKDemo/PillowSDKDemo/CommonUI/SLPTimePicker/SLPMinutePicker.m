@@ -123,10 +123,10 @@ static const CGFloat kMinutePickerTitleFont = 26.0;
     NSInteger value = [[self.iValues objectAtIndex:row] integerValue];
     switch (self.mode) {
         case SLPMinutePickerMode_Hour:
-            title = [NSString stringWithFormat:@"%d%@",(int)value, @"小时"];
+            title = [NSString stringWithFormat:@"%d%@",(int)value, NSLocalizedString(@"unit_h", nil)];
             break;
         case SLPMinutePickerMode_Minute:
-            title = [NSString stringWithFormat:@"%d%@",(int)value, @"分钟"];
+            title = [NSString stringWithFormat:@"%d%@",(int)value, NSLocalizedString(@"unit_m", nil)];
             break;
         case SLPMinutePickerMode_Second:
             title = [NSString stringWithFormat:@"%d%@",(int)value, @""];

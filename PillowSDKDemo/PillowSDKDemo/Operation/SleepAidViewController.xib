@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,6 +14,11 @@
                 <outlet property="chooseMusicBtn" destination="elD-Pw-FIK" id="JeC-Sg-eHS"/>
                 <outlet property="chooseStopBtn" destination="44t-Mm-IhN" id="yo1-2r-B2N"/>
                 <outlet property="chooseTimeBtn" destination="SWv-J2-FeW" id="1oC-AD-Qx1"/>
+                <outlet property="labe1" destination="Jds-jp-rCh" id="dFv-xm-Hjq"/>
+                <outlet property="labe2" destination="yxa-id-hhQ" id="MzW-Vl-w2f"/>
+                <outlet property="labe3" destination="ZkX-ST-CVR" id="6tw-bo-SNP"/>
+                <outlet property="labe4" destination="Z6i-2t-pLj" id="TUv-rj-eqF"/>
+                <outlet property="labe5" destination="Sdc-12-eGw" id="uob-Rb-s4F"/>
                 <outlet property="modeContainer" destination="cax-kV-NEk" id="i4f-iQ-8f7"/>
                 <outlet property="modeLabel" destination="Qju-4u-HsX" id="H2d-CR-XcG"/>
                 <outlet property="musicContainer" destination="xA3-JU-n2X" id="fiC-a2-3Zi"/>
