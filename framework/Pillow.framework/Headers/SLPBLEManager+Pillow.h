@@ -16,6 +16,10 @@
 #import "PillowUpgradeInfo.h"
 #import "Pillow_HistoryData.h"
 #import "PEnvironmentalData.h"
+#import "PillowSleepAidInfo.h"
+#import "PillowSmartStop.h"
+#import "PillowAlarmInfo.h"
+#import "LeftBedAlarmInfo.h"
 @interface SLPBLEManager (Pillow)
 
 /*deviceName 设备名称 和设备ID区分一下
@@ -46,10 +50,10 @@
 - (void)pillow:(CBPeripheral *)peripheral getDeviceVersionWithTimeout:(CGFloat)timeout
       callback:(SLPTransforCallback)handle;
 
-/*获取设备的环境数据
+/*获取设备的环境数据（invalid 废弃）
  回调返回PillowEnvironmentalData
  */
-- (void)pillow:(CBPeripheral *)peripheral getEnvironmentalDataTimeout:(CGFloat)timeout completion:(SLPTransforCallback)handle;
+//- (void)pillow:(CBPeripheral *)peripheral getEnvironmentalDataTimeout:(CGFloat)timeout completion:(SLPTransforCallback)handle;
 
 /*结束采集
  */
@@ -74,16 +78,16 @@
 - (void)pillow:(CBPeripheral *)peripheral stopRealTimeDataWithTimeout:(CGFloat)timeout
       callback:(SLPTransforCallback)handle;
 
-/*开始查看原始数据
+/*开始查看原始数据（invalid 废弃）
  原始数据数据通过通知kNotificationNameBLEpillowOriginalData 广播出<kNotificationPostData:PillowOriginalData>
  */
-- (void)pillow:(CBPeripheral *)peripheral startOriginalDataWithTimeout:(CGFloat)timeout
-      callback:(SLPTransforCallback)handle;
+//- (void)pillow:(CBPeripheral *)peripheral startOriginalDataWithTimeout:(CGFloat)timeout
+//      callback:(SLPTransforCallback)handle;
 
-/*结束查看原始数据
+/*结束查看原始数据（invalid 废弃）
  */
-- (void)pillow:(CBPeripheral *)peripheral stopOriginalDataWithTimeout:(CGFloat)timeout
-      callback:(SLPTransforCallback)handle;
+//- (void)pillow:(CBPeripheral *)peripheral stopOriginalDataWithTimeout:(CGFloat)timeout
+//      callback:(SLPTransforCallback)handle;
 
 /*升级
  crcDes:加密包CRC32
@@ -93,6 +97,17 @@
  */
 - (void)pillow:(CBPeripheral *)peripheral upgradeDeviceWithCrcDes:(long)crcDes
         crcBin:(long)crcBin
+upgradePackage:(NSData *)package
+      callback:(SLPTransforCallback)handle;
+
+/*ZP100/P401M/PHP1301/P102T升级
+ pkey:私钥
+hashCode: 哈希值
+ package:升级包
+ 回调返回 PillowUpgradeInfo
+ */
+- (void)pillow:(CBPeripheral *)peripheral upgradeDeviceWithPkey:(NSString *)pkey
+        hashCode:(NSString *)hashCode
 upgradePackage:(NSData *)package
       callback:(SLPTransforCallback)handle;
 
@@ -109,4 +124,62 @@ historyDownloadWithStartTime:(NSInteger)startTime
 eachDataCallback:(SLPTransforCallback)eachhandle
 finishCallback:(SLPTransforCallback)finishHandle;
 
+/* 助眠操作接口
+ musicEnable: 音乐开关  0: 关  1: 开
+ musicId: 音乐ID
+ volume: 音乐音量
+ circleMode: 循环模式    0列表播放 1单曲循环
+ lightEnable: 灯光开关  0: 关  1: 开
+ brightness: 灯光亮度     0  -  100
+ SLPLight: 灯光结构
+ smartEnable: 是否开启智能助眠  0: 关  1: 开
+ smartDuration: 助眠停止时长  单位分钟，默认45分钟,0睡着后再结束
+ */
+- (void)pillow:(CBPeripheral *)peripheral sleepAidOperation:(UInt8)musicEnable musicId:(UInt16)musicId volume:(UInt8)volume circleMode:(UInt8)circleMode lightEnable:(UInt8)lightEnable brightness:(UInt8)brightness light:(SLPLight *)light smartEnable:(UInt8)smartEnable smartDuration:(UInt16)smartDuration timeout:(CGFloat)timeout
+      callback:(SLPTransforCallback)handle;
+
+/* 获取助眠操作
+ */
+- (void)pillow:(CBPeripheral *)peripheral getSleepAidOperationWithTimeout:(CGFloat)timeout callback:(SLPTransforCallback)handle;
+
+/*
+ 蓝牙智能停止
+ PillowSmartStop
+ */
+- (void)pillow:(CBPeripheral *)peripheral smartStopConfig:(PillowSmartStop *)smartStopInfo timeout:(CGFloat)timeout
+      callback:(SLPTransforCallback)handle;
+
+/* 获取蓝牙智能停止
+ */
+- (void)pillow:(CBPeripheral *)peripheral getSmartStopWithTimeout:(CGFloat)timeout callback:(SLPTransforCallback)handle;
+
+/**
+ 获取闹钟列表
+ @param peripheral 蓝牙句柄
+ @param timeout 超时（单位秒）
+ @param handle 回调 返回 NSArray<SABAlarmInfo *>
+ */
+- (void)pillow:(CBPeripheral *)peripheral getAlarmListWithTimeout:(CGFloat)timeout callback:(SLPTransforCallback)handle;
+
+/*添加或修改闹铃
+ alarmInfo: 闹铃信息
+ timeout:超时
+ */
+- (void)pillow:(CBPeripheral *)peripheral alarmConfig:(PillowAlarmInfo *)alarmInfo
+       timeout:(CGFloat)timeout callback:(SLPTransforCallback)handle;
+
+/*离枕闹钟设置
+ alarmInfo: 闹铃信息
+ timeout:超时
+ */
+- (void)pillow:(CBPeripheral *)peripheral leftBedAlarmConfig:(LeftBedAlarmInfo *)alarmInfo
+       timeout:(CGFloat)timeout callback:(SLPTransforCallback)handle;
+
+/*离枕闹钟获取
+ */
+- (void)pillow:(CBPeripheral *)peripheral getLeftBedAlarmInfoWithTimeout:(CGFloat)timeout callback:(SLPTransforCallback)handle;
+
+/*闹钟音乐试听功能
+ */
+- (void)pillow:(CBPeripheral *)peripheral playMusicWithOperation:(UInt8)operation musicId:(UInt16)musicId volume:(UInt8)volume timeout:(CGFloat)timeout callback:(SLPTransforCallback)handle;
 @end

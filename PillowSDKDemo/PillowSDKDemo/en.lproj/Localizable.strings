@@ -148,3 +148,4 @@
 "time_out"="Time out";
 "alarm" = "Alarm";
 "add alarm" = "Add Alarm";
+"create_report" = "Generate sleep report";

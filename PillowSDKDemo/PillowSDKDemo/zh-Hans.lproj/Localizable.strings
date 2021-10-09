@@ -147,3 +147,7 @@
 "connect_device_successfully"="连接设备成功";
 "failure"="失败";
 "time_out"="超时";
+"sent_successfully"="发送成功";
+"upgrading_device"="正在升级设备：%@";
+"update_completed"="升级完成";
+"create_report" = "生成报告";

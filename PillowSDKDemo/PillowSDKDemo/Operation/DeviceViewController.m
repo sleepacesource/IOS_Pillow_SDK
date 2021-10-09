@@ -49,8 +49,6 @@
     
     [self setUI];
     [self addLeftItem];
-    
-//    [self getEnviroment];
 }
 
 - (void)setUI
@@ -275,7 +273,8 @@
         if (status==SLPDataTransferStatus_Succeed) {
             PillowUpgradeInfo *upgradeInfo=(PillowUpgradeInfo *)data;
             self.upgradeLabel.text=[NSString stringWithFormat:@"%.1f%%",upgradeInfo.progress*100];
-            self.ugLabel.text=[NSString stringWithFormat:@"%.1f%%",upgradeInfo.progress*100];
+            self.ugLabel.text=[NSString stringWithFormat:@"%.1f%%  升级中...",upgradeInfo.progress*100];
+
             [Tool outputResultWithStr:[NSString stringWithFormat:NSLocalizedString(@"upgrading_device", nil),self.upgradeLabel.text] textView:self.textView];
             if (upgradeInfo.progress==1) {
                 self.upgradeLabel.text=NSLocalizedString(@"update_success", nil);
@@ -340,15 +339,6 @@
     [self disconnectedDevice];
 }
 
-- (void)getEnviroment
-{
-    [SLPBLESharedManager pillow:self.selectPeripheral.peripheral getEnvironmentalDataTimeout:8.0 completion:^(SLPDataTransferStatus status, id data) {
-        if (status == SLPDataTransferStatus_Succeed){
-            PEnvironmentalData *evnData = data;
-            NSLog(@"%@",evnData);
-        }
-    }];
-}
 
 - (void)disconnectedDevice
 {

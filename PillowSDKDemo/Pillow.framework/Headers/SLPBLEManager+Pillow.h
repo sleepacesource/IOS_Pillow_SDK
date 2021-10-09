@@ -50,10 +50,10 @@
 - (void)pillow:(CBPeripheral *)peripheral getDeviceVersionWithTimeout:(CGFloat)timeout
       callback:(SLPTransforCallback)handle;
 
-/*获取设备的环境数据
+/*获取设备的环境数据（invalid 废弃）
  回调返回PillowEnvironmentalData
  */
-- (void)pillow:(CBPeripheral *)peripheral getEnvironmentalDataTimeout:(CGFloat)timeout completion:(SLPTransforCallback)handle;
+//- (void)pillow:(CBPeripheral *)peripheral getEnvironmentalDataTimeout:(CGFloat)timeout completion:(SLPTransforCallback)handle;
 
 /*结束采集
  */

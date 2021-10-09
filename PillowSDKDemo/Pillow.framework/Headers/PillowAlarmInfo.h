@@ -30,7 +30,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) UInt8 brightness;//亮度 0-100
 @property (nonatomic, assign) UInt16 musicID;//音乐ID
 @property (nonatomic, assign) UInt32 timestamp;//时间戳 设置/修改闹钟时的标准时间戳（用于单次闹钟）
-@property (nonatomic, assign) UInt8 isValid;//是否有效
+@property (nonatomic, assign) UInt8 isValid;//是否有效（0表示闹钟已删除，1表示闹钟有效）
 
 @end
 
