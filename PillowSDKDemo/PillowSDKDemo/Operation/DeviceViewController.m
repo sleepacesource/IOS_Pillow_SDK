@@ -273,8 +273,7 @@
         if (status==SLPDataTransferStatus_Succeed) {
             PillowUpgradeInfo *upgradeInfo=(PillowUpgradeInfo *)data;
             self.upgradeLabel.text=[NSString stringWithFormat:@"%.1f%%",upgradeInfo.progress*100];
-            self.ugLabel.text=[NSString stringWithFormat:@"%.1f%%  升级中...",upgradeInfo.progress*100];
-
+            self.ugLabel.text =[NSString stringWithFormat:NSLocalizedString(@"upgrading_device", nil),self.upgradeLabel.text];
             [Tool outputResultWithStr:[NSString stringWithFormat:NSLocalizedString(@"upgrading_device", nil),self.upgradeLabel.text] textView:self.textView];
             if (upgradeInfo.progress==1) {
                 self.upgradeLabel.text=NSLocalizedString(@"update_success", nil);

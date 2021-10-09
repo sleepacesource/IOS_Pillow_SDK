@@ -36,7 +36,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="执行过程:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ocg-AG-a0X">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="执行过程:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ocg-AG-a0X">
                     <rect key="frame" x="15" y="80" width="74" height="21"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="21" id="0k1-In-4vL"/>
@@ -45,7 +45,7 @@
                     <color key="textColor" red="0.50980392159999999" green="0.57254901960000004" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xNZ-8F-MkT">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xNZ-8F-MkT">
                     <rect key="frame" x="15" y="106" width="290" height="200"/>
                     <subviews>
                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Wy3-ku-cPL">
@@ -68,10 +68,10 @@
                     </constraints>
                 </view>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pdn-Wz-7iD">
-                    <rect key="frame" x="0.0" y="80" width="320" height="438"/>
+                    <rect key="frame" x="0.0" y="320" width="320" height="198"/>
                 </scrollView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mqW-hL-qbd">
-                    <rect key="frame" x="0.0" y="80" width="320" height="466"/>
+                    <rect key="frame" x="0.0" y="320" width="320" height="466"/>
                     <subviews>
                         <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FOz-U6-cS4">
                             <rect key="frame" x="15" y="15" width="137.5" height="40"/>
@@ -301,7 +301,7 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="ocg-AG-a0X" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="80" id="0kU-v8-7kn"/>
-                <constraint firstItem="Pdn-Wz-7iD" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="80" id="5oG-Ys-L0S"/>
+                <constraint firstItem="Pdn-Wz-7iD" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="320" id="5oG-Ys-L0S"/>
                 <constraint firstAttribute="trailing" secondItem="Pdn-Wz-7iD" secondAttribute="trailing" id="6MT-Di-d9c"/>
                 <constraint firstItem="mqW-hL-qbd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="FVk-Bv-ccS"/>
                 <constraint firstItem="ocg-AG-a0X" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="SiX-N6-PAM"/>
