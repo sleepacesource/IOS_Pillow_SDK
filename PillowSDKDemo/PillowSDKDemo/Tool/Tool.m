@@ -13,7 +13,7 @@
 + (void)configSomeKindOfButtonLikeNomal:(UIButton *)button{
     [button setBackgroundImage:[self imageFromColor:[FontColor C1]] forState:UIControlStateNormal];
     [button setBackgroundImage:[self imageFromColor:[FontColor C2]] forState:UIControlStateHighlighted];
-    [button setBackgroundImage:[self imageFromColor:[FontColor C2]] forState:UIControlStateSelected];
+    [button setBackgroundImage:[self imageFromColor:[FontColor C1]] forState:UIControlStateSelected];
     //    [button setBackgroundImage:[SLPUtils imageFromColor:SLPThemeColor.C1Disable] forState:UIControlStateDisabled];
     //    [button setBackgroundColor:SLPThemeColor.C1Disable];
     [button setTitleColor:[FontColor C9] forState:UIControlStateNormal];
