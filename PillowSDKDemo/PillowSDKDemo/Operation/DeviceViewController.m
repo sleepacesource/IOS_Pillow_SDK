@@ -130,6 +130,7 @@
 - (void)addNotifaction{
     [[NSNotificationCenter defaultCenter]addObserverForName:kNotificationNameBLEPillowWaitConfirm object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification * _Nonnull note) {
         [Tool outputResultWithStr:NSLocalizedString(@"receive_confirm", nil) textView:self.textView];
+        self.label3.text = NSLocalizedString(@"receive_confirm", nil);
     }];
 }
 
