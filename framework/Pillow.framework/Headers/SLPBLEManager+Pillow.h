@@ -120,4 +120,11 @@ historyDownloadWithStartTime:(NSInteger)startTime
 eachDataCallback:(SLPTransforCallback)eachhandle
 finishCallback:(SLPTransforCallback)finishHandle;
 
+/**
+ 绑定设备时，等待设备二次确认接口，避免被强制绑定
+ */
+- (void)pillow:(CBPeripheral *)peripheral waitConfirmWithTimeout:(CGFloat)timeout
+      callback:(SLPTransforCallback)handle;
+
+
 @end
