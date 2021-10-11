@@ -196,3 +196,6 @@
 "create_report" = "生成报告";
 "nothing"="无";
 "no_data"="历史数据为空";
+"device_confirm" = "设备二次确认";
+"send_confirm" = "已发送确认信息";
+"receive_confirm" = "已收到确认信息";

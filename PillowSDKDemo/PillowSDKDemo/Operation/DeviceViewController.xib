@@ -92,7 +92,7 @@
                             </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dVr-6g-jkq">
-                            <rect key="frame" x="167.5" y="252" width="137.5" height="40"/>
+                            <rect key="frame" x="167.5" y="322" width="137.5" height="40"/>
                             <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="DbP-gj-7sA"/>
@@ -148,7 +148,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="固件升级相关：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5zb-Ge-LwK">
-                            <rect key="frame" x="15" y="181" width="107.5" height="21"/>
+                            <rect key="frame" x="15" y="251" width="107.5" height="21"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="21" id="hHp-Tt-T0k"/>
                             </constraints>
@@ -157,7 +157,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggf-3d-Ckg">
-                            <rect key="frame" x="15" y="207" width="137.5" height="40"/>
+                            <rect key="frame" x="15" y="277" width="137.5" height="40"/>
                             <color key="backgroundColor" red="0.1647058824" green="0.59215686270000001" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="hJH-oE-VXl"/>
@@ -170,7 +170,7 @@
                             </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="br0-h8-u3L">
-                            <rect key="frame" x="167.5" y="207" width="137.5" height="40"/>
+                            <rect key="frame" x="167.5" y="277" width="137.5" height="40"/>
                             <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="yXf-6V-TX6"/>
@@ -180,7 +180,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d91-Ml-6Kg">
-                            <rect key="frame" x="15" y="252" width="137.5" height="40"/>
+                            <rect key="frame" x="15" y="322" width="137.5" height="40"/>
                             <color key="backgroundColor" red="0.1647058824" green="0.59215686270000001" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="eWg-8w-dcz"/>
@@ -203,7 +203,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Icx-1t-8kg" customClass="SLPUnderlineButton">
-                            <rect key="frame" x="15" y="312" width="290" height="40"/>
+                            <rect key="frame" x="15" y="382" width="290" height="40"/>
                             <color key="backgroundColor" red="0.16470588235294117" green="0.59215686274509804" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="Cfe-nM-5H3"/>
@@ -243,7 +243,7 @@
                         <constraint firstItem="3s8-Jc-uN7" firstAttribute="leading" secondItem="I9p-E7-aK4" secondAttribute="leading" id="c7c-vK-son"/>
                         <constraint firstItem="I9p-E7-aK4" firstAttribute="leading" secondItem="407-IP-qt3" secondAttribute="leading" constant="15" id="d0I-cZ-jm6"/>
                         <constraint firstItem="ggf-3d-Ckg" firstAttribute="leading" secondItem="I9p-E7-aK4" secondAttribute="leading" id="eR0-bp-OoT"/>
-                        <constraint firstItem="5zb-Ge-LwK" firstAttribute="top" secondItem="3s8-Jc-uN7" secondAttribute="bottom" constant="10" id="esM-xV-8DZ"/>
+                        <constraint firstItem="5zb-Ge-LwK" firstAttribute="top" secondItem="3s8-Jc-uN7" secondAttribute="bottom" constant="80" id="esM-xV-8DZ"/>
                         <constraint firstItem="JS6-l3-yrX" firstAttribute="width" secondItem="JG5-sL-mwi" secondAttribute="width" id="fHH-Sz-niZ"/>
                         <constraint firstAttribute="trailing" secondItem="dVr-6g-jkq" secondAttribute="trailing" constant="15" id="g1L-Ej-c6Q"/>
                         <constraint firstItem="dVr-6g-jkq" firstAttribute="trailing" secondItem="JG5-sL-mwi" secondAttribute="trailing" id="g5X-nf-kic"/>

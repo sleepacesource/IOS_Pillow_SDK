@@ -195,3 +195,6 @@
 "create_report" = "Generate sleep report";
 "nothing"="Nothing";
 "no_data"="No historical data";
+"device_confirm" = "Device confirm";
+"receive_confirm" = "Receive confirm info";
+"send_confirm" = "Send wait confirm";
