@@ -258,3 +258,4 @@
 "device_confirm" = "设备二次确认";
 "send_confirm" = "已发送确认信息";
 "receive_confirm" = "已收到确认信息";
+"sleep_aid_time_off" = "";
