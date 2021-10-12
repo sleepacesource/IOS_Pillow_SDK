@@ -269,7 +269,7 @@ static NSString *const kRowSnoozeTime = @"kRowSnoozeTime";
     SLPTableSectionData *sectionData = [self.sectionDataList objectAtIndex:indexPath.section];
     NSString *rowName = [sectionData .rowEnumList objectAtIndex:indexPath.row];
     if ([rowName isEqualToString:kRowWakeTime] || [rowName isEqualToString:kRowSnoozeTime]) {
-        return 110;
+        return 150;
     }
     return 60;
 }

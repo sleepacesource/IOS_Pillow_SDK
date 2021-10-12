@@ -15,6 +15,7 @@
 @interface DeviceViewController ()
 {
     UIView *ugView;
+    NSTimer *timer;
 }
 @property (weak, nonatomic) IBOutlet UIButton *getDeviceNameBT;
 @property (weak, nonatomic) IBOutlet UIButton *getDeviceIDBT;
@@ -40,7 +41,13 @@
 @property (weak, nonatomic) IBOutlet UILabel *label3;
 @property (weak, nonatomic) IBOutlet UIButton *confirmBT;
 
+@property (weak, nonatomic) IBOutlet  UIView *timershowView;
+@property (weak, nonatomic) IBOutlet  UIView *view1;
+@property (weak, nonatomic) IBOutlet UILabel *label4;
+
+
 @property (strong, nonatomic) UILabel *ugLabel;
+
 
 @end
 
@@ -65,6 +72,9 @@
     [Tool configSomeKindOfButtonLikeNomal:self.disconnectDeviceBT];
     [Tool configSomeKindOfButtonLikeNomal:self.confirmBT];
     [self.disconnectDeviceBT setLineWidth:1.0];
+    [self.view1.layer setMasksToBounds:YES];
+    [self.view1.layer setCornerRadius:2.0f];
+    
     
     self.myscorollview.contentSize=self.cView.frame.size;
     [self.myscorollview addSubview:self.cView];
@@ -126,10 +136,33 @@
     self.navigationItem.leftBarButtonItem=listItem;
 }
 
+- (void)showTimerView: (BOOL)show{
+    self.timershowView.hidden = !show;
+    if (show) {
+         __block int count = 60;
+        self.label4.text =[NSString stringWithFormat:@"%@ %ds",NSLocalizedString(@"device_confirm", nil),count];
+        timer = [NSTimer scheduledTimerWithTimeInterval:1.0 repeats:YES block:^(NSTimer * _Nonnull timer) {
+            count--;
+            if (count>0) {
+                self.label4.text =[NSString stringWithFormat:@"%@ %ds",NSLocalizedString(@"device_confirm", nil),count];
+            }
+            else{
+                [timer invalidate];
+                self.timershowView.hidden= YES;
+            }
+        }];
+    }
+    else
+    {
+        [timer invalidate];
+    }
+}
+
 - (void)addNotifaction{
     [[NSNotificationCenter defaultCenter]addObserverForName:kNotificationNameBLEPillowWaitConfirm object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification * _Nonnull note) {
         [Tool outputResultWithStr:NSLocalizedString(@"receive_confirm", nil) textView:self.textView];
         self.label3.text = NSLocalizedString(@"receive_confirm", nil);
+        [self showTimerView:NO];
     }];
 }
 
@@ -151,6 +184,7 @@
 
 - (void)viewWillDisappear:(BOOL)animated{
     self.label3.text = @"";
+    [self showTimerView:NO];
 }
 
 - (void)deviceDisconenct
@@ -259,6 +293,7 @@
     [SLPBLESharedManager pillow:self.selectPeripheral.peripheral waitConfirmWithTimeout:10.0 callback:^(SLPDataTransferStatus status, id data) {
         if (status==SLPDataTransferStatus_Succeed) {
             self.label3.text=NSLocalizedString(@"send_confirm", nil);
+            [self showTimerView:YES];
         }
         else
         {

@@ -82,7 +82,7 @@ static const NSInteger kOffsetUp = 40;
     self.previewBtn.layer.masksToBounds = YES;
     self.previewBtn.layer.cornerRadius = 5;
     
-    [self.deleteBtn setTitle:@"删除闹钟" forState:UIControlStateNormal];
+    [self.deleteBtn setTitle:NSLocalizedString(@"delete_alarm", nil) forState:UIControlStateNormal];
     [self.deleteBtn.titleLabel setFont:[Theme T1]];
     [self.deleteBtn setTitleColor:[Theme C7] forState:UIControlStateNormal];
 }
