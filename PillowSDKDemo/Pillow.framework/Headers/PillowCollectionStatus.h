@@ -10,5 +10,6 @@
 
 @interface PillowCollectionStatus : NSObject
 @property (nonatomic,assign) UInt8 collectionStatus;
+@property (nonatomic,assign) UInt32 collectionTimestamp;
 @property (nonatomic,readonly) BOOL isCollecting;
 @end
