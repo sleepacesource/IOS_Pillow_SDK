@@ -211,25 +211,33 @@
     [SLPBLESharedManager pillow:self.selectPeripheral.peripheral getCollectionStatusWithTimeout:10 callback:^(SLPDataTransferStatus status, id data) {
         if (status == SLPDataTransferStatus_Succeed) {
             PillowCollectionStatus *collectStatus=(PillowCollectionStatus *)data;
-            [SLPBLESharedManager autoPillow:self.selectPeripheral.peripheral personType:SLPSleepPersonType_Male historyDownloadWithStartTime:collectStatus.collectionTimestamp endTime:endTime eachDataCallback:^(SLPDataTransferStatus status, id data) {
-                SLPHistoryData *historyData=(SLPHistoryData *)data;
-                [self->historyArr addObject:historyData];
-                NSLog(@"download history data:>%@",historyData);
-                //        [SimulateData dealwithData:historyData];
-            } finishCallback:^(SLPDataTransferStatus status, id data) {
+            if (collectStatus.collectionTimestamp == 0) {
                 [MBProgressHUD hideHUDForView:self.view animated:YES];
-                NSLog(@"download history data finished");
-                if (!self->historyArr.count) {
-                    [Tool outputResultWithStr:NSLocalizedString(@"no_data", nil) textView:self.textView];
-                    UIAlertView *alertview=[[UIAlertView alloc]initWithTitle:nil message:NSLocalizedString(@"hint_analyze_fail", nil) delegate:self cancelButtonTitle:NSLocalizedString(@"confirm", nil) otherButtonTitles:nil];
-                    [alertview show];
-                    return;
-                }
-                else///deal with data
-                {
-                    [self showReportwith: [SimulateData dealwithData:[Tool backLatestHistoryData:self->historyArr]]];
-                }
-            }];
+                [Tool outputResultWithStr:NSLocalizedString(@"no_data", nil) textView:self.textView];
+                UIAlertView *alertview=[[UIAlertView alloc]initWithTitle:nil message:NSLocalizedString(@"hint_analyze_fail", nil) delegate:self cancelButtonTitle:NSLocalizedString(@"confirm", nil) otherButtonTitles:nil];
+                [alertview show];
+                return;
+            }else{
+                [SLPBLESharedManager autoPillow:self.selectPeripheral.peripheral personType:SLPSleepPersonType_Male historyDownloadWithStartTime:collectStatus.collectionTimestamp endTime:endTime eachDataCallback:^(SLPDataTransferStatus status, id data) {
+                    SLPHistoryData *historyData=(SLPHistoryData *)data;
+                    [self->historyArr addObject:historyData];
+                    NSLog(@"download history data:>%@",historyData);
+                    //        [SimulateData dealwithData:historyData];
+                } finishCallback:^(SLPDataTransferStatus status, id data) {
+                    [MBProgressHUD hideHUDForView:self.view animated:YES];
+                    NSLog(@"download history data finished");
+                    if (!self->historyArr.count) {
+                        [Tool outputResultWithStr:NSLocalizedString(@"no_data", nil) textView:self.textView];
+                        UIAlertView *alertview=[[UIAlertView alloc]initWithTitle:nil message:NSLocalizedString(@"hint_analyze_fail", nil) delegate:self cancelButtonTitle:NSLocalizedString(@"confirm", nil) otherButtonTitles:nil];
+                        [alertview show];
+                        return;
+                    }
+                    else///deal with data
+                    {
+                        [self showReportwith: [SimulateData dealwithData:[Tool backLatestHistoryData:self->historyArr]]];
+                    }
+                }];
+            }
         }
         else{
             [Tool outputResultWithStr:NSLocalizedString(@"failure", nil) textView:self.textView];
