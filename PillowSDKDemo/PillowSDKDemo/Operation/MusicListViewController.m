@@ -27,6 +27,11 @@
     [super viewDidLoad];
     
     [self setUI];
+    [self play];
+}
+
+- (void)play{
+    [self playMusic:self.musicID];
 }
 
 - (void)setUI

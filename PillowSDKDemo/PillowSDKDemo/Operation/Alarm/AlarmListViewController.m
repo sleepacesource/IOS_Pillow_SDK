@@ -68,9 +68,10 @@
             [wealSelf.tableView reloadData];
             SharedDataManager.alarmList = array;
         }
-        
     }];
     
+    
+   
     
 }
 
