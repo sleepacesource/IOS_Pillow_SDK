@@ -346,6 +346,11 @@
     NSString *hashCode = @"1a78b5e87e034f74938469715b0c8a5ad1527315d5800ec5cbc59c3d63200d57";
     
     NSString *filepath = [[NSBundle mainBundle] pathForResource:@"P102T-v1.13r(v2.0.1b)-g-20210927" ofType:@"img"];
+    if([self.selectPeripheral.name hasPrefix:@"P13T"]){
+        filepath = [[NSBundle mainBundle] pathForResource:@"P103T-v1.13(1.01)(02.00.01)-g-20230417" ofType:@"img"];
+        pkey = @"864f19c7d744337f76a7051fe8133fa39eab0169adf0ee2f5aa552ce4932e0df867649ea20610a131687c394a014eeada2de7c94eefc5499dce7566530d46a6f";
+        hashCode = @"a649c3abe495df86bffe09f875eb41e07954488accf770018d2f642dbda90bcd";
+    }
     NSData *package = [NSData dataWithContentsOfFile:filepath];
     [SLPBLESharedManager pillow:self.selectPeripheral.peripheral upgradeDeviceWithPkey:pkey hashCode:hashCode upgradePackage:package callback:^(SLPDataTransferStatus status, id data) {
         if (status==SLPDataTransferStatus_Succeed) {

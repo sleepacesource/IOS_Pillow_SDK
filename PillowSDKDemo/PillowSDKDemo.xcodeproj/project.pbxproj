@@ -91,6 +91,7 @@
 		26EEAB11242B24AE000FD4AB /* BluetoothManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26EEAB0E242B24AE000FD4AB /* BluetoothManager.framework */; };
 		26EEAB12242B24AE000FD4AB /* Pillow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26EEAB0F242B24AE000FD4AB /* Pillow.framework */; };
 		26EEAB13242B24AE000FD4AB /* SLPCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26EEAB10242B24AE000FD4AB /* SLPCommon.framework */; };
+		26FACFC52A53E9A900244432 /* P103T-v1.13(1.01)(02.00.01)-g-20230417.img in Resources */ = {isa = PBXBuildFile; fileRef = 26FACFC42A53E9A800244432 /* P103T-v1.13(1.01)(02.00.01)-g-20230417.img */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -241,6 +242,7 @@
 		26EEAB0E242B24AE000FD4AB /* BluetoothManager.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BluetoothManager.framework; sourceTree = "<group>"; };
 		26EEAB0F242B24AE000FD4AB /* Pillow.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Pillow.framework; sourceTree = "<group>"; };
 		26EEAB10242B24AE000FD4AB /* SLPCommon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SLPCommon.framework; sourceTree = "<group>"; };
+		26FACFC42A53E9A800244432 /* P103T-v1.13(1.01)(02.00.01)-g-20230417.img */ = {isa = PBXFileReference; lastKnownFileType = file; path = "P103T-v1.13(1.01)(02.00.01)-g-20230417.img"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -408,6 +410,7 @@
 		261E9FC11F690F0E0044BF3C /* package */ = {
 			isa = PBXGroup;
 			children = (
+				26FACFC42A53E9A800244432 /* P103T-v1.13(1.01)(02.00.01)-g-20230417.img */,
 				26496F1127043C5800C69E1E /* P102T-v1.13r(v2.0.1b)-g-20210927.img */,
 			);
 			path = package;
@@ -667,6 +670,7 @@
 				261EA1641F69114F0044BF3C /* Localizable.strings in Resources */,
 				261EA14E1F6910080044BF3C /* LICENSE in Resources */,
 				261EA0011F690F0E0044BF3C /* tab_btn_scenes_home@3x.png in Resources */,
+				26FACFC52A53E9A900244432 /* P103T-v1.13(1.01)(02.00.01)-g-20230417.img in Resources */,
 				260493D81F6B81EE0035E2E8 /* ConnectDeviceViewController.xib in Resources */,
 				261E9FBD1F690F050044BF3C /* Default-667h@2x.png in Resources */,
 				261E9FFE1F690F0E0044BF3C /* sun@2x.png in Resources */,
