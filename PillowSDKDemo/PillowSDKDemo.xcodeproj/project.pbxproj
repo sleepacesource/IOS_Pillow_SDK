@@ -84,12 +84,12 @@
 		261EA1621F6910B10044BF3C /* DeviceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 261EA15C1F6910B10044BF3C /* DeviceViewController.m */; };
 		261EA1631F6910B10044BF3C /* DeviceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 261EA15D1F6910B10044BF3C /* DeviceViewController.xib */; };
 		261EA1641F69114F0044BF3C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 261EA1661F69114F0044BF3C /* Localizable.strings */; };
+		26AEF08E2B0B44D8006261B5 /* BluetoothManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26AEF0882B0B448B006261B5 /* BluetoothManager.framework */; };
+		26AEF08F2B0B44D8006261B5 /* Pillow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26AEF0892B0B448B006261B5 /* Pillow.framework */; };
+		26AEF0902B0B44D8006261B5 /* SLPCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26AEF08A2B0B448B006261B5 /* SLPCommon.framework */; };
 		26B41BAD1F7DE01C0003994A /* sdk_index_icon_pillow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 26B41BAB1F7DE01C0003994A /* sdk_index_icon_pillow@2x.png */; };
 		26B41BAE1F7DE01C0003994A /* sdk_index_icon_pillow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 26B41BAC1F7DE01C0003994A /* sdk_index_icon_pillow@3x.png */; };
 		26B4CF031F6929D500E7EDD1 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 26B4CEFF1F69280500E7EDD1 /* libc++.tbd */; };
-		26EEAB11242B24AE000FD4AB /* BluetoothManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26EEAB0E242B24AE000FD4AB /* BluetoothManager.framework */; };
-		26EEAB12242B24AE000FD4AB /* Pillow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26EEAB0F242B24AE000FD4AB /* Pillow.framework */; };
-		26EEAB13242B24AE000FD4AB /* SLPCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26EEAB10242B24AE000FD4AB /* SLPCommon.framework */; };
 		A4424B85231537CD0002D35B /* P200A_HP00X_20190827_V1.11(0.0.2)_Release_Update.des in Resources */ = {isa = PBXBuildFile; fileRef = A4424B84231537CC0002D35B /* P200A_HP00X_20190827_V1.11(0.0.2)_Release_Update.des */; };
 /* End PBXBuildFile section */
 
@@ -234,12 +234,12 @@
 		261EA1651F69114F0044BF3C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		261EA1671F6911540044BF3C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		269449301F7C9BCB006A215F /* sdk_pillow_80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sdk_pillow_80.png; sourceTree = "<group>"; };
+		26AEF0882B0B448B006261B5 /* BluetoothManager.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BluetoothManager.framework; sourceTree = "<group>"; };
+		26AEF0892B0B448B006261B5 /* Pillow.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Pillow.framework; sourceTree = "<group>"; };
+		26AEF08A2B0B448B006261B5 /* SLPCommon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SLPCommon.framework; sourceTree = "<group>"; };
 		26B41BAB1F7DE01C0003994A /* sdk_index_icon_pillow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sdk_index_icon_pillow@2x.png"; sourceTree = "<group>"; };
 		26B41BAC1F7DE01C0003994A /* sdk_index_icon_pillow@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sdk_index_icon_pillow@3x.png"; sourceTree = "<group>"; };
 		26B4CEFF1F69280500E7EDD1 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
-		26EEAB0E242B24AE000FD4AB /* BluetoothManager.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BluetoothManager.framework; sourceTree = "<group>"; };
-		26EEAB0F242B24AE000FD4AB /* Pillow.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Pillow.framework; sourceTree = "<group>"; };
-		26EEAB10242B24AE000FD4AB /* SLPCommon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SLPCommon.framework; sourceTree = "<group>"; };
 		A4424B84231537CC0002D35B /* P200A_HP00X_20190827_V1.11(0.0.2)_Release_Update.des */ = {isa = PBXFileReference; lastKnownFileType = file; path = "P200A_HP00X_20190827_V1.11(0.0.2)_Release_Update.des"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -248,10 +248,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26EEAB12242B24AE000FD4AB /* Pillow.framework in Frameworks */,
+				26AEF08E2B0B44D8006261B5 /* BluetoothManager.framework in Frameworks */,
+				26AEF08F2B0B44D8006261B5 /* Pillow.framework in Frameworks */,
+				26AEF0902B0B44D8006261B5 /* SLPCommon.framework in Frameworks */,
 				26B4CF031F6929D500E7EDD1 /* libc++.tbd in Frameworks */,
-				26EEAB11242B24AE000FD4AB /* BluetoothManager.framework in Frameworks */,
-				26EEAB13242B24AE000FD4AB /* SLPCommon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,9 +326,9 @@
 		261E9F791F690D7D0044BF3C = {
 			isa = PBXGroup;
 			children = (
-				26EEAB0E242B24AE000FD4AB /* BluetoothManager.framework */,
-				26EEAB0F242B24AE000FD4AB /* Pillow.framework */,
-				26EEAB10242B24AE000FD4AB /* SLPCommon.framework */,
+				26AEF0882B0B448B006261B5 /* BluetoothManager.framework */,
+				26AEF0892B0B448B006261B5 /* Pillow.framework */,
+				26AEF08A2B0B448B006261B5 /* SLPCommon.framework */,
 				261EA1491F6910080044BF3C /* MBProgressHUD */,
 				261E9F841F690D7D0044BF3C /* PillowSDKDemo */,
 				261E9F9E1F690D7E0044BF3C /* PillowSDKDemoTests */,
@@ -923,7 +923,7 @@
 				INFOPLIST_FILE = PillowSDKDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = V3.0.0.3;
+				MARKETING_VERSION = V3.0.0.4;
 				OTHER_LDFLAGS = (
 					"-force_load",
 					"$(SRCROOT)/BluetoothManager.framework/BluetoothManager",
@@ -948,7 +948,7 @@
 				INFOPLIST_FILE = PillowSDKDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = V3.0.0.3;
+				MARKETING_VERSION = V3.0.0.4;
 				OTHER_LDFLAGS = (
 					"-force_load",
 					"$(SRCROOT)/BluetoothManager.framework/BluetoothManager",

@@ -11,7 +11,7 @@
 #import "SLPPillowDef.h"
 #import "SLPBLEManager+Pillow.h"
 
-#define kPillowVersion  @"3.2.4";
+#define kPillowVersion  @"3.3.0";
 
 // In this header, you should import all the public headers of your framework using statements like #import <Pillow/PublicHeader.h>
 
