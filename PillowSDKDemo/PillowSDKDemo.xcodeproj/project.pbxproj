@@ -87,6 +87,8 @@
 		26AEF08E2B0B44D8006261B5 /* BluetoothManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26AEF0882B0B448B006261B5 /* BluetoothManager.framework */; };
 		26AEF08F2B0B44D8006261B5 /* Pillow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26AEF0892B0B448B006261B5 /* Pillow.framework */; };
 		26AEF0902B0B44D8006261B5 /* SLPCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26AEF08A2B0B448B006261B5 /* SLPCommon.framework */; };
+		26AEF0932B0C3F51006261B5 /* P200A_HP00X-v1.21r(v2.0.10r)-p-20220811.des in Resources */ = {isa = PBXBuildFile; fileRef = 26AEF0912B0C3F51006261B5 /* P200A_HP00X-v1.21r(v2.0.10r)-p-20220811.des */; };
+		26AEF0942B0C3F51006261B5 /* P200A_HP00X-v1.22r(v2.0.10r)-u-20231109.des in Resources */ = {isa = PBXBuildFile; fileRef = 26AEF0922B0C3F51006261B5 /* P200A_HP00X-v1.22r(v2.0.10r)-u-20231109.des */; };
 		26B41BAD1F7DE01C0003994A /* sdk_index_icon_pillow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 26B41BAB1F7DE01C0003994A /* sdk_index_icon_pillow@2x.png */; };
 		26B41BAE1F7DE01C0003994A /* sdk_index_icon_pillow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 26B41BAC1F7DE01C0003994A /* sdk_index_icon_pillow@3x.png */; };
 		26B4CF031F6929D500E7EDD1 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 26B4CEFF1F69280500E7EDD1 /* libc++.tbd */; };
@@ -237,6 +239,8 @@
 		26AEF0882B0B448B006261B5 /* BluetoothManager.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BluetoothManager.framework; sourceTree = "<group>"; };
 		26AEF0892B0B448B006261B5 /* Pillow.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Pillow.framework; sourceTree = "<group>"; };
 		26AEF08A2B0B448B006261B5 /* SLPCommon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SLPCommon.framework; sourceTree = "<group>"; };
+		26AEF0912B0C3F51006261B5 /* P200A_HP00X-v1.21r(v2.0.10r)-p-20220811.des */ = {isa = PBXFileReference; lastKnownFileType = file; path = "P200A_HP00X-v1.21r(v2.0.10r)-p-20220811.des"; sourceTree = "<group>"; };
+		26AEF0922B0C3F51006261B5 /* P200A_HP00X-v1.22r(v2.0.10r)-u-20231109.des */ = {isa = PBXFileReference; lastKnownFileType = file; path = "P200A_HP00X-v1.22r(v2.0.10r)-u-20231109.des"; sourceTree = "<group>"; };
 		26B41BAB1F7DE01C0003994A /* sdk_index_icon_pillow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sdk_index_icon_pillow@2x.png"; sourceTree = "<group>"; };
 		26B41BAC1F7DE01C0003994A /* sdk_index_icon_pillow@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sdk_index_icon_pillow@3x.png"; sourceTree = "<group>"; };
 		26B4CEFF1F69280500E7EDD1 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
@@ -408,6 +412,8 @@
 		261E9FC11F690F0E0044BF3C /* package */ = {
 			isa = PBXGroup;
 			children = (
+				26AEF0912B0C3F51006261B5 /* P200A_HP00X-v1.21r(v2.0.10r)-p-20220811.des */,
+				26AEF0922B0C3F51006261B5 /* P200A_HP00X-v1.22r(v2.0.10r)-u-20231109.des */,
 				A4424B84231537CC0002D35B /* P200A_HP00X_20190827_V1.11(0.0.2)_Release_Update.des */,
 			);
 			path = package;
@@ -651,6 +657,7 @@
 				261E9F921F690D7D0044BF3C /* Assets.xcassets in Resources */,
 				261E9FF71F690F0E0044BF3C /* home@3x.png in Resources */,
 				261E9FFB1F690F0E0044BF3C /* leavebed_sm@3x.png in Resources */,
+				26AEF0942B0C3F51006261B5 /* P200A_HP00X-v1.22r(v2.0.10r)-u-20231109.des in Resources */,
 				261EA15F1F6910B10044BF3C /* ControlViewController.xib in Resources */,
 				261E9FED1F690F0E0044BF3C /* about_logo@2x.png in Resources */,
 				261E9FF01F690F0E0044BF3C /* data@2x.png in Resources */,
@@ -682,6 +689,7 @@
 				261E9FBE1F690F050044BF3C /* Default-736h@3x.png in Resources */,
 				261E9FEF1F690F0E0044BF3C /* control@3x.png in Resources */,
 				26B41BAD1F7DE01C0003994A /* sdk_index_icon_pillow@2x.png in Resources */,
+				26AEF0932B0C3F51006261B5 /* P200A_HP00X-v1.21r(v2.0.10r)-p-20220811.des in Resources */,
 				261E9FF91F690F0E0044BF3C /* huxi_3-177@3x.png in Resources */,
 				261E9FF11F690F0E0044BF3C /* data@3x.png in Resources */,
 				261E9FF61F690F0E0044BF3C /* home@2x.png in Resources */,
