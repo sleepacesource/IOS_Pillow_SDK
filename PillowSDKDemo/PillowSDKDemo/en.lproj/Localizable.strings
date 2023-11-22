@@ -133,3 +133,4 @@
 "process"="Execute Process";
 "app_name"="Auto Pillow SDK";
 "update_success"="Firmware Update Complete";
+"hand_stop_collect"="Stop Collecting";

@@ -72,7 +72,7 @@
     [self.getDeviceStatusBT setTitle:NSLocalizedString(@"obtain_working_state", nil) forState:UIControlStateNormal];
     [self.setAutoMonitorBT setTitle:NSLocalizedString(@"set_auto_monitor", nil) forState:UIControlStateNormal];
     [self.startCollectBT setTitle:NSLocalizedString(@"start_collection", nil) forState:UIControlStateNormal];
-    [self.stopCollectBT setTitle:NSLocalizedString(@"off_collection", nil) forState:UIControlStateNormal];
+    [self.stopCollectBT setTitle:NSLocalizedString(@"hand_stop_collect", nil) forState:UIControlStateNormal];
     [self.startRealtimeDataBT setTitle:NSLocalizedString(@"view_data", nil) forState:UIControlStateNormal];
     [self.stopRealtimeDataBT setTitle:NSLocalizedString(@"off_data", nil) forState:UIControlStateNormal];
     [self.checkSignalBT setTitle:NSLocalizedString(@"view_signal_strength", nil) forState:UIControlStateNormal];
@@ -298,6 +298,34 @@
     SignalViewController *signalVC=[[SignalViewController alloc]init];
     signalVC.selectPeripheral=self.selectPeripheral;
     [self.navigationController pushViewController:signalVC animated:YES];
+}
+
+- (IBAction)stopCollect:(id)sender {
+    if (![Tool bleIsOpenShowToTextview:self.textView]) {
+        return ;
+    }
+    if (![Tool deviceIsConnected:self.selectPeripheral.peripheral ShowToTextview:self.textView]) {
+        return ;
+    }
+    
+    [Tool outputResultWithStr:NSLocalizedString(@"notified_acquisition_off", nil) textView:self.textView];
+    [SLPBLESharedManager pillow:self.selectPeripheral.peripheral stopCollectionWithTimeout:10.0 callback:^(SLPDataTransferStatus status, id data) {
+        if (status==SLPDataTransferStatus_Succeed) {
+            NSLog(@"%@",NSLocalizedString(@"close_acquisition_success", nil));
+            [Tool outputResultWithStr:NSLocalizedString(@"close_acquisition_success", nil) textView:self.textView];
+            [self isShowRealDataBT:NO];
+            self.sleepStatusValueLabel.text=@"--";
+            self.breathValueLabel.text=@"--";
+            self.heartRateValueLabel.text=@"--";
+            self.startCollectBT.enabled=YES;
+            self.stopCollectBT.enabled=NO;
+        }
+        else
+        {
+            NSLog(@"%@",NSLocalizedString(@"stop collect failed", nil));
+            [Tool outputResultWithStr:NSLocalizedString(@"failure", nil) textView:self.textView];
+        }
+    }];
 }
 
 - (void)disconnectedDevice

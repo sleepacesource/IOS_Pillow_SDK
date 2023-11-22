@@ -133,3 +133,4 @@
 "process"="执行过程";
 "app_name"="Auto Pillow SDK";
 "update_success"="升级成功";
+"hand_stop_collect"="手动结束监测";
