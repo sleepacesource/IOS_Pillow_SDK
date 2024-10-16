@@ -57,6 +57,7 @@ typedef NS_ENUM(NSInteger,HistoryDataStopMode) {
 @property (nonatomic,assign) NSInteger deepSleepAllTime;//深睡时长
 @property (nonatomic,assign) NSInteger sleepScore;//得分 (0 ~ 100)
 @property (nonatomic,assign) NSInteger wakeTimes;//睡中清醒次数
+@property (nonatomic,assign) NSInteger exceptionCode;//报告异常码
 
 @end
 
