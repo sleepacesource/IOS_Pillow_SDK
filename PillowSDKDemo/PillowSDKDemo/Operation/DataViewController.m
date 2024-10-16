@@ -223,6 +223,7 @@
                     SLPHistoryData *historyData=(SLPHistoryData *)data;
                     [self->historyArr addObject:historyData];
                     NSLog(@"download history data:>%@",historyData);
+                    NSLog(@"summary startTime=%ld,recordCount=%d",(long)historyData.summary.startTime,(long)historyData.summary.recordCount);
                     //        [SimulateData dealwithData:historyData];
                 } finishCallback:^(SLPDataTransferStatus status, id data) {
                     [MBProgressHUD hideHUDForView:self.view animated:YES];
