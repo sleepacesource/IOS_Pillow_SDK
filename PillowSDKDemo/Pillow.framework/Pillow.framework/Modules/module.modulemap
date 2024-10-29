@@ -1,0 +1,6 @@
+framework module Pillow {
+  umbrella header "Pillow.h"
+
+  export *
+  module * { export * }
+}
